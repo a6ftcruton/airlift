@@ -1,150 +1,228 @@
 records:
   - sprig_id: 1
-    title: "fresh goat's milk curd"
-    description: "baby beets, raspberry, pink peppercorn biscotti"
-    price: 11.01
+    title: "Orange Safety Vest"
+    description: "The Patrolman model 6135 is available in all sizes, and the colors green or orange. Use this class 2 level 2 hi-visibility (hi-viz) protective clothing for roadwork, construction, law enforcement, or nighttime activities."
+    price: 19.95
     category_ids:
       - '<%= sprig_record(Category, 1).id %>'
       - '<%= sprig_record(Category, 5).id %>'
-    image_file_name: "goat_milk.jpg"
+    vendor_id: 1
+    image_file_name: "t.jpg"
   - sprig_id: 2
-    title: "chilled bangs island mussels"
-    description: "tomato water, lemon balm, lemon cucumber"
-    price: 14.01
+    title: "SafetyMax Hi-Vis Pants"
+    description: "The perfect gear for construction jobs and outdoor activities alike."
+    price: 34.01
     category_ids:
       - '<%= sprig_record(Category, 1).id %>'
-    image_file_name: "mussels.jpg"
+    vendor_id: 1
+    image_file_name: "safety-coat.jpg"
   - sprig_id: 3
-    title: "smoked wild bluefish"
-    description: "tomato + fennel salad, chamomile vinaigrette, coronado cabbage"
-    price: 15.01
+    title: "Diamondback POLY/PVC Rainsuit 3pc"
+    description:"Diamondback SRS3/111 POLY/PVC Rainsuit 3pc includes jacket with detachable hood and bib overall. Heavy 0.35mm PVC exterior laminated to polyester with a PVC interior coating for extra strength and durability. Full cut for a comfortable fit. Corduroy collar." 
+    price: 25.95
     category_ids:
       - '<%= sprig_record(Category, 1).id %>'
-    image_file_name: "wild_bluefish.jpg"
+    vendor_id: 1
+    image_file_name: "rainsuit.jpg"
   - sprig_id: 4
-    title: "lemongrass sausage"
-    description: "watermelon, shishito pepper, watercress, mint"
-    price: 13.01
+    title: "Katadyn MyBottle Water Microfilter White Splash"
+    description: "The Katadyn MyBottle Microfilter is a multi-purpose filtration system. It meets EPA guidelines for removal of bacteria and protozoan cyst (like Giardia). This economical microfilter system is easy to operate, reliable and the internal carbon filter also reduces chemicals and makes water taste better."
+    price: 34.99
     category_ids:
       - '<%= sprig_record(Category, 1).id %>'
-    image_file_name: "food.jpg"
+    image_file_name: "katadyn.jpg"
   - sprig_id: 5
-    title: "okra + corn beignets"
-    description: "prawn reduction, five herb salad"
+    title: "MyBottle Water Microfilter White Splash 2"
+    description: "Replacement Cartridge is a replacement filter for the MyBottle Lightweight Filtration products from Katadyn. "
     price: 15.01
     category_ids:
       - '<%= sprig_record(Category, 1).id %>'
       - '<%= sprig_record(Category, 5).id %>'
-    image_file_name: "okra.jpg"
+    vendor_id: 1
+    image_file_name: "filter.jpg"
   - sprig_id: 6
-    title: "duck liver sausage"
-    description: "bbq tomato jam, corn salad, skillet bread"
-    price: 13.01
+    title: "Encore Plastics White Bucket 5gal"
+    description: "Encore Plastics White Bucket 5 Gallon 250001 Used for paints, coatings, varnishes, water sealants, concrete patching compounds, asphalt coatings, printing inks, soaps and detergents. Designed with reinforced saturn rings around the top to prevent rim distortion when carried. Uniform wall thickness for stacking strength."
+    price: 3.35
     category_ids:
       - '<%= sprig_record(Category, 1).id %>'
-    image_file_name: "fancy_poo.jpg"
+    vendor_id: 1
+    image_file_name: "bucket.jpg"
   - sprig_id: 7
-    title: "babette's pain naturale"
-    description: "beurre rudolph le menuier"
+    title: "Clorox Bleach"
+    description: "Clorox 02452 Liquid Bleach 96oz contains whitening formula that gets even your dirtiest clothes white, in a smaller bottle that's easy to handle and pour. Regular scent, use for mold and mildew removal, clothes washing, and disaster and emergency cleanup of the toughest stains after flooding, storm damage, and more."
     price: 5.01
     category_ids:
       - '<%= sprig_record(Category, 1).id %>'
-    image_file_name: "gross.JPG"
+    vendor_id: 1
+    image_file_name: "bleach.jpg"
   - sprig_id: 8
-    title: "margherita"
-    description: "fresh mozarella, san marzano tomato, basil"
-    price: 11.01
+    title: "3M Spray Paint P95 Full Face Respirator"
+    description: "Full face piece helps prevent paint overspray and dusts from getting in eyes. 3M Spray Paint P95 Full Face Respirator model 68P71PA1-A/68P71 helps reduce exposure to organic vapors and mists associated with paint spray, pesticide applications, solvents, thinners. Replaceable cartridges, filters."
+    price: 151.95
     category_ids:
       - '<%= sprig_record(Category, 2).id %>'
       - '<%= sprig_record(Category, 5).id %>'
-    image_file_name: "margaherita.jpg"
+    vendor_id: 1
+    image_file_name: "respirator.jpg"
   - sprig_id: 9
-    title: "the fig + pig"
-    description: "guanciale, gorgonzola, baby arugula"
-    price: 12.01
+    title: "Unger Industrial Curved Floor Squeegee - 36"
+    description: "Features a pivoting aluminum channel with black rubber that is exchangeable and can be used from 2 sides. Handle socket provides optimum channel pivoting push-pull action and is designed for use with Total Reach extension poles."
+    price: 27.95
     category_ids:
       - '<%= sprig_record(Category, 2).id %>'
       - '<%= sprig_record(Category, 5).id %>'
-    image_file_name: "pig.jpg"
+    vendor_id: 1
+    image_file_name: "squeegee.jpg"
   - sprig_id: 10
-    title: "patata rossa"
-    description: "lardo, roasted garlic oil, caramelized onion, pecorino"
-    price: 13.01
+    title: "Unger Industrial Aluminum Taper Handle - 56"
+    description: "The model AL140 'Pro Aluminum' 1.5 features a fluted aluminum handle with an ergonomic grip.For use with Push Pull, Water Wand squeegees and other products with a 1.5 taper socket."
+    price: 18.95
     category_ids:
       - '<%= sprig_record(Category, 2).id %>'
-    image_file_name: "patata_rossa.jpg"
+    vendor_id: 1
+    image_file_name: "handle.jpg"
   - sprig_id: 11
-    title: "roasted corn soup"
-    description: "chanterelle mushroom confit, tamale, aged Welsh chedder"
+    title: "Quick Dam Sandless Sandbags"
+    description: "Quick Dams, also known as sandless sand bags (model# QD1224-6), create an effective, easy to use flood control barrier. As water comes in contact with the specially formulated inner powder, it turns into a gel causing the bag to swell. Quick Dam flood sand bags can be stacked and staggered to build a retaining wall. Quick Dams are an easy to use sandless flood control barrier that are a great alternative to heavy, messy tradional sand bags. Flood Barrier socks are great for diverting water away from your garage or basement."
+    price: 36.45
+    category_ids:
+      - '<%= sprig_record(Category, 3).id %>'
+      - '<%= sprig_record(Category, 5).id %>'
+    vendor_id: 1
+    image_file_name: "sandless.jpg"
+  - sprig_id: 12
+    title: "HydraBarrier Standard Water Bag"
+    description: "HydraBarrier 6ft, 12ft, and 24ft Standard Bags (HBS06/HBS12/HBS24) are recommended for applications requiring diversion of fast moving streams of water. The Hydrabarrier Standard provides a 4 inch high tube capable of damming doorways, garage doors, basement entrances, and much more."
+    price: 16.95
+    category_ids:
+      - '<%= sprig_record(Category, 3).id %>'
+      - '<%= sprig_record(Category, 5).id %>'
+    vendor_id: 1
+    image_file_name: "waterbag.jpg"
+  - sprig_id: 13
+    title: "Moldex Mold and Mildew Protectant Spray"
+    description: "Provides an invisible barrier that protects against the harmful effects of mold and mildew. Creates a mold and algae proof barrier that dries clear and fast. Designed for both indoor and outdoor applications and is moisture resistant on most surfaces."
+    price: 9.99
+    category_ids:
+      - '<%= sprig_record(Category, 3).id %>'
+      - '<%= sprig_record(Category, 5).id %>'
+    vendor_id: 1
+    image_file_name: "moldex.jpg"
+  - sprig_id: 14
+    title: "AquaPodKit Emergency Water Storage Standard"
+    description: "The AquaPodKit Emergency Water Storage Standard contains 1 liner, pump, and lock, and is easy to install and provides the safe water your family will need in the event of a contaminated public water supply. Storm surges and destruction from hurricanes, water main breaks and other catastrophes can make tap water unsafe to drink"
+    price: 19.95
+    category_ids:
+      - '<%= sprig_record(Category, 3).id %>'
+      - '<%= sprig_record(Category, 5).id %>'
+    vendor_id: 1
+    image_file_name: "aquapod.jpg"
+  - sprig_id: 15
+    title: "Encore Plastics Gamma Seal Bucket Lid"
+    description: "Reusable bucket lid. Encore Plastics Gamma Seal Bucket Lid 82136-500426 permanently transforms your 12-in diameter bucket into an airtight and leak proof storage container. A bucket can be used for hundreds of household storage applications, simply snap the patented adapter onto your bucket and spin on the removable lid."
     price: 10.01
     category_ids:
-      - '<%= sprig_record(Category, 3).id %>'
-      - '<%= sprig_record(Category, 5).id %>'
-    image_file_name: "cornsoup.jpg"
-  - sprig_id: 12
-    title: "local lettuces"
-    description: "dried cherries, candied pepitas, chevre&acute;, white balsamic"
-    price: 8.01
-    category_ids:
-      - '<%= sprig_record(Category, 3).id %>'
-      - '<%= sprig_record(Category, 5).id %>'
-    image_file_name: "greens.jpg"
-  - sprig_id: 13
-    title: "cardoon souffle"
-    description: "porcini balsamella, leeks, baby kale"
-    price: 11.01
-    category_ids:
-      - '<%= sprig_record(Category, 3).id %>'
-      - '<%= sprig_record(Category, 5).id %>'
-    image_file_name: "souffle.jpg"
-  - sprig_id: 14
-    title: "carrot tagliatelle"
-    description: "carrot top pesto, cumin seed, orange beure blanc"
-    price: 12.01
-    category_ids:
-      - '<%= sprig_record(Category, 3).id %>'
-      - '<%= sprig_record(Category, 5).id %>'
-    image_file_name: "carrot_tagilatelle.jpg"
-  - sprig_id: 15
-    title: "day boat scallops"
-    description: "surryano ham, cantaloupe, wax beans, fig vin cotto"
-    price: 30.01
-    category_ids:
       - '<%= sprig_record(Category, 4).id %>'
-    image_file_name: "scallops.jpg"
+    vendor_id: 1
+    image_file_name: "lid.jpg"
   - sprig_id: 16
-    title: "pan roasted lamb"
-    description: "eggplant, garbanzo beans, gaeta olive, crepinette, pomegranate demi-glace"
-    price: 25.01
+    title: "Capital Rubber PVC Discharge Hose - MxF Coupling"
+    description: "Lay flat PVC contractors grade hose for pump discharge and agricultural applications."
+    price: 55.45
     category_ids:
       - '<%= sprig_record(Category, 4).id %>'
-    image_file_name: "lamb.jpg"
+    vendor_id: 1
+    image_file_name: "coupling.jpg"
   - sprig_id: 17
-    title: "kale + roasted garlic bucatini"
-    description: "smoked ham, pecora vecchio, quail egg yolk"
-    price: 25.01
+    title: "Ventamatic MaxxAir High Velocity Carpet Fan 4000CFM"
+    description: "Heavy duty 1 HP induction motor designed for extended use. Top-mounted 3-speed switch for convenience. Rugged molded plastic housing for durability and year-round use. Multi-angle airflow for exact positioning in specialized applications"
+    price: 269.99
     category_ids:
       - '<%= sprig_record(Category, 4).id %>'
-    image_file_name: "kale.png"
+    vendor_id: 1
+    image_file_name: "floor_fan.jpg"
   - sprig_id: 18
-    title: "red duroc pork + belly"
-    description: "la ratte potatoes, peppercorn-black plum aigre doux, torpedo onions, fennel"
-    price: 29.01
+    title: "Trimaco Supertuff Shoe Guards - Case"
+    description: "Supertuff Shoe Guards made of Spun bonded polypropylene with non-skid sole."
+    price: 14.45
     category_ids:
       - '<%= sprig_record(Category, 4).id %>'
-    image_file_name: "pork_belly.jpg"
+    vendor_id: 1
+    image_file_name: "shoe_covers.jpg"
   - sprig_id: 19
-    title: "roasted squab + confit"
-    description: "grape + turnip brovada, foie gras torchon, watercress puree"
-    price: 34.01
+    title: "Norcross Safety Black PVC Boot"
+    description: "Sixteen inch, PVC, injection-molded knee boots. Provides the ultimate in fit and comfort. Removable and washable Foot Form cushion insoles. Contour heel cup molding reduces heel slippage. Reinforced construction at critical stress points. Norcross Safety Black PVC Boot 18822 is 100 percent waterproof."
+    price: 17.95
     category_ids:
       - '<%= sprig_record(Category, 4).id %>'
-    image_file_name: "squab.jpg"
+    vendor_id: 1
+    image_file_name: "boot.jpg"
   - sprig_id: 20
-    title: "cauliflower"
-    description: "rye gnocchi, baeburn apple, brussel sprouts"
-    price: 23.01
+    title: "Boss MFG Chemical Guard Gloves"
+    description: "Fully coated black neoprene. Premium, smooth grip, interlock lined."
+    price: 12.95
     category_ids:
       - '<%= sprig_record(Category, 4).id %>'
       - '<%= sprig_record(Category, 5).id %>'
-    image_file_name: "cauliflower.JPG"
+    vendor_id: 1
+    image_file_name: "gloves.JPG"
+  - sprig_id: 21
+    title:"Flushable Loo 400 Toilet"
+    description:"Nothing says comfort like a flushing toilet, and with the Flushable Loo 400, you can bring it and the convenience of home to the outdoors with minimum effort."
+    price: 119.45
+    category_ids: '<%= sprig_record(Category, 4).id %>'
+    vendor_id: 2
+    image_file_name: "portable.jpg"
+  sprig_id: 22
+    title:"Deluxe First Responder First Aid Kit - SOFT CASE"
+    description:"Our comprehensive responder kit contains the essential first aid supplies you need in a medical emergency. This 100 denier cordura semi-rigid bag with handle, shoulder strap, side pockets, main compartment has removable divider & pocket, lid has zippered pouch, buckle closure, business card holder includes CPR devices, dressings, bandages, tapes, biohazard bags, gloves and more. Plus, there is still room for your own personal medical supplies."
+    price: 164.45
+    category_ids: '<%= sprig_record(Category, 4).id %>'
+    vendor_id: 2
+    image_file_name: "aid_kit.jpg"
+  - sprig_id: 23
+    title:"Ultimate First Responder Burn Pack"
+    description:"This 23-piece pack provides a large quantity of essential supplies to treat and protect a burn injury, including a trauma pad that can be used to hold ice as well as provide compression."
+    price: 18.95 
+    category_ids: '<%= sprig_record(Category, 4).id %>'
+    vendor_id: 2
+    image_file_name: "burn_pack.jpg"
+  - sprig_id: 24
+    title:"AmbuRescue CPR Mask Kit"
+    description:"The Ambu Res-Cue Mask is designed to provide protected recue breathing for any patient (any age group) and may also be used with a resuscitator. The Ambu Res-Cue Mask helps protect rescuers in an emergency situation. Prevents direct contact with patient's mouth, nose and face and helps overcome hesitation to start resuscitation. Transparent dome allows rescuer to visually check for patient's lip color and vomitus."
+    price: 24.95 
+    category_ids: '<%= sprig_record(Category, 4).id %>'
+    vendor_id: 2
+    image_file_name: "amub_res.jpg"
+  - sprig_id: 25
+    title:"IOSAT - Radiation Protection Tablets"
+    description:"In the event of a nuclear accident, radioactive iodine would be released into the air and could then be absorbed by the thyroid, damaging it and potentially causing death. You don't want to be left unprotected and unprepared during a radioactive emergency. For example, after the Chernobyl melt-down, all U.S. supplies of Potassium Iodide, which protects the body from the harmful radioactive iodine, disappeared for months! Health experts believe that the greatest health concerns from a nuclear accident are likely to be not from the initial explosion or spill, but from the release of radioiodine being carried downwind hundreds of miles from the original site. When Potassium Iodide is taken it floods the thyroid with a stabilized iodine, preventing 99% percent of the damage caused by radioactive nuclear fallout. "
+    price: 24.95 
+    category_ids: '<%= sprig_record(Category, 4).id %>'
+    vendor_id: 2
+    image_file_name: "iosat.jpg"
+  - sprig_id: 26
+    title:"Vented Particulate Respirator Face Mask"
+    description:"The exhalation valve extends the life and increases the level of protection and comfort in this mask compared to the regular N95. Perfect for reducing the contraction of swine flu, bird flu and other communicable diseases. Patented 3M model 8110s filter media with one-way anti-fogging exhalation vent and advanced electrostatically charged microfibers help make breathing easier and cooler for enhanced user comfort."
+    price: 24.95 
+    category_ids: '<%= sprig_record(Category, 4).id %>'
+    vendor_id: 2
+    image_file_name: "respi.jpg"
+  - sprig_id: 27
+    title:"Datrex 3600 Calorie Food Bar"
+    description:"Every 72-hour emergency kit needs a stash of these tasty, high energy, and nutritious Datrex food bars. You might worry about the flavor of a bar packed so full of nutrition that it can keep one person sustained for three days, but Datrex food bars have a light coconut flavor and a moist cookie-like texture that our customers love. These bars are high in calories, but low in protein and salt so they won’t make you thirsty but they'll keep you energized."
+    price: 7.95 
+    category_ids: '<%= sprig_record(Category, 4).id %>'
+    vendor_id: 2
+    image_file_name: "bars.jpg"
+  - sprig_id: 28
+    title:"Emergency Poncho"
+    description:"Protection from the elements - Stay dry, stay warm, and stay healthy with this high-quality poncho. You'll be grateful for dry clothes during an emergency."
+    price: 4.95 
+    category_ids: '<%= sprig_record(Category, 4).id %>'
+    vendor_id: 2
+    image_file_name: "poncho.jpg"
+
+
+      
