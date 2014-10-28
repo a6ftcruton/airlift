@@ -6,6 +6,7 @@ class Item < ActiveRecord::Base
   has_many :line_items
   has_many :orders, through: :line_items
   has_many :reviews
+	belongs_to :vendor_id
 
 	has_many :item_categories
 	has_many :categories, through: :item_categories
@@ -18,7 +19,7 @@ class Item < ActiveRecord::Base
 	def active?
 		self.active == true
 	end
-  
+
   def vegetarian?
     categories.include? Category.where(title: "vegetarian").first
   end
