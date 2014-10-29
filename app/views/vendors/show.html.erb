@@ -1,0 +1,7 @@
+<h1>All Vendor Items</h1>
+
+<ul>
+  <% @vendor.items.each do |item| %>
+    <li><%= link_to "#{item.title}", item_path(item.id) %></li>
+  <% end %>
+</ul>
