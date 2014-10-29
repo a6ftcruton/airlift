@@ -19,20 +19,17 @@
             <li class="active"><%#= link_to "Events", events_path %></li>
             <li class="active"><%#= link_to "Blog", items_path %></li>
             <li class="active"><%#= link_to "Contact", contacts_path %></li> -->
+            <%# raise "boom" if @item.nil? %>
             <% if can? :create, @item %>
                   <li class="active"><%= link_to "Admin Dashboard", admin_path %></li>
             <% end %>
-            <%= link_to "Browse By Vendor", vendors_path %>
+            <%#= link_to "Browse By Vendor", vendors_path %>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Browse by Vendor<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-                <li class="divider"></li>
-                <li><a href="#">One more separated link</a></li>
+                <% vendors.each do |vendor| %>
+                  <li><%=link_to "#{vendor.name}", vendor_path(vendor.id) %></li></a></li>
+                <% end %>
               </ul>
             </li>
           </ul>

@@ -4,4 +4,8 @@ module ApplicationHelper
     number_to_currency price
   end
 
+  def vendors
+    @vendors ||= Vendor.all
+  end
+
 end
