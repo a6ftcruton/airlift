@@ -1,0 +1,20 @@
+records:
+  - sprig_id: 1
+    name: "Above the Flood"
+    description: "Flood prevention, mitigation, and cleanup done right."
+    slug: "/above_the_flood"
+  - sprig_id: 2
+    name: "Real Relief"
+    description: "Delivering the emergency supplies you'll need on the ground the moment disaster ends and recovery begins."
+    slug: "real_relief"
+  - sprig_id: 3
+    name: "Responder"
+    description: "Medical supplies necessary for the emergencies you cannot predict but will need to be ready for."
+    slug: "/responder"
+  - sprig_id: 4
+    name: "Doomsday Preppers"
+    description: "Don't prepare for the disaster you think is coming--prepare for the worst."
+    slug: "/doomsday_preppers"
+  - sprig_id: 5
+    name: "Gimme Shelter"
+    description: "From temporary emergency shelters to housing for the long-term displaced, we are where you turn after the storm."
