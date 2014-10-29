@@ -6,7 +6,7 @@ records:
     category_ids:
       - '<%= sprig_record(Category, 1).id %>'
       - '<%= sprig_record(Category, 5).id %>'
-    vendor_id: 1
+    vendor_id: '<%= sprig_record(Vendor, 1).id %>'
     image_file_name: "t.jpg"
   - sprig_id: 2
     title: "SafetyMax Hi-Vis Pants"
@@ -14,15 +14,15 @@ records:
     price: 34.01
     category_ids:
       - '<%= sprig_record(Category, 1).id %>'
-    vendor_id: 1
+    vendor_id: '<%= sprig_record(Vendor, 1).id %>'
     image_file_name: "safety-coat.jpg"
   - sprig_id: 3
     title: "Diamondback POLY/PVC Rainsuit 3pc"
-    description:"Diamondback SRS3/111 POLY/PVC Rainsuit 3pc includes jacket with detachable hood and bib overall. Heavy 0.35mm PVC exterior laminated to polyester with a PVC interior coating for extra strength and durability. Full cut for a comfortable fit. Corduroy collar." 
+    description: "Diamondback SRS3/111 POLY/PVC Rainsuit 3pc includes jacket with detachable hood and bib overall. Heavy 0.35mm PVC exterior laminated to polyester with a PVC interior coating for extra strength and durability. Full cut for a comfortable fit. Corduroy collar." 
     price: 25.95
     category_ids:
       - '<%= sprig_record(Category, 1).id %>'
-    vendor_id: 1
+    vendor_id: '<%= sprig_record(Vendor, 1).id %>'
     image_file_name: "rainsuit.jpg"
   - sprig_id: 4
     title: "Katadyn MyBottle Water Microfilter White Splash"
@@ -38,7 +38,7 @@ records:
     category_ids:
       - '<%= sprig_record(Category, 1).id %>'
       - '<%= sprig_record(Category, 5).id %>'
-    vendor_id: 1
+    vendor_id: '<%= sprig_record(Vendor, 1).id %>'
     image_file_name: "filter.jpg"
   - sprig_id: 6
     title: "Encore Plastics White Bucket 5gal"
@@ -46,7 +46,7 @@ records:
     price: 3.35
     category_ids:
       - '<%= sprig_record(Category, 1).id %>'
-    vendor_id: 1
+    vendor_id: '<%= sprig_record(Vendor, 1).id %>'
     image_file_name: "bucket.jpg"
   - sprig_id: 7
     title: "Clorox Bleach"
@@ -54,7 +54,7 @@ records:
     price: 5.01
     category_ids:
       - '<%= sprig_record(Category, 1).id %>'
-    vendor_id: 1
+    vendor_id: '<%= sprig_record(Vendor, 1).id %>'
     image_file_name: "bleach.jpg"
   - sprig_id: 8
     title: "3M Spray Paint P95 Full Face Respirator"
@@ -63,7 +63,7 @@ records:
     category_ids:
       - '<%= sprig_record(Category, 2).id %>'
       - '<%= sprig_record(Category, 5).id %>'
-    vendor_id: 1
+    vendor_id: '<%= sprig_record(Vendor, 1).id %>'
     image_file_name: "respirator.jpg"
   - sprig_id: 9
     title: "Unger Industrial Curved Floor Squeegee - 36"
@@ -72,7 +72,7 @@ records:
     category_ids:
       - '<%= sprig_record(Category, 2).id %>'
       - '<%= sprig_record(Category, 5).id %>'
-    vendor_id: 1
+    vendor_id: '<%= sprig_record(Vendor, 1).id %>'
     image_file_name: "squeegee.jpg"
   - sprig_id: 10
     title: "Unger Industrial Aluminum Taper Handle - 56"
@@ -80,7 +80,7 @@ records:
     price: 18.95
     category_ids:
       - '<%= sprig_record(Category, 2).id %>'
-    vendor_id: 1
+    vendor_id: '<%= sprig_record(Vendor, 1).id %>'
     image_file_name: "handle.jpg"
   - sprig_id: 11
     title: "Quick Dam Sandless Sandbags"
@@ -89,7 +89,7 @@ records:
     category_ids:
       - '<%= sprig_record(Category, 3).id %>'
       - '<%= sprig_record(Category, 5).id %>'
-    vendor_id: 1
+    vendor_id: '<%= sprig_record(Vendor, 1).id %>'
     image_file_name: "sandless.jpg"
   - sprig_id: 12
     title: "HydraBarrier Standard Water Bag"
@@ -98,7 +98,7 @@ records:
     category_ids:
       - '<%= sprig_record(Category, 3).id %>'
       - '<%= sprig_record(Category, 5).id %>'
-    vendor_id: 1
+    vendor_id: '<%= sprig_record(Vendor, 1).id %>'
     image_file_name: "waterbag.jpg"
   - sprig_id: 13
     title: "Moldex Mold and Mildew Protectant Spray"
@@ -107,7 +107,7 @@ records:
     category_ids:
       - '<%= sprig_record(Category, 3).id %>'
       - '<%= sprig_record(Category, 5).id %>'
-    vendor_id: 1
+    vendor_id: '<%= sprig_record(Vendor, 1).id %>'
     image_file_name: "moldex.jpg"
   - sprig_id: 14
     title: "AquaPodKit Emergency Water Storage Standard"
@@ -116,7 +116,7 @@ records:
     category_ids:
       - '<%= sprig_record(Category, 3).id %>'
       - '<%= sprig_record(Category, 5).id %>'
-    vendor_id: 1
+    vendor_id: '<%= sprig_record(Vendor, 1).id %>'
     image_file_name: "aquapod.jpg"
   - sprig_id: 15
     title: "Encore Plastics Gamma Seal Bucket Lid"
@@ -124,7 +124,7 @@ records:
     price: 10.01
     category_ids:
       - '<%= sprig_record(Category, 4).id %>'
-    vendor_id: 1
+    vendor_id: '<%= sprig_record(Vendor, 1).id %>'
     image_file_name: "lid.jpg"
   - sprig_id: 16
     title: "Capital Rubber PVC Discharge Hose - MxF Coupling"
@@ -132,7 +132,7 @@ records:
     price: 55.45
     category_ids:
       - '<%= sprig_record(Category, 4).id %>'
-    vendor_id: 1
+    vendor_id: '<%= sprig_record(Vendor, 1).id %>'
     image_file_name: "coupling.jpg"
   - sprig_id: 17
     title: "Ventamatic MaxxAir High Velocity Carpet Fan 4000CFM"
@@ -140,7 +140,7 @@ records:
     price: 269.99
     category_ids:
       - '<%= sprig_record(Category, 4).id %>'
-    vendor_id: 1
+    vendor_id: '<%= sprig_record(Vendor, 1).id %>'
     image_file_name: "floor_fan.jpg"
   - sprig_id: 18
     title: "Trimaco Supertuff Shoe Guards - Case"
@@ -148,7 +148,7 @@ records:
     price: 14.45
     category_ids:
       - '<%= sprig_record(Category, 4).id %>'
-    vendor_id: 1
+    vendor_id: '<%= sprig_record(Vendor, 1).id %>'
     image_file_name: "shoe_covers.jpg"
   - sprig_id: 19
     title: "Norcross Safety Black PVC Boot"
@@ -156,7 +156,7 @@ records:
     price: 17.95
     category_ids:
       - '<%= sprig_record(Category, 4).id %>'
-    vendor_id: 1
+    vendor_id: '<%= sprig_record(Vendor, 1).id %>'
     image_file_name: "boot.jpg"
   - sprig_id: 20
     title: "Boss MFG Chemical Guard Gloves"
@@ -165,64 +165,68 @@ records:
     category_ids:
       - '<%= sprig_record(Category, 4).id %>'
       - '<%= sprig_record(Category, 5).id %>'
-    vendor_id: 1
+    vendor_id: '<%= sprig_record(Vendor, 1).id %>'
     image_file_name: "gloves.JPG"
   - sprig_id: 21
-    title:"Flushable Loo 400 Toilet"
-    description:"Nothing says comfort like a flushing toilet, and with the Flushable Loo 400, you can bring it and the convenience of home to the outdoors with minimum effort."
+    title: "Flushable Loo 400 Toilet"
+    description: "Nothing says comfort like a flushing toilet, and with the Flushable Loo 400, you can bring it and the convenience of home to the outdoors with minimum effort."
     price: 119.45
     category_ids: '<%= sprig_record(Category, 4).id %>'
-    vendor_id: 2
+    vendor_id: '<%= sprig_record(Vendor, 2).id %>'
     image_file_name: "portable.jpg"
-  sprig_id: 22
-    title:"Deluxe First Responder First Aid Kit - SOFT CASE"
-    description:"Our comprehensive responder kit contains the essential first aid supplies you need in a medical emergency. This 100 denier cordura semi-rigid bag with handle, shoulder strap, side pockets, main compartment has removable divider & pocket, lid has zippered pouch, buckle closure, business card holder includes CPR devices, dressings, bandages, tapes, biohazard bags, gloves and more. Plus, there is still room for your own personal medical supplies."
+  - sprig_id: 22
+    title: "Deluxe First Responder First Aid Kit - SOFT CASE"
+    description: "Our comprehensive responder kit contains the essential first aid supplies you need in a medical emergency. This 100 denier cordura semi-rigid bag with handle, shoulder strap, side pockets, main compartment has removable divider & pocket, lid has zippered pouch, buckle closure, business card holder includes CPR devices, dressings, bandages, tapes, biohazard bags, gloves and more. Plus, there is still room for your own personal medical supplies."
     price: 164.45
     category_ids: '<%= sprig_record(Category, 4).id %>'
-    vendor_id: 2
+    vendor_id: '<%= sprig_record(Vendor, 2).id %>'
     image_file_name: "aid_kit.jpg"
   - sprig_id: 23
-    title:"Ultimate First Responder Burn Pack"
-    description:"This 23-piece pack provides a large quantity of essential supplies to treat and protect a burn injury, including a trauma pad that can be used to hold ice as well as provide compression."
+    title: "Ultimate First Responder Burn Pack"
+    description: "This 23-piece pack provides a large quantity of essential supplies to treat and protect a burn injury, including a trauma pad that can be used to hold ice as well as provide compression."
     price: 18.95 
     category_ids: '<%= sprig_record(Category, 4).id %>'
-    vendor_id: 2
+    vendor_id: '<%= sprig_record(Vendor, 2).id %>'
     image_file_name: "burn_pack.jpg"
   - sprig_id: 24
-    title:"AmbuRescue CPR Mask Kit"
-    description:"The Ambu Res-Cue Mask is designed to provide protected recue breathing for any patient (any age group) and may also be used with a resuscitator. The Ambu Res-Cue Mask helps protect rescuers in an emergency situation. Prevents direct contact with patient's mouth, nose and face and helps overcome hesitation to start resuscitation. Transparent dome allows rescuer to visually check for patient's lip color and vomitus."
+    title: "AmbuRescue CPR Mask Kit"
+    description: "The Ambu Res-Cue Mask is designed to provide protected recue breathing for any patient (any age group) and may also be used with a resuscitator. The Ambu Res-Cue Mask helps protect rescuers in an emergency situation. Prevents direct contact with patient's mouth, nose and face and helps overcome hesitation to start resuscitation. Transparent dome allows rescuer to visually check for patient's lip color and vomitus."
     price: 24.95 
     category_ids: '<%= sprig_record(Category, 4).id %>'
-    vendor_id: 2
+    vendor_id: '<%= sprig_record(Vendor, 2).id %>'
     image_file_name: "amub_res.jpg"
   - sprig_id: 25
-    title:"IOSAT - Radiation Protection Tablets"
-    description:"In the event of a nuclear accident, radioactive iodine would be released into the air and could then be absorbed by the thyroid, damaging it and potentially causing death. You don't want to be left unprotected and unprepared during a radioactive emergency. For example, after the Chernobyl melt-down, all U.S. supplies of Potassium Iodide, which protects the body from the harmful radioactive iodine, disappeared for months! Health experts believe that the greatest health concerns from a nuclear accident are likely to be not from the initial explosion or spill, but from the release of radioiodine being carried downwind hundreds of miles from the original site. When Potassium Iodide is taken it floods the thyroid with a stabilized iodine, preventing 99% percent of the damage caused by radioactive nuclear fallout. "
+    title: "IOSAT - Radiation Protection Tablets"
+    description: "In the event of a nuclear accident, radioactive iodine would be released into the air and could then be absorbed by the thyroid, damaging it and potentially causing death. You don't want to be left unprotected and unprepared during a radioactive emergency. For example, after the Chernobyl melt-down, all U.S. supplies of Potassium Iodide, which protects the body from the harmful radioactive iodine, disappeared for months! Health experts believe that the greatest health concerns from a nuclear accident are likely to be not from the initial explosion or spill, but from the release of radioiodine being carried downwind hundreds of miles from the original site. When Potassium Iodide is taken it floods the thyroid with a stabilized iodine, preventing 99% percent of the damage caused by radioactive nuclear fallout. "
     price: 24.95 
     category_ids: '<%= sprig_record(Category, 4).id %>'
-    vendor_id: 2
+    vendor_id: '<%= sprig_record(Vendor, 2).id %>'
     image_file_name: "iosat.jpg"
   - sprig_id: 26
-    title:"Vented Particulate Respirator Face Mask"
-    description:"The exhalation valve extends the life and increases the level of protection and comfort in this mask compared to the regular N95. Perfect for reducing the contraction of swine flu, bird flu and other communicable diseases. Patented 3M model 8110s filter media with one-way anti-fogging exhalation vent and advanced electrostatically charged microfibers help make breathing easier and cooler for enhanced user comfort."
+    title: "Vented Particulate Respirator Face Mask"
+    description: "The exhalation valve extends the life and increases the level of protection and comfort in this mask compared to the regular N95. Perfect for reducing the contraction of swine flu, bird flu and other communicable diseases. Patented 3M model 8110s filter media with one-way anti-fogging exhalation vent and advanced electrostatically charged microfibers help make breathing easier and cooler for enhanced user comfort."
     price: 24.95 
     category_ids: '<%= sprig_record(Category, 4).id %>'
-    vendor_id: 2
+    vendor_id: '<%= sprig_record(Vendor, 2).id %>'
     image_file_name: "respi.jpg"
   - sprig_id: 27
-    title:"Datrex 3600 Calorie Food Bar"
-    description:"Every 72-hour emergency kit needs a stash of these tasty, high energy, and nutritious Datrex food bars. You might worry about the flavor of a bar packed so full of nutrition that it can keep one person sustained for three days, but Datrex food bars have a light coconut flavor and a moist cookie-like texture that our customers love. These bars are high in calories, but low in protein and salt so they won’t make you thirsty but they'll keep you energized."
+    title: "Datrex 3600 Calorie Food Bar"
+    description: "Every 72-hour emergency kit needs a stash of these tasty, high energy, and nutritious Datrex food bars. You might worry about the flavor of a bar packed so full of nutrition that it can keep one person sustained for three days, but Datrex food bars have a light coconut flavor and a moist cookie-like texture that our customers love. These bars are high in calories, but low in protein and salt so they won’t make you thirsty but they'll keep you energized."
     price: 7.95 
     category_ids: '<%= sprig_record(Category, 4).id %>'
-    vendor_id: 2
+    vendor_id: '<%= sprig_record(Vendor, 2).id %>'
     image_file_name: "bars.jpg"
   - sprig_id: 28
-    title:"Emergency Poncho"
-    description:"Protection from the elements - Stay dry, stay warm, and stay healthy with this high-quality poncho. You'll be grateful for dry clothes during an emergency."
+    title: "Emergency Poncho"
+    description: "Protection from the elements - Stay dry, stay warm, and stay healthy with this high-quality poncho. You'll be grateful for dry clothes during an emergency."
     price: 4.95 
     category_ids: '<%= sprig_record(Category, 4).id %>'
-    vendor_id: 2
+    vendor_id: '<%= sprig_record(Vendor, 2).id %>'
     image_file_name: "poncho.jpg"
-
-
-      
+  -  sprig_id: 29 
+    title: "Black Paracord 250 ft"
+    description: "Made in the U.S.A. with 100% nylon, this paracord is built to the highest industry standards. Kernmantle construction with outer sheath and 7 inner strands allows you to use inner strands for multiple purposes such as: sowing torn clothing, using as fishing line, or stitching up a wound. This 550 paracord will come in handy anytime you are in the outdoors or placed in a survival situation."
+    price: 2 4.95 
+    category_ids: '<%= sprig_record(Category, 4).id %>'
+    vendor_id: '<%= sprig_record(Vendor, 2).id %>'
+    image_file_name: "paracord.jpg"   
