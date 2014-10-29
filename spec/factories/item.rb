@@ -6,5 +6,6 @@ FactoryGirl.define do
     description "taste like the first food evar"
     price 1.00
     categories { [build(:category)] }
+    association :vendor
   end
 end
