@@ -85,7 +85,7 @@ a {
 //Masonry Grid Styling//
 #masonry-container {
   background: #FFF;
-  padding: 5px;
+  padding: 2px;
   margin-bottom: 20px;
   border-radius: 5px;
   clear: both;
@@ -108,8 +108,8 @@ a {
 .grid-item {
 	text-align: center;
 	width: 25%;
-	margin: 20px;
-	padding: 20px;
+	margin: 10px;
+	padding: 5px;
 	border: solid;
   border-width: 3px;
   -webkit-border-radius: 20px;
@@ -236,17 +236,15 @@ a {
   border-bottom: 2px solid rgba(0, 0, 0, .05);
 }
 .jumbotron {
-    background-image: image-url("man_child.jpg");
+    background-image: image-url("Airdrop_pallets.jpg");
     background-position: 0% 27%;
     background-size: cover;
     background-repeat: no-repeat;
-    color: white;
-    text-shadow: white 0.3em 0.3em 0.3em;
     height: 400px;
 }
 
 .jumbotron h2{
-  color: darkred !important;
+  color: white !important;
 }
 
 #footer {
