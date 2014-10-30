@@ -21,7 +21,6 @@
       <div class="grid-item <%= item.categories.reduce('') { |sum, category| sum + category.to_s + ' '}.strip %>" id="item_<%= item.id %>">
         <%= image_tag item.image.url(:medium) if item.image_file_name %><br/>
         <%= link_to item.title, item_path(item) %><br/>
-        <div class="item-description"><%= item.description %></div>
         <%= print_price(item.price) %><br/>
         <%= form_tag(cart_add_item_path(item), method: :patch, remote: true) do %>
           <span class="glyphicon glyphicon-plus"></span>
