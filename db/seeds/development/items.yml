@@ -50,7 +50,7 @@ records:
     image_file_name: "bucket.jpg"
   - sprig_id: 7
     title: "Clorox Bleach"
-    description: "Clorox 02452 Liquid Bleach 96oz contains whitening formula that gets even your dirtiest clothes white, in a smaller bottle that's easy to handle and pour. Regular scent, use for mold and mildew removal, clothes washing, and disaster and emergency cleanup of the toughest stains after flooding, storm damage, and more."
+    description: "This trademarked bleach contains whitening formula that gets even your dirtiest clothes white, in a smaller bottle that's easy to handle and pour. Regular scent, use for mold and mildew removal, clothes washing, and disaster and emergency cleanup of the toughest stains after flooding, storm damage, and more."
     price: 5.01
     category_ids:
       - '<%= sprig_record(Category, 1).id %>'

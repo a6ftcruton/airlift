@@ -7,24 +7,26 @@
           </div>
           <div class="panel-body">
             <ul class="list-group">
-            <% @vendor.items.each do |item| %>
-              <li class="list-group-item">
-                <%= link_to item.categories.first.title, item_path(item.id) %></li>
-            <% end %>
-              </ul>
+              <% @categories.each do |category| %>
+                <li class="list-group-item">
+                  <%= link_to category.title, items_path %>
+                </li>
+              <% end %>
+            </ul>
           </div>
         </div>
         <p></p>
     </div>
 
-    <div class="col-md-8">
+    <div class="col-md-8 text-center">
       <h1><%= @vendor.name %></h1>
       <h4><%= @vendor.description %></h4>
         <% @vendor.items.each do |item| %>
           <div class="airlift-grid-cell well col-md-6">
-            <h4><%= link_to "#{item.title}", item_path(item.id) %></h4>
+            <h4><%= link_to "#{item.title}", item_path(item.id)  %></h4>
             <%= image_tag item.image.url(:medium) if item.image_file_name %><br/>
-          </div>
+            <h6>Reviews - Average: <%= @average %></h6>
+              </div>
         <% end %>
     </div>
   </div>
