@@ -1,13 +1,6 @@
-<div id="pdf">
-<%= link_to 'view menu as pdf', menu_path(format: :pdf, disposition: "inline", reference: "html") %>
-<span>or</span>
-<%= link_to 'download', menu_path(format: :pdf, disposition: "attachment", reference: "pdf") %>
-<span class="glyphicon glyphicon-list-alt"></span>
-</div>
-
 <div id = "categories">
 <ul id='category_list'>
-<h3>Categories</h3>
+<h2>Categories</h2>
 <% @categories.each do |category| %>
   <li><a href="#" id="<%= category.to_s %>" class="filter" data-no-turbolink><%= category.title %></a>
   </li>
