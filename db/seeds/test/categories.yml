@@ -1,11 +1,11 @@
 records:
   - sprig_id: 1
-    title: "small plates"
+    title: "Emergency"
   - sprig_id: 2
-    title: "flat breads"
+    title: "Flood Recovery"
   - sprig_id: 3
-    title: "soup & salads"
+    title: "First Aid"
   - sprig_id: 4
-    title: "entree"
+    title: "Shelter"
   - sprig_id: 5
-    title: "vegetarian"
+    title: "Sanitation"
