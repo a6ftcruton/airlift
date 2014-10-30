@@ -1,6 +1,6 @@
 <div class="navbar-wrapper">
   <div class="container">
-    <div class="avbar navbar-inverse navbar-static-top" role="navigation", style="margin-bottom:50px">
+    <div class="avbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -9,33 +9,28 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/"><%= image_tag("AirLift-logo-white.png", :alt => "logo", :width => '220', :height => '87' ) %></a>
+          <a class="navbar-brand" href="/"><%= image_tag("AirLift-logo-white.png", :alt => "logo", :width => '120', :height => '37' ) %></a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <% if can? :create, @item %>
-                  <li class="active"><%= link_to "Admin Dashboard", admin_path %></li>
-            <% end %>
-            <%= link_to "Browse By Vendor", vendors_path %>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Browse by Vendor<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-                <li class="divider"></li>
-                <li><a href="#">One more separated link</a></li>
+                <% vendors.each do |vendor| %>
+                  <li><%=link_to "#{vendor.name}", vendor_path(vendor.id) %></li></a></li>
+                <% end %>
               </ul>
             </li>
-          </ul>
           <form class="navbar-form navbar-left" role="search">
             <div class="form-group">
               <input type="text" class="form-control" placeholder="Search">
             </div>
             <button type="submit" class="btn btn-default">Submit</button>
           </form>
+          <% if can? :create, @item %>
+                <li class="active"><%= link_to "Admin Dashboard", admin_path %></li>
+          <% end %>
+        </ul>
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right", style= "float:right", style="padding: 20px">
               <% if current_user %>
