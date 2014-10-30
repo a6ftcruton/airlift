@@ -10,14 +10,19 @@ describe 'vendor', type: :feature do
 
   it 'views all vendor pages' do
     visit root_path
-    click_on('Browse By Vendor')
-    expect(current_path).to eq vendors_path
+    find('.dropdown-toggle').click
+    within('.dropdown-menu') do
+      find('li:nth-child(1) > a').click
+    end
+    expect(current_path).to eq vendor_path(@vendor)
     expect(page).to have_link('first store')
   end
 
   it 'views a single vendor page' do
     visit vendors_path
-    click_on('first store')
+    within('.vendors-list') do
+      click_on('first store')
+    end
     expect(current_path).to eq vendor_path(@vendor.id)
     expect(page).to have_link('band aids')
     expect(page).to_not have_content('error')
