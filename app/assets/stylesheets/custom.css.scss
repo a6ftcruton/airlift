@@ -8,6 +8,10 @@
   color: white;
 }
 
+.navbar-wrapper .container {
+  padding-top: 70px;
+}
+
 a {
   color: darkred !important;
   text-decoration: none;
@@ -224,7 +228,7 @@ a {
   margin: 3em;
 }
 .vendors-list {
-  text-align: center; 
+  text-align: center;
 }
 .vendors-title {
   margin: 25px 30%;
@@ -233,8 +237,6 @@ a {
 }
 .jumbotron {
     margin-bottom: 30px;
-    margin-top: 40px;
-    padding: 30px !important;
     background-image: image-url("man_child.jpg");
     background-position: 0% 27%;
     background-size: cover;
