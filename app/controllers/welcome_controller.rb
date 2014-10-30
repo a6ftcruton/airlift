@@ -8,6 +8,6 @@ class WelcomeController < ApplicationController
   end
 
   def code
-  	redirect_to "https://github.com/ianderse/dinner_dash"
+  	redirect_to "https://github.com/jessicag/the_pivot"
   end
 end
