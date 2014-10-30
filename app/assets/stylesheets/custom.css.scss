@@ -4,6 +4,15 @@
   color: #FFFFFF !important;
 }
 
+.navbar-nav {
+  color: white;
+}
+
+a {
+  color: darkred !important;
+  text-decoration: none;
+}
+
 #about {
   margin-left: auto;
   margin-right: auto;
@@ -221,4 +230,25 @@ a {
   margin: 25px 30%;
   padding-bottom: 20px;
   border-bottom: 2px solid rgba(0, 0, 0, .05);
+}
+.jumbotron {
+    margin-bottom: 30px;
+    margin-top: 40px;
+    padding: 30px !important;
+    background-image: image-url("man_child.jpg");
+    background-position: 0% 27%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    text-shadow: white 0.3em 0.3em 0.3em;
+    height: 400px;
+}
+
+.jumbotron h2{
+  color: darkred !important;
+}
+
+#footer {
+  background-color: lightgrey;
+  color: white;
 }
