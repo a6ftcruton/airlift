@@ -8,4 +8,6 @@ class VendorsController < ApplicationController
     @categories = Category.all
     @vendor = Vendor.find(params[:id])
   end
+  
+  def
 end
