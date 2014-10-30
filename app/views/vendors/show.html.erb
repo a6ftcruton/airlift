@@ -1,7 +1,33 @@
-<h1>All Vendor Items</h1>
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="col-md-4">
+      <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Browse By Category</h3>
+          </div>
+          <div class="panel-body">
+            <ul class="list-group">
+              <% @categories.each do |category| %>
+                <li class="list-group-item">
+                  <%= link_to category.title, items_path %>
+                </li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+        <p></p>
+    </div>
 
-<ul>
-  <% @vendor.items.each do |item| %>
-    <li><%= link_to "#{item.title}", item_path(item.id) %></li>
-  <% end %>
-</ul>
+    <div class="col-md-8 text-center">
+      <h1><%= @vendor.name %></h1>
+      <h4><%= @vendor.description %></h4>
+        <% @vendor.items.each do |item| %>
+          <div class="airlift-grid-cell well col-md-6">
+            <h4><%= link_to "#{item.title}", item_path(item.id)  %></h4>
+            <%= image_tag item.image.url(:medium) if item.image_file_name %><br/>
+            <h6>Reviews - Average: <%= @average %></h6>
+              </div>
+        <% end %>
+    </div>
+  </div>
+</div>
