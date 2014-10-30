@@ -1,6 +1,6 @@
 <div class="navbar-wrapper">
   <div class="container">
-    <div class="navbar navbar-default navbar-static-top" role="navigation", style="margin-bottom:50px">
+    <div class="avbar navbar-inverse navbar-static-top" role="navigation", style="margin-bottom:50px">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -9,16 +9,10 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/"><%= image_tag("caussa_logo_h.png", :alt => "logo", :width => '220', :height => '87' ) %></a>
+          <a class="navbar-brand" href="/"><%= image_tag("AirLift-logo-white.png", :alt => "logo", :width => '220', :height => '87' ) %></a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <!-- <li class="active"><%#= link_to "Home", root_path %></li>
-            <li class="active"><%#= link_to "About", about_path %></li>
-            <li class="active"><%#= link_to "Menu", items_path %></li>
-            <li class="active"><%#= link_to "Events", events_path %></li>
-            <li class="active"><%#= link_to "Blog", items_path %></li>
-            <li class="active"><%#= link_to "Contact", contacts_path %></li> -->
             <% if can? :create, @item %>
                   <li class="active"><%= link_to "Admin Dashboard", admin_path %></li>
             <% end %>

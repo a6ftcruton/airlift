@@ -199,10 +199,15 @@ text-align: left;
 
 .jumbotron {
     margin-bottom: 0px;
-    background-image: url(../img/plane.jpg);
-    background-position: 0% 25%;
+    background-image: image-url("sleeping_girl.jpg");
+    background-position: 0% 47%;
     background-size: cover;
     background-repeat: no-repeat;
     color: white;
     text-shadow: black 0.3em 0.3em 0.3em;
+    height: 400px;
+}
+
+.jumbotron h1{
+  color: darkred !important;
 }
