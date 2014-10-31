@@ -6,6 +6,6 @@ class VendorsController < ApplicationController
 
   def show
     @categories = Category.all
-    @vendor = Vendor.find(params[:id])
+    @vendor = Vendor.friendly.find(params[:id])
   end
 end

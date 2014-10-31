@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.1.1'
 
+gem 'friendly_id', '~> 5.0.0'
 gem 'prawn', github: 'prawnpdf/prawn'
 gem 'prawn-table', github: 'prawnpdf/prawn-table'
 gem 'figaro'

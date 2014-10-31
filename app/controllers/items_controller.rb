@@ -10,6 +10,8 @@ class ItemsController < ApplicationController
   end
 
 	def show
+    vendor = Vendor.find_by!(:name => slug)
+    @item = vendor.items.find_by!(:id => params[:id])
     @categories = @item.categories
 	end
 

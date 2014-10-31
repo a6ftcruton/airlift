@@ -11,8 +11,10 @@ Rails.application.routes.draw do
   #namespace ':store_slug' do
   #  resources :items
   #end
+
   #get ':store_slug/items', to: 'items#index'
-  #get ':store_slug/items/:id', to: 'items#show'
+  #/above_the_flood/items/123
+  #get ':store_slug/items/:id', to: 'items#show_by_vendor'
 
   namespace :admin do
     get '', to: 'dashboard#index'
