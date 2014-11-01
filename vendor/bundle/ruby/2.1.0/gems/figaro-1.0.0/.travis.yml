@@ -1,0 +1,28 @@
+before_install:
+  - gem update bundler rake
+before_script:
+  - unset RAILS_ENV
+  - unset RACK_ENV
+branches:
+  only:
+    - master
+env:
+  global:
+    secure: | # CODECLIMATE_REPO_TOKEN=6a3cbf74a9ccc7821b85867929087591e46295f9e0196a954d1b95773d9d871a bundle exec rake
+gemfile:
+  - gemfiles/rails30.gemfile
+  - gemfiles/rails31.gemfile
+  - gemfiles/rails32.gemfile
+  - gemfiles/rails40.gemfile
+  - gemfiles/rails41.gemfile
+  - gemfiles/rails42.gemfile
+language: ruby
+matrix:
+  allow_failures:
+    - rvm: ruby-head
+rvm:
+  - 1.9.3
+  - "2.0"
+  - "2.1"
+  - ruby-head
+script: bundle exec rspec

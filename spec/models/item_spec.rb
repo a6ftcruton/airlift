@@ -39,7 +39,4 @@ RSpec.describe Item, :type => :model do
     expect(item.vegetarian?).to be false
   end
 
-  it 'uses a default image if one is not uploaded' do
-  	skip
-  end
 end

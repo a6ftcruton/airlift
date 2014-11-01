@@ -227,10 +227,10 @@ a {
 #masonry-grid > img {
   margin: 3em;
 }
-.vendors-list {
+.vendors-list, .categories-list {
   text-align: center;
 }
-.vendors-title {
+.vendors-title, .categories-title {
   margin: 25px 30%;
   padding-bottom: 20px;
   border-bottom: 2px solid rgba(0, 0, 0, .05);
@@ -250,4 +250,10 @@ a {
 #footer {
   background-color: lightgrey;
   color: white;
+}
+.create-store-btn {
+  width: 80%;
+  background-color: lighten(darkred, 5);
+  color: white;
+  margin-top: 30px;
 }
