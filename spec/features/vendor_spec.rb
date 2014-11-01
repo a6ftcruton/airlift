@@ -14,7 +14,7 @@ describe 'vendor', type: :feature do
     within('.dropdown-menu') do
       find('li:nth-child(1) > a').click
     end
-    expect(current_path).to eq vendor_path(@vendor)
+    expect(current_path).to eq vendors_path
     expect(page).to have_link('first store')
   end
 
