@@ -1,0 +1,17 @@
+# pack-refs with: peeled fully-peeled 
+d3d642e6e02edd81143fe565a85ffb7761dc2b56 refs/heads/hb_issue_20
+7f203dd17d16ac70ddb60ecc9e4bb49bae4a815b refs/heads/hb_issue_22
+ad9d8ecd5368f3270b35b17f870b0a3bd499dcf8 refs/heads/hb_split_table_rows
+35403264a268ec9275787b0136866a97325c0a3a refs/heads/hb_split_table_rows_refactor_1
+4f3bc79f70611f1a7ff1bd2e45586ab5be047f63 refs/heads/issue_3
+2aebd33a0084ca302f582f34144a038f10b55ffc refs/heads/issue_6
+8211ecb90f3f2a5d2ce3f4c5f0de2adc206049bb refs/heads/issue_8
+7a8afda197a1874796959b6431b355d7b188142e refs/heads/master
+8f0b66156ca1b3c79c2d3055659567c547f958f5 refs/heads/refactor
+dc9aa9bc2a85931739f40fbcad51b69ffea0ce62 refs/tags/0.0.2
+d082dbceefd8b8b2beda9af664afa5a719ace677 refs/tags/0.0.3
+ac696b3f91a42b6699ad0701bf08990e25755bf8 refs/tags/0.0.4
+54fe375a917a93af9c9cf418e953c7b2e04431de refs/tags/0.1.0
+440aa2e843d5d32d3f1402089678e831681787b2 refs/tags/0.1.1
+d9db3834def4ea20efe5d771ccc56704190fd8a0 refs/tags/0.1.2
+1a8915c0e4aa369d38929203ad7337f4bf9a06fe refs/tags/0.2.0

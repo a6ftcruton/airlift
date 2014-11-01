@@ -1,20 +1,33 @@
 records:
   - sprig_id: 1
     name: "Above the Flood"
-    description: "Flood prevention, mitigation, and cleanup done right."
+<<<<<<< HEAD
+    description: "Bespoke kogi wolf, craft beer tattooed artisan brunch viral DIY banh mi kale chips. Leggings heirloom crucifix next level. Lo-fi Pinterest cred, flexitarian readymade semiotics banjo biodiesel fingerstache. Godard sustainable occupy, kitsch stumptown ennui Tumblr. Schlitz mumblecore heirloom pickled tote bag, deep v viral mustache next level meditation stumptown lomo Pitchfork. Godard plaid Marfa, Vice mumblecore PBR roof party chillwave taxidermy four loko cardigan freegan forage twee. Asymmetrical squid tousled McSweeney's, Kickstarter fixie Helvetica church-key cred craft beer VHS fingerstache stumptown Truffaut."
     slug: "/above_the_flood"
   - sprig_id: 2
     name: "Real Relief"
-    description: "Delivering the emergency supplies you'll need on the ground the moment disaster ends and recovery begins."
+    description: "Austin kale chips butcher, drinking vinegar VHS XOXO salvia post-ironic McSweeney's asymmetrical meh narwhal Thundercats Cosby sweater chambray. Literally Shoreditch tousled Schlitz occupy keytar craft beer leggings kogi biodiesel irony dreamcatcher. Marfa gluten-free tote bag whatever skateboard pug. Photo booth DIY ugh skateboard Shoreditch freegan chillwave pop-up cornhole. Blog viral locavore Intelligentsia, put a bird on it Brooklyn twee chia drinking vinegar umami whatever sustainable small batch mustache paleo. Butcher dreamcatcher distillery banh mi, literally tofu roof party mumblecore synth master cleanse forage. Actually locavore lomo, pug quinoa church-key fingerstache American Apparel polaroid selvage tote bag drinking vinegar deep v street art Kickstarter"
     slug: "real_relief"
   - sprig_id: 3
     name: "Responder"
-    description: "Medical supplies necessary for the emergencies you cannot predict but will need to be ready for."
+    description: "Meggings typewriter Marfa mumblecore master cleanse ugh, PBR flannel yr beard +1 slow-carb synth Banksy. Typewriter skateboard heirloom pug, Cosby sweater pork belly hashtag keytar freegan 90's trust fund. Readymade semiotics cornhole, chillwave viral Blue Bottle locavore fingerstache actually gastropub tousled normcore try-hard Cosby sweater synth. Lo-fi Truffaut twee, Tumblr +1 deep v DIY Carles blog synth. VHS art party street art fixie. Single-origin coffee umami small batch, Neutra distillery letterpress meh heirloom Williamsburg Cosby sweater actually DIY farm-to-table locavore. Put a bird on it Portland Blue Bottle asymmetrical, bespoke stumptown VHS authentic +1 fanny pack organic chia."
     slug: "/responder"
   - sprig_id: 4
     name: "Doomsday Preppers"
-    description: "Don't prepare for the disaster you think is coming--prepare for the worst."
+    description: "8-bit asymmetrical ugh Echo Park Intelligentsia mixtape actually, cred distillery selfies. Vegan tilde irony slow-carb selvage. DIY bespoke cred, Portland mustache photo booth mixtape banh mi normcore Shoreditch Godard bitters Pitchfork PBR&B. Kitsch Portland Marfa cray. Retro meh cliche, deep v trust fund cred DIY. Umami lo-fi organic pop-up Blue Bottle XOXO, messenger bag normcore. Gastropub literally Intelligentsia mlkshk farm-to-table fixie keytar, asymmetrical Neutra."
     slug: "/doomsday_preppers"
+=======
+    description: "Flood prevention, mitigation, and cleanup done right."
+  - sprig_id: 2
+    name: "Real Relief"
+    description: "Delivering the emergency supplies you'll need on the ground the moment disaster ends and recovery begins."
+  - sprig_id: 3
+    name: "Responder"
+    description: "Medical supplies necessary for the emergencies you cannot predict but will need to be ready for."
+  - sprig_id: 4
+    name: "Doomsday Preppers"
+    description: "Don't prepare for the disaster you think is coming--prepare for the worst."
+>>>>>>> master
   - sprig_id: 5
     name: "Gimme Shelter"
-    description: "From temporary emergency shelters to housing for the long-term displaced, we are where you turn after the storm."
+    description: "Chillwave distillery farm-to-table chia, Brooklyn Marfa photo booth lomo. Four loko 8-bit master cleanse cornhole ugh locavore shabby chic cold-pressed church-key American Apparel, Brooklyn mixtape mlkshk Cosby sweater food truck. Tote bag hella leggings YOLO seitan keffiyeh, twee craft beer gastropub. Blog seitan hoodie, narwhal iPhone artisan messenger bag salvia crucifix Cosby sweater VHS semiotics. Pickled viral mustache sriracha craft beer literally. Pitchfork plaid squid, try-hard church-key Neutra master cleanse beard. Semiotics forage VHS crucifix."

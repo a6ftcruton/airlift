@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <div class="row-fluid">
-    <div class="col-md-4">
+    <div class="col-md-3">
       <div class="panel panel-default">
           <div class="panel-heading">
             <h3 class="panel-title">Browse By Category</h3>
@@ -9,7 +9,7 @@
             <ul class="list-group">
               <% @categories.each do |category| %>
                 <li class="list-group-item">
-                  <%= link_to category.title, items_path %>
+                <a href="#" id="<%= category.to_s %>" class="filter" data-no-turbolink><%= category.title %></a>
                 </li>
               <% end %>
             </ul>
@@ -18,16 +18,63 @@
         <p></p>
     </div>
 
-    <div class="col-md-8 text-center">
+    <div class="col-md-9 text-center">
       <h1><%= @vendor.name %></h1>
       <h4><%= @vendor.description %></h4>
-        <% @vendor.items.each do |item| %>
-          <div class="airlift-grid-cell well col-md-6">
-            <h4><%= link_to "#{item.title}", item_path(item.id)  %></h4>
-            <%= image_tag item.image.url(:medium) if item.image_file_name %><br/>
-            <h6>Reviews - Average: <%= @average %></h6>
+
+          <div class="airlift-grid-cell well col-md-9">
+            <div id="masonry-grid">
+              <div class="grid-sizer">
+                <% @vendor.items.each do |item| %>
+                  <div class="grid-item <%= item.categories.reduce('') { |sum, category| sum + category.to_s + ' '}.strip %>" id="item_<%= item.id %>">
+                    <%= image_tag item.image.url(:medium) if item.image_file_name %><br/>
+                    <%= link_to item.title, item_path(item) %><br/>
+                    <%= print_price(item.price) %><br/>
+                    <h4><%= item.vendor_id %></h4>
+                    <%= form_tag(cart_add_item_path(item), method: :patch, remote: true) do %>
+                      <span class="glyphicon glyphicon-plus"></span>
+                      <%= label_tag "quantity" %>
+                      <%= number_field_tag "quantity", 1 , min: 1, class:"text-size" %>
+                      <%= submit_tag 'Add to cart', class: "btn btn-default btn-sm", id: "add_to_cart" %>
+                    <% end %>
+                    <h6>Reviews - Average: <%= @average %></h6>
+                  </div>
+                <% end %>
               </div>
-        <% end %>
+            </div>
     </div>
   </div>
 </div>
+
+<script>
+  var container = document.querySelector('#masonry-grid');
+  var msnry = new Masonry( container, {
+    columnWidth: ".grid-sizer",
+    itemSelector: '.grid-item'
+  });
+  imagesLoaded( container, function() {
+    msnry.layout();
+  });
+
+  var category_link = $("#<%= @category %>");
+  category_link.toggleClass('pressed');
+
+  $('.filter').on('click', function () {
+      $(this).toggleClass('pressed');
+      filterItems();
+      msnry.layout();
+  });
+
+  function filterItems() {
+    $('.grid-item').removeClass('off');
+    $('.pressed').each(function() {
+      var category = $(this).attr('id');
+      $('.grid-item').each(function() {
+        if (!$(this).hasClass(category)) {
+          $(this).addClass('off');
+        }
+      });
+    });
+  }
+
+</script>
