@@ -1,0 +1,16 @@
+<div class="container item-show-container">
+  <div id="masonry-grid" style="text-align:center">
+    <h1><%= @category.title.capitalize %></h1>
+      <%#= image_tag @category.image.url(:medium) if @category.image_file_name != nil %><br/>
+      <%= @category.description %><br/>
+      <!-- <h3><%#= print_price(@category.item.price) %><br/></h3> -->
+      <%#= 'Category'.pluralize(@categories.size) %>:
+      <%= items.map { |category| category.title }.join(', ') %>
+      <br/>
+        <%if current_user.nil?  %>
+        <h4><%= link_to "<< Return to All Categories", categories_path %><h4>
+        <% elsif current_user.is?('admin') %></h4>
+        <h4><%= link_to "<< Return to Your Admin Dashboard", admin_path %>
+      <% end  %>
+  </div>
+</div>

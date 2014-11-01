@@ -5,7 +5,7 @@ Capybara.default_wait_time = 5
 describe 'unauthenticated user', type: :feature do
   include Capybara::DSL
 
-  context "vendor" do
+  context "browse by dropdown from header" do
     before do
       @vendor1 = create(:vendor)
       @vendor2 = create(:vendor, name: 'second store', description: 'a store that sells first aid', slug: '/second_store')
@@ -13,50 +13,55 @@ describe 'unauthenticated user', type: :feature do
       @first_aid_category = create(:category, title: 'First Aid')
     end
 
-    it "can browse all vendors" do
-      # visit '/'
-      # within('.dropdown-menu') do
-      #   assert page.has_content?('first store')
-      #   assert page.has_content?('second store')
-      #   click_link 'first store'
-      # end
-      visit vendors_path
+    it "can browse by all vendors" do
+      visit '/'
+      within('.dropdown-menu') do
+        assert page.has_content?('Vendors')
+        click_link 'Vendors'
+      end
       expect(current_path).to eq(vendors_path)
-      save_and_open_page
-        assert page.has_content?('first store')
-        assert page.has_content?('second store')
-        click_link 'first store'
+      assert page.has_content?('All Vendors')
+      assert page.has_content?('first store')
+      assert page.has_content?('second store')
+      click_link 'first store'
       expect(current_path).to eq(vendor_path(@vendor1.id))
       expect(page).to have_content 'barney band aids'
     end
 
-    it "can browse categories by vendors", js: true do
-      visit vendors_path
-      expect(page).to have_content 'Vendors'
-      click_link 'first store'
-      expect(page).to have_content 'first store'
+    it "can browse all categories" do
+      visit '/'
+      within('.dropdown-menu') do
+        assert page.has_content?('Categories')
+        click_link 'Categories'
+      end
+      expect(page).to have_content 'All Categories'
       expect(page).to have_content 'First Aid'
+      click_link 'First Aid'
+      expect(current_path).to eq(category_path(@first_aid_category))
+      expect(page).to have_content 'barney band aids'
+    end
+
+    it "can browse all items" do
+      visit '/'
+      within('.dropdown-menu') do
+        assert page.has_content?('Items')
+        click_link 'Items'
+      end
+      expect(page).to have_content 'Categories'
+      expect(page).to have_content 'barney band aids'
+      expect(current_path).to eq(items_path)
     end
   end
 
-  context "items" do
+
+  context "from items page" do
     before do
       @vendor = create(:vendor)
       @first_aid_category = create(:category, title: 'First Aid')
       @item = create(:item, vendor: @vendor, title: 'Mickey band aids', categories: [@first_aid_category])
     end
 
-    it "can browse all items" do
-      # visit '/'
-      # click_link 'Menu'
-      # expect(current_path).to eq(items_path)
-      visit items_path
-      expect(page).to have_content 'Mickey band aids'
-    end
-
     it "can browse items by category", js: true do
-      # visit '/'
-      # click_link 'Menu'
       visit items_path
       expect(page).to have_content 'Mickey band aids'
       click_link 'First Aid'
@@ -65,16 +70,15 @@ describe 'unauthenticated user', type: :feature do
     end
 
     it "can view a single item" do
-      # visit '/'
-      # click_on 'Menu'
       visit items_path
       within(".grid-item") do
         click_on 'Mickey band aids'
       end
       expect(current_path).to eq item_path(@item)
-      expect(page).to have_content "#{@item.title}"
+      expect(page).to have_content "#{@item.title.capitalize}"
     end
   end
+
 
   context "creating an account" do
     it "can create an account" do
@@ -89,7 +93,6 @@ describe 'unauthenticated user', type: :feature do
       fill_in 'Password confirmation', with: 'jsmithers@example.com'
       click_button 'Create Account'
       expect(page).to have_content "Your account was successfully created!"
-      # expect(page).to have_content 'Menu'
     end
 
     it "cannot create an account with invalid data" do
@@ -101,6 +104,7 @@ describe 'unauthenticated user', type: :feature do
       expect(page).to have_content "Please be sure to include a name and a valid email."
     end
   end
+
 
   context "authentication" do
     it "can login" do
@@ -125,6 +129,7 @@ describe 'unauthenticated user', type: :feature do
     end
   end
 
+
   context "authorization" do
     it "cannot view another user's private data" do
       user = create(:user, first_name: 'joe', email: 'abc@example.com', password: 'asdf', password_confirmation: 'asdf')
@@ -144,6 +149,7 @@ describe 'unauthenticated user', type: :feature do
       expect(page).to_not have_content('Role')
     end
   end
+
 
   context "when using the cart", js: true do
     before do
@@ -220,15 +226,18 @@ describe 'unauthenticated user', type: :feature do
       expect(page).to have_content 'Login To Checkout'
     end
   end
+end
 
-  describe "What's good here?" do
-    it "can see the posted reviews" do
-      visit '/items/1'
-      expect(page).to have_content 'Reviews'
-    end
-    it 'can see the average of the ratings' do
-      visit '/items/1'
-      expect(page).to have_content "Average"
-    end
+
+
+describe "What's good here?" do
+  it "can see the posted reviews" do
+    visit '/items/1'
+    expect(page).to have_content 'Reviews'
+  end
+
+  it 'can see the average of the ratings' do
+    visit '/items/1'
+    expect(page).to have_content "Average"
   end
 end
