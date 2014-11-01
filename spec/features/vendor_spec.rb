@@ -10,16 +10,39 @@ describe 'vendor', type: :feature do
 
   it 'views all vendor pages' do
     visit root_path
-    click_on('Browse By Vendor')
+    find('.dropdown-toggle').click
+    within('.dropdown-menu') do
+      find('li:nth-child(1) > a').click
+    end
     expect(current_path).to eq vendors_path
     expect(page).to have_link('first store')
   end
 
   it 'views a single vendor page' do
     visit vendors_path
-    click_on('first store')
+    within('.vendors-list') do
+      click_on('first store')
+    end
     expect(current_path).to eq vendor_path(@vendor.id)
     expect(page).to have_link('band aids')
     expect(page).to_not have_content('error')
   end
+  
+  it 'can create a new vendor' do
+    visit new_vendor_path
+    fill_in("Name Your Store", with: 'Great Store')
+    fill_in("Describe Your Store", with: 'So great')
+    click_on 'Create My Store'
+    expect(current_path).to eq root_path
+    expect(page).to_not have_css('.errors')
+  end
+
+ xit 'can cannot create a new vendor with a duplicate name' do
+    visit new_vendor_path
+    fill_in("Name Your Store", with: 'first store')
+    fill_in("Describe Your Store", with: 'So great')
+    click_on 'Create My Store'
+    expect(page).to have_content('Name has already been taken')
+  end
+
 end

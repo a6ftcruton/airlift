@@ -229,7 +229,6 @@ describe 'unauthenticated user', type: :feature do
 end
 
 
-
 describe "What's good here?" do
   it "can see the posted reviews" do
     visit '/items/1'

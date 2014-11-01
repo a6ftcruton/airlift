@@ -1,0 +1,14 @@
+<% @vendor.errors.full_messages.each do |m| %>
+<%= m %>
+<% end %>
+
+<%= form_for(@vendor) do |f|  %>
+  <%= f.label :name, "Name Your Store"  %><br>
+  <%= f.text_field :name, size: "80" %><br>
+
+  <%= f.label :description, "Describe Your Store"  %><br>
+  <%= f.text_area :description, size: "80x2" %><br>
+
+  <%= f.submit "Create My Store", class: "btn btn-lg create-store-btn"  %>
+
+<% end %>
