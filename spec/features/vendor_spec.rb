@@ -27,4 +27,6 @@ describe 'vendor', type: :feature do
     expect(page).to have_link('band aids')
     expect(page).to_not have_content('error')
   end
+
+
 end

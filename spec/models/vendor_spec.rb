@@ -25,6 +25,6 @@ RSpec.describe Vendor, :type => :model do
   it 'receives a default slug based on name' do
     vendor = Vendor.create(name: "Mr. John's Store")
     expect(vendor).to be_valid
-    expect(vendor.slug).to eq "mr_johns_store"
+    expect(vendor.slug).to eq "mr-johns-store"
   end
 end
