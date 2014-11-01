@@ -8,4 +8,8 @@ module ApplicationHelper
     @vendors ||= Vendor.all
   end
 
+  def items
+    @vendor_items = Item.all
+  end
+
 end

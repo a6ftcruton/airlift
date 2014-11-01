@@ -7,9 +7,11 @@ RSpec.describe Cart, type: :model do
   end
 
   it "can populate an array of items and quantities" do
-    create(:item)
-    create(:item, id: 2)
-    create(:item, id: 3)
+#    create(:item)
+#    create(:item, id: 2)
+    create(:item, id: 1, title: "a", description: "grade a")
+    create(:item, id: 2, title: "b", description: "grade b")
+    create(:item, id: 3, title: "c", description: "grade c")
 
     result = cart.items_to_quantities
     expect(result).to eq([[Item.find(1), 1], [Item.find(2), 2], [Item.find(3), 1]])
