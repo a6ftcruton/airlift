@@ -138,7 +138,8 @@ describe 'authenticated user', type: :feature do
       expect(page).to have_content "Second Food"
   end
 
-end
+
+  end
 
 describe 'authenticated user order display page' do
     before do

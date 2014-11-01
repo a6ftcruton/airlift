@@ -25,6 +25,14 @@
           <div class="airlift-grid-cell well col-md-6">
             <h4><%= link_to "#{item.title}", item_path(item.id)  %></h4>
             <%= image_tag item.image.url(:medium) if item.image_file_name %><br/>
+
+        <%= form_tag(cart_add_item_path(item), method: :patch, remote: true) do %>
+          <span class="glyphicon glyphicon-plus"></span>
+          <%= label_tag "quantity" %>
+          <%= number_field_tag "quantity", 1 , min: 1, class:"text-size" %>
+          <%= submit_tag 'Add to cart', class: "btn btn-default btn-sm", id: "add_to_cart" %>
+        <% end %>
+
             <h6>Reviews - Average: <%= @average %></h6>
               </div>
         <% end %>
