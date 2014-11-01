@@ -1,0 +1,18 @@
+/Users/jessicag/.rvm/rubies/ruby-2.1.1/bin/ruby -r ./siteconf20141030-67568-6lm7v4.rb extconf.rb 
+checking for ruby/util.h... yes
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling bcrypt_ext.c
+compiling crypt.c
+compiling crypt_blowfish.c
+compiling crypt_gensalt.c
+compiling wrapper.c
+linking shared-object bcrypt_ext.bundle
+ld: warning: directory not found for option '-L/Users/travis/.sm/pkg/active/lib'
+
+make "DESTDIR=" install
+/usr/bin/install -m 0755 bcrypt_ext.bundle ./.gem.20141030-67568-141kfws
+installing default bcrypt_ext libraries
