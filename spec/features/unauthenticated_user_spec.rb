@@ -68,7 +68,6 @@ describe 'unauthenticated user', type: :feature do
       expect(page).to have_css '#category_list'
       within('#category_list') do
        expect(page).to have_content "First Aid"
-#        expect(page).to have_css "##{@first_aid_category.title.split.join('_')}"
       end
       find('#First_Aid').trigger('click')
       expect(page).to have_content "#{@first_aid_category.title}"
