@@ -9,8 +9,11 @@ describe 'vendor', type: :feature do
   end
 
   it 'views all vendor pages' do
-    visit root_path
-    click_on('Browse By Vendor')
+    visit '/'
+    within('.dropdown-menu') do
+      assert page.has_content?('Vendors')
+      click_link 'Vendors'
+    end
     expect(current_path).to eq vendors_path
     expect(page).to have_link('first store')
   end
