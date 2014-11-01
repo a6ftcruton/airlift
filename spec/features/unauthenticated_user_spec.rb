@@ -62,17 +62,15 @@ describe 'unauthenticated user', type: :feature do
       @item = create(:item, vendor: @vendor, title: 'Mickey band aids', categories: [@first_aid_category])
     end
 
-    xit "can browse items by category", js: true do
+    it "can browse items by category", js: true do
       visit items_path
       expect(page).to have_content "#{@item.title}"
       expect(page).to have_css '#category_list'
       within('#category_list') do
-        expect(page).to have_css "##{@first_aid_category.title.split.join('_')}"
+       expect(page).to have_content "First Aid"
+#        expect(page).to have_css "##{@first_aid_category.title.split.join('_')}"
       end
-      within("##{@first_aid_category.title.split.join('_')}") do
-      # save_and_open_page
-        click_link "#{@first_aid_category.title}"
-      end
+      find('#First_Aid').trigger('click')
       expect(page).to have_content "#{@first_aid_category.title}"
       expect(page).to have_content "#{@item.title}"
     end
