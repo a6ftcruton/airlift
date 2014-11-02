@@ -3,11 +3,17 @@
 <% end %>
 
 <%= form_for(@vendor) do |f|  %>
-  <%= f.label :name, "Name Your Store"  %><br>
+   
+  <%= f.label :name, "Name Your Store*"  %><br>
   <%= f.text_field :name, size: "80" %><br>
 
   <%= f.label :description, "Describe Your Store"  %><br>
   <%= f.text_area :description, size: "80x2" %><br>
+
+<h5>*We will use the name you enter for your store to automatically generate the url for your Airlift-hosted site:
+  <h6><strong>Example:</strong> Name: 'Bob's Relief Trombones'<strong> Website Address:</strong> airlift.com/bobs-relief-trombones</h6>
+
+
 
   <%= f.submit "Create My Store", class: "btn btn-lg create-store-btn"  %>
 
