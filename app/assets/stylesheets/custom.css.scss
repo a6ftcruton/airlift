@@ -1,19 +1,24 @@
 //Navbar Styling//
 .navbar-nav >.active > a:hover {
   background-color: #545454 !important;
-  color: #FFFFFF !important;
-}
-
-.navbar-nav {
-  color: white;
+  color: white !important;
 }
 
 .navbar-wrapper .container {
   padding-top: 40px;
 }
 
+.navbar-inverse a {
+  background-color: #303030 !important;
+  color: white !important;
+}
+
+.navbar-inverse ul {
+  color: #A62A2A;
+}
+
 a {
-  color: darkred !important;
+  color: #8E2323;
   text-decoration: none;
 }
 
