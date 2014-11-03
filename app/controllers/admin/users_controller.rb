@@ -40,7 +40,7 @@ class Admin::UsersController < Admin::BaseController
   def edit
     render 'edit_user_role'
   end
-
+  
   private
 
     def user_params
