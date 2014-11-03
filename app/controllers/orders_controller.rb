@@ -1,5 +1,6 @@
 class OrdersController < ApplicationController
 	load_and_authorize_resource
+  helper_method :find_vendor_name
 
 	def new
 		@order = Order.new
@@ -24,7 +25,7 @@ class OrdersController < ApplicationController
 
 	def show
 		@order = Order.includes(:items).find(params[:id])
-		@items = @order.items.group_by(&:id).values
+    @vendors = @order.group_by_vendor
 	end
 
 	private
@@ -32,4 +33,9 @@ class OrdersController < ApplicationController
 	def order_params
 		params.require(:order).permit(:street_number, :street, :city, :state, :zip, :exchange, :status)
 	end
+
+ def find_vendor_name(vendor_id)
+   Vendor.where(id: vendor_id).first.name
+ end
+
 end

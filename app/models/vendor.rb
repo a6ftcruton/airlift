@@ -14,4 +14,8 @@ class Vendor < ActiveRecord::Base
   def generate_slug(name_to_slug)
     name_to_slug.gsub(/'/, '').parameterize
   end
+
+  def find_vendor_name(vendor_id)
+    Vendor.where(id: vendor_id).first.name  
+  end
 end

@@ -45,4 +45,13 @@ class Order < ActiveRecord::Base
 
 	  self.user = current_user
   end
+
+  def order_total
+    self
+  end
+
+  def group_by_vendor
+    self.items.group_by(&:vendor_id)
+  end
+
 end

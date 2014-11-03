@@ -3,20 +3,54 @@
 
 	<div class="panel-heading"><h1>Completed Order</h1></div>
 		<div class="panel-body">
-			<% @items.each do |items| %>
-				<b>Items Ordered </b>
-				<div class="items">
-				<% item = items.first %>
-				<%= link_to item.title, item_path(item) %> <%= items.size %> <%= print_price(item.price * items.size) %><br/>
+			<% @vendors.each do |vendor, items| %>
+        <div class="well">
+        <table class="table">
+          <%#fail%>
+          <h2><%= find_vendor_name(vendor) %></h2>
+            <thead>
+              <tr class="success">
+                <th>Items</th>
+                <th>Quantity</th>
+                <th>Unit Price</th>
+                <th>Item Total</th>
+              </tr>
+            </thead>
+            <tbody>
+            <% items.uniq.each do |item| %>
+              <tr>
+                <td><%= link_to item.title, item_path(item) %></td> 
+                <td><%= items.uniq.size %></td>
+                <td><%= item.price %></td>
+                <td><%= print_price(item.price * items.uniq.size) %></td>
+              </tr>
+            <% end %>
+              <tr>
+                <td><td>
+                <th class="warning">Vendor Total:</th>
+                <td class="warning"><%= print_price(order_price(items)) %></td>
+              </tr>
+            </tbody>
+        </table>
+      </div>
 			<% end %>
 		</div>
-			<b>Price</b>
-			<div class="price">
-			 <%= print_price(order_price(@order.items)) %>
-			</div>
-			<b>Order Status: </b>
-			<div class="status">
-			<%= @order.status %>
+    <div class="well">
+      <table class="table">
+        <h2>Order Summary</h2>
+        <tr class="success">
+          <th>Order Total</th>
+          <th>Order Status</th>
+          <th>Estimated Delivery</th>
+        </tr>
+        <tbody>
+         <tr class="warning">
+           <td><h4><%= print_price(order_price(@order.items)) %></h4></td>
+           <td><h4><%= @order.status.capitalize %></h4></td>
+           <td><h4>delivery info</h4></td>
+        </tr>
+      </table>
+    </div>
 		</div>
 		</div>
 	</div>
