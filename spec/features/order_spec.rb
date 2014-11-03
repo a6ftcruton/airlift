@@ -33,14 +33,14 @@ describe 'authenticated user', type: :feature do
       first('#add_to_cart').click
       visit cart_edit_path
       within('#table') do
-        expect(page).to have_content 'Item' 
-        expect(page).to have_content 'Purchased from' 
-        expect(page).to have_content 'first vendor here' 
-        expect(page).to have_content 'second vendor here' 
-      end 
+        expect(page).to have_content 'Item'
+        expect(page).to have_content 'Purchased from'
+        expect(page).to have_content 'first vendor here'
+        expect(page).to have_content 'second vendor here'
+      end
     end
-  
+
   end
 
-  
+
 end
