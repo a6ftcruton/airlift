@@ -30,6 +30,7 @@ records:
     price: 34.99
     category_ids:
       - '<%= sprig_record(Category, 1).id %>'
+    vendor_id: '<%= sprig_record(Vendor, 1).id %>'
     image_file_name: "katadyn.jpg"
   - sprig_id: 5
     title: "MyBottle Water Microfilter White Splash 2"

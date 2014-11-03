@@ -147,7 +147,8 @@ describe 'authenticated user,', type: :feature do
       expect(page).to have_content "Second Food"
   end
 
-end
+
+  end
 
 describe 'authenticated user order display page' do
     before do
@@ -171,7 +172,7 @@ describe 'authenticated user order display page' do
 
     it 'shows line-item subtotals' do
       click_on '2'
-      expect(page).to have_content 'Second Food 1 $1.00'
+      expect(page).to have_content '$1.00'
     end
 
     it 'links to each item description' do
@@ -188,10 +189,7 @@ describe 'authenticated user order display page' do
 
     it 'shows total order price' do
       click_on '5'
-      expect(page).to have_content "Price $1.00"
+      expect(page).to have_content "$1.00"
     end
 
-    it 'shows date and time order was submitted'
-    it 'shows timestamp when order was completed'
-    it 'shows timestamp when order was cancelled'
 end

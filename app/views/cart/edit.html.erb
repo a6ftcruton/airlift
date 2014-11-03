@@ -2,10 +2,17 @@
   <div class="panel panel-default">
     <div class="panel-heading"><h1>Your Cart</h1></div>
       <table class="table">
+        <% unless cart.items.empty? %>
+        <th>Item</th>
+        <th>Purchased from</th>
+        <th></th>
+        <th>Quantity</th>
+        <th>Item total</th>
         <tbody>
         <% cart.items_to_quantities.each do |item, quantity| %>
           <tr id='<%= "item_#{item.id}" %>'>
             <td><%= item.title %></td>
+            <td><%= item.vendor.name %><td>
               <td><%= form_tag(cart_update_quantity_path(item), method: :patch, remote: true, style: 'display:inline;') do %>
                 <%= number_field_tag "quantity", quantity, min: 0, class: "text-size" %>
                 <%= submit_tag "update quantity", class: "btn btn-grey3 btn-sm", id: 'update_quantity' %>
@@ -18,6 +25,7 @@
           </tr>
         </tbody>
         <% end %>
+      <% end %>
       </table>
     </div>
     <%= link_to 'Clear My Cart', cart_destroy_path, method: :delete, class: "btn btn-grey4 btn-sm" %>
