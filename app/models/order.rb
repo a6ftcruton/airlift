@@ -47,12 +47,17 @@ class Order < ActiveRecord::Base
 	  self.user = current_user
   end
 
-  def order_total
-    self
-  end
-
   def group_by_vendor
     self.items.group_by(&:vendor_id)
   end
 
+  def create_vendor_orders
+    self.group_by_vendor.each do |vendor_id, items|
+      vendor_order = VendorOrder.create(
+        vendor_id: vendor_id,
+        order_id: self.id, 
+        items: items
+      )
+    end
+  end
 end

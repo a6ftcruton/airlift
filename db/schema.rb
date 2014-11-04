@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141104011323) do
+ActiveRecord::Schema.define(version: 20141104171721) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -100,11 +100,21 @@ ActiveRecord::Schema.define(version: 20141104011323) do
     t.string   "role",            default: "user"
   end
 
+  create_table "vendor_order_items", force: true do |t|
+    t.integer  "vendor_order_id"
+    t.integer  "item_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "vendor_orders", force: true do |t|
     t.integer  "order_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "vendor_id"
   end
+
+  add_index "vendor_orders", ["vendor_id"], name: "index_vendor_orders_on_vendor_id", using: :btree
 
   create_table "vendors", force: true do |t|
     t.string   "name"

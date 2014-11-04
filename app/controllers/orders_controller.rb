@@ -16,7 +16,9 @@ class OrdersController < ApplicationController
     cart.clear
 
 		if order.save
-			flash[:notice] = "Your order has been successfully created!"
+      order.create_vendor_orders
+      flash[:notice] = "Your order has been successfully created!"
+
 			redirect_to order
 		else
 			flash[:notice] = "Error placing order"
