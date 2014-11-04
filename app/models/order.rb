@@ -5,6 +5,7 @@ class Order < ActiveRecord::Base
   belongs_to :user
   has_many :line_items
   has_many :items, through: :line_items
+  has_many :vendor_orders
 
   validates :items, presence: true, on: :create
   validates :user, presence: true

@@ -1,6 +1,5 @@
 class OrdersController < ApplicationController
 	load_and_authorize_resource
-  after_create :vendor_orders
   helper_method :find_vendor_name
 
 
@@ -13,7 +12,7 @@ class OrdersController < ApplicationController
 
 	def create
     order = Order.new(order_params)
-    @vendor_orders = order.populate(cart, current_user)
+    order.populate(cart, current_user)
     cart.clear
 
 		if order.save
@@ -38,12 +37,6 @@ class OrdersController < ApplicationController
 
  def find_vendor_name(vendor_id)
    Vendor.where(id: vendor_id).first.name
- end
-
- def vendor_orders
-   @vendor_orders.group_by_vendor
-   @vendor_orders.each do |vendor, items|
-
  end
 
 end
