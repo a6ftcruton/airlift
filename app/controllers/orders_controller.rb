@@ -1,6 +1,7 @@
 class OrdersController < ApplicationController
 	load_and_authorize_resource
   helper_method :find_vendor_name
+	# scope :managed_by_user, ->(user) { includes(:user).where(users: { vendor_id: user }) }
 
 	def new
 		@order = Order.new

@@ -5,6 +5,11 @@ class Ability
   def initialize( user )
     user ||= User.new(role: nil)
 
+    # can :manage, Order, Order.managed_by_user(user.id) do |order|
+    #    order.user.vendor_id == user.id
+    #  end
+    # can :manage, Item if user.admin?
+    # can :manage, Category if user.admin?
     if user.is? :admin
       can :manage, :all
     elsif user.is? :store_admin
