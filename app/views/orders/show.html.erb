@@ -20,9 +20,9 @@
             <% items.uniq.each do |item| %>
               <tr>
                 <td><%= link_to item.title, item_path(item) %></td> 
-                <td><%= items.uniq.size %></td>
-                <td><%= item.price %></td>
-                <td><%= print_price(item.price * items.uniq.size) %></td>
+                <td><%= items.size %></td>
+                <td><%= print_price(item.price) %></td>
+                <td><%= print_price(item.price * items.size) %></td>
               </tr>
             <% end %>
               <tr>
