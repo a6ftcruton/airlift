@@ -5,7 +5,7 @@ class ItemsController < ApplicationController
   before_action :item_rating, only: [:index, :show]
 
 	def index
-    @items = Item.active
+    @items = Item.active.includes(:categories)
     @categories = Category.all
   end
 

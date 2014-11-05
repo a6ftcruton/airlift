@@ -3,14 +3,14 @@ class UsersController < ApplicationController
 
   def new
   end
-  
+
   def create
     @user = User.new(user_params)
 
     if @user.save
       flash[:notice] = "Your account was successfully created!"
       session[:user_id] = @user.id
-      redirect_to items_path
+      redirect_to items_path(vendor.slug)
     else
       flash[:error] = "Please be sure to include a name and a valid email."
       render :new
@@ -29,7 +29,7 @@ class UsersController < ApplicationController
     if @user.save
       flash[:notice] = "Your profile has been updated."
       session[:user_id] = @user.id
-      redirect_to edit_user_path(@user)
+      redirect_to edit_user_path(vendor.slug, @user)
     else
       flash[:error] = @user.errors.full_messages.join(', ')
       render :edit

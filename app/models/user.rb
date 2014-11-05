@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
-
   has_many :orders
   has_many :reviews
+  belongs_to :vendor
 
   has_secure_password
 
@@ -23,7 +23,7 @@ class User < ActiveRecord::Base
     "#{first_name + ' ' + last_name}".strip
   end
 
-    def is?(requested_role)
+  def is?(requested_role)
     self.role.to_s == requested_role.to_s
   end
 

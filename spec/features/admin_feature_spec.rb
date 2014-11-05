@@ -4,6 +4,9 @@ Capybara.default_wait_time = 5
 
 describe 'admin user', type: :feature do
 
+	let(:vendor) do |vendor|
+		create(:vendor)
+	end
 	before do
 		@user = create(:user, first_name: 'joe', email: 'abc@example.com', password: 'asdf', password_confirmation: 'asdf', role:'admin')
     visit '/'
@@ -11,7 +14,7 @@ describe 'admin user', type: :feature do
     fill_in 'password', with: "#{@user.password}"
     click_on 'login'
 	end
-
+	
 	it 'has a role of admin' do
 		visit '/'
 		expect(page).to have_content("Admin Dashboard")
@@ -24,25 +27,25 @@ describe 'admin user', type: :feature do
 		fill_in 'password', with: "#{@user.password}"
 		click_on 'login'
 		expect(page).to have_content("Administrator")
-		expect(current_path).to eq admin_path
+		expect(current_path).to eq admin_path(vendor.slug)
 		expect(page).to have_content "Site Administrator Dashboard"
 	end
 
 describe 'admin dashboard' do
 
 		it 'has link to create new items' do
-		  visit admin_path
+		  visit admin_path(vendor.slug)
 			expect(page).to have_content('Site Administrator Dashboard')
 			expect(page).to have_content('Create A New Menu Item')
 		end
 
 		it 'has link to manage users' do
-			visit admin_path
+			visit admin_path(vendor.slug)
 			expect(page).to have_content('View Current Users')
 		end
 
 		it 'has link to manage orders' do
-			visit admin_path
+			visit admin_path(vendor.slug)
 			expect(page).to have_content('View Current Orders')
 		end
 	end

@@ -11,7 +11,7 @@ class ReviewsController < ApplicationController
   	review.user_id = current_user.id
   	review.item_id = @item_id
   	review.save
-  	redirect_to item_path(@item_id)
+  	redirect_to item_path(vendor.slug, @item_id)
   end
 
   def edit

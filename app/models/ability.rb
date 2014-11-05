@@ -13,9 +13,9 @@ class Ability
     if user.is? :admin
       can :manage, :all
     elsif user.is? :store_admin
-      can :manage, Item, organization_id: user.organization.id
+      can :manage, Item, vendor_id: user.vendor.id
       can :manage, Category
-      can :manage, User, manager_id: user.id
+      can :manage, User, vendor_id: user.id
       cannot :manage, User, self_managed: true
       can :manage, User, id: user.id
     elsif user.is? :user

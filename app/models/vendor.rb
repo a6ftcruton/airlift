@@ -1,5 +1,6 @@
 class Vendor < ActiveRecord::Base
   has_many :items
+  has_many :users
   before_save :set_default_slug
 
   validates :name, presence: true #, uniqueness: true <- this blows up lots of tests?
@@ -8,7 +9,7 @@ class Vendor < ActiveRecord::Base
   private
 
   def set_default_slug
-    self.slug ||= generate_slug(self.name) 
+    self.slug ||= generate_slug(self.name)
   end
 
   def generate_slug(name_to_slug)
@@ -16,6 +17,6 @@ class Vendor < ActiveRecord::Base
   end
 
   def find_vendor_name(vendor_id)
-    Vendor.where(id: vendor_id).first.name  
+    Vendor.where(id: vendor_id).first.name
   end
 end

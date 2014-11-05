@@ -10,7 +10,6 @@ class SessionsController < ApplicationController
     else
       flash[:errors] = "Invalid Login"
       redirect_to root_path
-      # render :new
     end
   end
 
@@ -22,8 +21,14 @@ class SessionsController < ApplicationController
 
   private
 
-    def correct_destination(user)
-      user.is?('admin') ? admin_path : items_path
+  def correct_destination(user)
+    if user.is?('admin') && user.vendor
+      admin_path(user.vendor.slug)
+    elsif user.is?('admin')
+      platform_admin_path
+    else
+      vendor_path(user.vendor.slug)
     end
+  end
 
 end

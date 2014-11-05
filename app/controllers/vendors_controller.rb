@@ -6,9 +6,9 @@ class VendorsController < ApplicationController
 
   def show
     @categories = Category.all
-    @vendor = Vendor.find(params[:id])
+    # @vendor = Vendor.find(params[:id])
   end
-  
+
   def new
     @vendor = Vendor.new()
   end

@@ -6,14 +6,14 @@
 </div>
 
     <div class="container marketing", style="padding:0px">
-      <h1 style="text-align:center">Most Popular Menu Items</h1><br/>
+      <h1 style="text-align:center">Most Popular Items</h1><br/>
       <% @top_three.each do |item| %>
         <div class="row">
         <div class="col-lg-4">
           <%= image_tag item.image.url(:medium), class: "img-circle featurette" if item.image_file_name %>
           <h2><%= item.title %></h2>
           <p><%= item.description %></p>
-          <p><%= link_to "View details »", item_path(item), class: "btn btn-default" %></p>
+          <p><%= link_to "View details »", item_path(item.vendor.slug, item), class: "btn btn-default" %></p>
         </div>
       <% end %>
     </div>

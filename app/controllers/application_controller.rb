@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  attr_reader :vendor
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :null_session
@@ -8,6 +9,8 @@ class ApplicationController < ActionController::Base
   end
 
   after_filter :save_cart_in_session
+
+  before_action :set_vendor
 
   private
 
@@ -29,4 +32,7 @@ class ApplicationController < ActionController::Base
       session[:cart] = cart.to_a
     end
 
+    def set_vendor
+      @vendor = Vendor.where(slug: params[:store_slug]).first
+    end
 end
