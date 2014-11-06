@@ -4,7 +4,7 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>You have received a new order from <%= @user.email %>!</h1>
+    <h2>You have received a new order from <%= @user.email %>!</h2>
     <div>
       <h2>Order Information:</h2>
       <table class="table">
@@ -38,10 +38,12 @@
           </tr>
           <%# @vendor_order.group_by_id  %>
           <% @vendor_order.line_items.map do |line_item| %>
+            <%# @vendor_order.line_item_groups.map do |group| %>
+            <%#= require 'pry'; binding.pry %>
           <tbody>
             <td><%= line_item.item.title %></td>
-            <td><%= line_item.id %></td>
-            <td><%= line_item.item.count %></td>
+            <td><%= line_item.item.id %></td>
+            <td>1</td>
             <td><%= line_item.item.price %></td><br/>
         </tbody>
       <% end %>
@@ -49,9 +51,9 @@
   </div>
       <% if @order.exchange == "delivery" %>
         <div>
-            <h2>Customer Address</h2>
-            <p><%= @order.street_number @order.street %></p>
-            <p><%= @order.city @order.state @order.zip %></p>
+            <h2>Customer Shipping Address</h2>
+            <p><%= @order.street_number %>&nbsp<%= @order.street %></p>
+            <p><%= @order.city %>&nbsp<%= @order.state %>&nbsp<%= @order.zip %></p>
         </div>   
       <% end %>
   </body>
