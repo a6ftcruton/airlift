@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>You have received a new order from <%= @user.email %>!</h1>
+    <div>
+      <h2>Order Information:</h2>
+      <table class="table">
+        <tr>
+          <th>Order ID</th>
+          <th>Order Date</th>
+          <th>Ordered from</th>
+          <th>Status</th>
+          <th>Exchange Method</th>
+        </tr>
+        <tbody>
+          <tr>
+            <th><%= @order.id %></th>
+            <th><%= Time.now.to_datetime %></th>
+            <th><%= "airlift.com/#{ @vendor_order.vendor.slug}" %></th> 
+            <th><%= @order.status %></th>
+            <th><%= @order.exchange %></th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div>
+      <h2>Items Ordered:</h2>
+        <table class="table">
+          <tr>
+            <th>Item</th>
+            <th>Item ID</th>
+            <th>Quantity</th>
+            <th>Unit Price</th>
+          </tr>
+          <%# @vendor_order.group_by_id  %>
+          <% @vendor_order.line_items.map do |line_item| %>
+          <tbody>
+            <td><%= line_item.item.title %></td>
+            <td><%= line_item.id %></td>
+            <td><%= line_item.item.count %></td>
+            <td><%= line_item.item.price %></td><br/>
+        </tbody>
+      <% end %>
+    </table>
+  </div>
+      <% if @order.exchange == "delivery" %>
+        <div>
+            <h2>Customer Address</h2>
+            <p><%= @order.street_number @order.street %></p>
+            <p><%= @order.city @order.state @order.zip %></p>
+        </div>   
+      <% end %>
+  </body>
+</html>

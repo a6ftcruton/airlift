@@ -85,14 +85,4 @@ Rails.application.configure do
     },
     :fog_directory => ENV["S3_BUCKET_NAME"]
   }
-
-  ActionMailer::Base.smtp_settings = {
-  :user_name => ENV['SG_USERNAME'],
-  :password => ENV['SG_PASSWORD'],
-  :domain => 'localhost:3000',
-  :address => 'smtp.sendgrid.net',
-  :port => 587,
-  :authentication => :plain,
-  :enable_starttls_auto => true
-}
   end

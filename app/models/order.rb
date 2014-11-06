@@ -5,7 +5,6 @@ class Order < ActiveRecord::Base
   belongs_to :user
   has_many :line_items
   has_many :items, through: :line_items
-  has_many :vendor_orders
 
   validates :items, presence: true, on: :create
   validates :user, presence: true
@@ -48,16 +47,17 @@ class Order < ActiveRecord::Base
   end
 
   def group_by_vendor
-    self.items.group_by(&:vendor_id)
+    self.items.group_by(&:vendor)
   end
 
-  def create_vendor_orders
-    self.group_by_vendor.each do |vendor_id, items|
-      vendor_order = VendorOrder.create(
-        vendor_id: vendor_id,
-        order_id: self.id, 
-        items: items
-      )
+  def vendor_order_items
+    self.line_items.group_by(&:vendor)
+  end
+
+  def vendor_orders
+    vendor_order_items.map do |key, value|
+      VendorOrder.new(self, key, value)
     end
   end
+
 end

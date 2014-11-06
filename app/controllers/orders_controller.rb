@@ -16,9 +16,12 @@ class OrdersController < ApplicationController
     cart.clear
 
 		if order.save
-      order.create_vendor_orders
-      flash[:notice] = "Your order has been successfully created!"
+      vendor_orders = order.vendor_orders
+      vendor_orders.each do |vendor_order|
+        VendorNotifier.new_order_notification(current_user, order, vendor_order).deliver
+      end
 
+      flash[:notice] = "Your order has been successfully created!"
 			redirect_to order
 		else
 			flash[:notice] = "Error placing order"
