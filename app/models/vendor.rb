@@ -7,6 +7,10 @@ class Vendor < ActiveRecord::Base
   validates :name, presence: true #, uniqueness: true <- this blows up lots of tests?
   validates :slug, uniqueness: true
 
+  # def vendor_items
+  #   @vendor_items = Vendor.find_by(slug: "responder").items
+  # end
+
   private
 
   def set_default_slug
