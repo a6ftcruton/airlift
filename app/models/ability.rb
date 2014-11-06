@@ -7,6 +7,13 @@ class Ability
 
     if user.is? :admin
       can :manage, :all
+    elsif user.is? :store_admin
+      can :manage, Item
+      can :manage, Category
+      can :manage, Order
+      can :manage, Review
+      can :manage, User, id: user.id
+      can :manage, User, vendor_id: user.id
     elsif user.is? :user
       can :read, Item
       can :read, Category
