@@ -2,6 +2,7 @@ class OrdersController < ApplicationController
 	load_and_authorize_resource
   helper_method :find_vendor_name
 
+
 	def new
 		@order = Order.new
 	end
@@ -10,12 +11,17 @@ class OrdersController < ApplicationController
 	end
 
 	def create
-		order = Order.new(order_params)
+    order = Order.new(order_params)
     order.populate(cart, current_user)
     cart.clear
 
 		if order.save
-			flash[:notice] = "Your order has been successfully created!"
+      vendor_orders = order.vendor_orders
+      vendor_orders.each do |vendor_order|
+        VendorNotifier.new_order_notification(current_user, order, vendor_order).deliver
+      end
+
+      flash[:notice] = "Your order has been successfully created!"
 			redirect_to order
 		else
 			flash[:notice] = "Error placing order"
@@ -39,3 +45,4 @@ class OrdersController < ApplicationController
  end
 
 end
+

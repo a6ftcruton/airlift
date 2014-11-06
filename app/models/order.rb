@@ -46,12 +46,18 @@ class Order < ActiveRecord::Base
 	  self.user = current_user
   end
 
-  def order_total
-    self
+  def group_by_vendor
+    self.items.group_by(&:vendor)
   end
 
-  def group_by_vendor
-    self.items.group_by(&:vendor_id)
+  def vendor_order_items
+    self.line_items.group_by(&:vendor)
+  end
+
+  def vendor_orders
+    vendor_order_items.map do |key, value|
+      VendorOrder.new(self, key, value)
+    end
   end
 
 end

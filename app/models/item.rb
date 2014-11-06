@@ -6,6 +6,8 @@ class Item < ActiveRecord::Base
   has_many :line_items
   has_many :orders, through: :line_items
   has_many :reviews
+  has_many :vendor_order_items 
+  has_many :vendor_orders, through: :vendor_order_items
 	belongs_to :vendor
 
 	has_many :item_categories
