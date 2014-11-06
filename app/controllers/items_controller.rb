@@ -12,7 +12,7 @@ class ItemsController < ApplicationController
 	def show
     @categories = @item.categories
 	end
-
+  
   private
 
     def set_item

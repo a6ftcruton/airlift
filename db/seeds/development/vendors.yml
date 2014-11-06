@@ -22,7 +22,7 @@ records:
     description: "Power tools to help speed rebuilding and recovery efforts."
   - sprig_id: 8
     name: "Assembly Generator Supplies"
-    description: "Generators and backup power systems."    
+    description: "Generators and backup power systems."
   - sprig_id: 9
     name: "Courier Emergency Medical"
     description: "Medical supplies meant for doctors who work in the field."
