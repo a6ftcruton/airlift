@@ -13,7 +13,7 @@ class Ability
       can :manage, Order
       can :manage, Review
       can :manage, User, id: user.id
-      can :manage, User, vendor_id: user.id
+      can :manage, Vendor, vendor_id: user.vendor_id
     elsif user.is? :user
       can :read, Item
       can :read, Category
