@@ -7,13 +7,6 @@ Rails.application.routes.draw do
   patch 'cart/update_quantity/:id', to: 'cart#update_quantity', as: 'cart_update_quantity'
   delete 'cart/destroy'
 
-  # /my_tap_shoes/items/6
-  #namespace ':store_slug' do
-  #  resources :items
-  #end
-  #get ':store_slug/items', to: 'items#index'
-  #get ':store_slug/items/:id', to: 'items#show'
-
   namespace :admin do
     get '', to: 'dashboard#index'
     resources :items, except: [:index]
@@ -53,4 +46,13 @@ Rails.application.routes.draw do
 
   match '/contacts',     to: 'contacts#new',             via: 'get'
   resources "contacts", only: [:new, :create]
+
+  get '/:slug', to: 'vendors#show'
+
+  # /my_tap_shoes/items/6
+  # namespace ':slug' do
+  #  resources :items
+  # end
+  # get ':slug/items', to: 'items#index'
+  # get ':slug/items/:id', to: 'items#show'
 end
