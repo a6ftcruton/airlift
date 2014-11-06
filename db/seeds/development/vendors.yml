@@ -2,40 +2,30 @@ records:
   - sprig_id: 1
     name: "Above the Flood"
     description: "Flood and water damage prevention, mitigation, and restoration."
-    vendor_id: '<%= sprig_record(Vendor, 1).id %>'
   - sprig_id: 2
     name: "Real Relief"
     description: "Delivering the emergency supplies you'll need on the ground the moment disaster ends and recovery begins."
-    vendor_id: '<%= sprig_record(Vendor, 2).id %>'
   - sprig_id: 3
     name: "Responder"
     description: "Medical supplies necessary for the emergencies you cannot predict but will need to be ready for."
-    vendor_id: '<%= sprig_record(Vendor, 3).id %>'
   - sprig_id: 4
     name: "Doomsday Preppers"
     description: "Don't prepare for the disaster you think is coming--prepare for the worst."
-    vendor_id: '<%= sprig_record(Vendor, 4).id %>'
   - sprig_id: 5
     name: "Gimme Shelter"
     description: "Keep the elements out. Offering top-of-the-line primitive, survival, and long-term disaster housing."
-    vendor_id: '<%= sprig_record(Vendor, 5).id %>'
   - sprig_id: 6
     name: "Danger Zone"
     description: "Signs and organizational tools to bring order to places like refugee camps and communities recovering from catastrophic disasters."
-    vendor_id: '<%= sprig_record(Vendor, 6).id %>'
   - sprig_id: 7
     name: "Power Play"
     description: "Power tools to help speed rebuilding and recovery efforts."
-    vendor_id: '<%= sprig_record(Vendor, 7).id %>'
   - sprig_id: 8
     name: "Assembly Generator Supplies"
     description: "Generators and backup power systems."
-    vendor_id: '<%= sprig_record(Vendor, 8).id %>'
   - sprig_id: 9
     name: "Courier Emergency Medical"
     description: "Medical supplies meant for doctors who work in the field."
-    vendor_id: '<%= sprig_record(Vendor, 9).id %>'
   - sprig_id: 10
     name: "Duct Tape Depot"
     description: "You need it more than anything for everything."
-    vendor_id: '<%= sprig_record(Vendor, 10).id %>'
