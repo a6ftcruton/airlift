@@ -29,7 +29,7 @@
                 <% @vendor.items.each do |item| %>
                   <div class="grid-item <%= item.categories.reduce('') { |sum, category| sum + category.to_s + ' '}.strip %>" id="item_<%= item.id %>">
                     <%= image_tag item.image.url(:medium) if item.image_file_name %><br/>
-                    <%= link_to item.title, item_path(item) %><br/>
+                    <%= link_to item.title, vendor_item_path(@vendor.slug,item) %><br/>
                     <%= print_price(item.price) %><br/>
                     <h4><%= item.vendor_id %></h4>
                     <%= form_tag(cart_add_item_path(item), method: :patch, remote: true) do %>
