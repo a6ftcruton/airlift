@@ -49,16 +49,9 @@ Rails.application.routes.draw do
 
   get ':slug', to: 'vendors#show'
 
-  # scope ':slug' do
-  #   get '/', to: 'vendors#show'
-  #   resources :items, only: [:index, :show]
-  # end
+  scope ':slug' do
+    get '/', to: 'vendors#show'
+    resources :items, only: [:show], as: "vendor_item"
+  end
 
-
-  # /my_tap_shoes/items/6
-  # namespace ':slug' do
-  #  resources :items
-  # end
-  # get ':slug/items', to: 'items#index'
-  # get ':slug/items/:id', to: 'items#show'
 end
