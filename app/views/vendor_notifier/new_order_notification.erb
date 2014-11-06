@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h2>You have received a new order from <%= @user.email %>!</h2>
+    <div>
+      <h2>Order Information:</h2>
+      <table class="table">
+        <tr>
+          <th>Order ID</th>
+          <th>Order Date</th>
+          <th>Ordered from</th>
+          <th>Status</th>
+          <th>Exchange Method</th>
+        </tr>
+        <tbody>
+          <tr>
+            <th><%= @order.id %></th>
+            <th><%= Time.now.to_datetime %></th>
+            <th><%= "airlift.com/#{ @vendor_order.vendor.slug}" %></th> 
+            <th><%= @order.status %></th>
+            <th><%= @order.exchange %></th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div>
+      <h2>Items Ordered:</h2>
+        <table class="table">
+          <tr>
+            <th>Item</th>
+            <th>Item ID</th>
+            <th>Quantity</th>
+            <th>Unit Price</th>
+          </tr>
+          <%# @vendor_order.group_by_id  %>
+          <% @vendor_order.line_items.map do |line_item| %>
+            <%# @vendor_order.line_item_groups.map do |group| %>
+            <%#= require 'pry'; binding.pry %>
+          <tbody>
+            <td><%= line_item.item.title %></td>
+            <td><%= line_item.item.id %></td>
+            <td>1</td>
+            <td><%= line_item.item.price %></td><br/>
+        </tbody>
+      <% end %>
+    </table>
+  </div>
+      <% if @order.exchange == "delivery" %>
+        <div>
+            <h2>Customer Shipping Address</h2>
+            <p><%= @order.street_number %>&nbsp<%= @order.street %></p>
+            <p><%= @order.city %>&nbsp<%= @order.state %>&nbsp<%= @order.zip %></p>
+        </div>   
+      <% end %>
+  </body>
+</html>

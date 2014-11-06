@@ -1,5 +1,7 @@
 class Vendor < ActiveRecord::Base
   has_many :items
+  has_many :vendor_orders
+
   before_save :set_default_slug
 
   validates :name, presence: true #, uniqueness: true <- this blows up lots of tests?
