@@ -1,11 +1,11 @@
 class Admin::DashboardController < Admin::BaseController
 
   def index
-    @items = Item.accessible_by(current_ability)
+    if current_user.is?('admin')
+      @items = Item.all
+    else
+      @vendor = Vendor.find(current_user.vendor_id)
+      @items = @vendor.items
+    end
   end
-
-  #review Items by accessibility; can only see items per vendor id
-  #only show orders for the vendor
-
-
 end

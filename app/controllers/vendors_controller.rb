@@ -4,9 +4,19 @@ class VendorsController < ApplicationController
     @vendors = Vendor.all
   end
 
+  # def show
+  #   @categories = Category.all
+  #   @vendor = Vendor.find_by(slug: params[:slug])
+  # end
+
   def show
     @categories = Category.all
-    @vendor = Vendor.find_by(slug: params[:slug])
+  	@vendor = Vendor.where(slug: params[:slug]).first
+  	if @vendor
+  		render :show
+  	else
+  		redirect_to root_path
+  	end
   end
 
   def new

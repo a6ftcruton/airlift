@@ -33,7 +33,7 @@ describe 'admin dashboard' do
 		it 'has link to create new items' do
 		  visit admin_path
 			expect(page).to have_content('Site Administrator Dashboard')
-			expect(page).to have_content('Create A New Menu Item')
+			expect(page).to have_content('Create A New Item')
 		end
 
 		it 'has link to manage users' do
@@ -50,7 +50,7 @@ describe 'admin dashboard' do
 	it 'can create item listings' do
 		small_plates_category = create(:category, title: 'Small Plates')
 		visit '/admin'
-		click_on('Create A New Menu Item')
+		click_on('Create A New Item')
 		expect(page).to have_content("Create New Item")
 		fill_in 'Title', with: "Test Item"
 		fill_in 'Description', with: "Test Description"
