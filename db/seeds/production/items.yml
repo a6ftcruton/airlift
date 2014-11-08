@@ -251,7 +251,7 @@ records:
     price: 14.95
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 3).id %>'
-    image_file_name: "gauze.jpg"
+    image_file_name: "kendall.jpg"
   - sprig_id: 33
     title: "BSN Medical Tensoplast Elastic Adhesive Bandage, 4in. x 5 yd."
     description: "Its Superior Stretch and Regain Feature Provides Firm, Controlled Compression and Support. The Porous Adhesive Of This Bandage Helps Prevent Skin Maceration. Fluffy Non-Fray Edges Prevents The Bandage from Rucking Or Marking. High Adhesive Property. Air Permeable. Provides Strong Compression and Long Term Support."
@@ -321,7 +321,7 @@ records:
     price: 119.95
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 4).id %>'
-    image_file_name: "food_storage.jpg"
+    image_file_name: "food_storage.jpeg"
   - sprig_id: 43
     title: "Brunton Hydrogen Reactor Portable Power Pack Black"
     description: "Features of the Brunton Hydrogen Reactor Portable Fuel Cell Live Swappable Energy Just exchange empty for full and keep charging without waiting, ideal for disaster readiness; solid state with no natural discharge Environmentally Safe No toxic chemicals. OUTPUT Standard USB"
