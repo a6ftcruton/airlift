@@ -60,7 +60,7 @@ class Order < ActiveRecord::Base
     end
   end
   
-  def text_customer
+  def text_customer(order)
     customer_phone_number = "3034789928" # in production, change to match @user.phone_number
 
     twilio_sid = ENV["TWILIO_SID"] 
@@ -72,8 +72,7 @@ class Order < ActiveRecord::Base
     @twilio_client.account.sms.messages.create(
       from: twilio_phone_number,
       to: customer_phone_number,
-      body: "Confirm Your GPS location for AirDrop Delivery.  http://maps.google.com",
-      media_url: "http://mapgs.google.com"
+      body: "Airlift order #{order.id} confirmation. Help is on the way!"
     )
   end
 end

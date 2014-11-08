@@ -16,7 +16,7 @@ class OrdersController < ApplicationController
     cart.clear
 
 		if order.save
-      order.text_customer
+      order.text_customer(order)
       vendor_orders = order.vendor_orders
       vendor_orders.each do |vendor_order|
         VendorNotifier.new_order_notification(current_user, order, vendor_order).deliver

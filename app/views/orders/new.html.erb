@@ -26,5 +26,16 @@
       	<%= f.select :exchange, ['pickup', 'delivery'], :selected => 'pickup' %>
     	<%= f.submit class: "btn btn-grey1"%>
     <% end %>
+  </div>
 </div>
+<div class="container exchange-container">
+  <%= render partial: "pickup" %>
+  <%= render partial: "delivery" %>
+  <div id="map-container">
+    <div id="map-canvas"></div>
+  </div>
 </div>
+
+
+
+
