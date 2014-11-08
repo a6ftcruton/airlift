@@ -5,14 +5,19 @@ class ItemsController < ApplicationController
   before_action :item_rating, only: [:index, :show]
 
 	def index
-    @items = Item.active
-    @categories = Category.all
+    if params[:query].present?
+      @items = Item.search(params[:query], load: true)
+      @categories = Category.all
+    else
+      @items = Item.active
+      @categories = Category.all
+    end
   end
 
 	def show
     @categories = @item.categories
 	end
-  
+
   private
 
     def set_item

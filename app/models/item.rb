@@ -1,4 +1,9 @@
+# require 'elasticsearch/model'
 class Item < ActiveRecord::Base
+	# include Elasticsearch::Model
+	# include Elasticsearch::Model::Callbacks
+	searchkick autocomplete: ['title']
+
 	validates :title, presence: true, uniqueness: true
 	validates :description, presence: true
 	validates :price, numericality: { greater_than: 0 }
@@ -6,7 +11,7 @@ class Item < ActiveRecord::Base
   has_many :line_items
   has_many :orders, through: :line_items
   has_many :reviews
-  has_many :vendor_order_items 
+  has_many :vendor_order_items
   has_many :vendor_orders, through: :vendor_order_items
 	belongs_to :vendor
 
@@ -17,6 +22,15 @@ class Item < ActiveRecord::Base
 	validates_attachment :image, content_type: {content_type: ["image/jpeg", "image/jpeg", "image/png", "image/gif"]}
 
 	scope :active, -> {where(active: true)}
+
+	# Item.import
+	# def self.search(params)
+	# 	tire.search(load: true) do
+	# 		query { string params[:query] } if params[:query].present?
+	# 	end
+	# end
+	#
+	# @items = Item.search('foobar').records
 
 	def active?
 		self.active == true
