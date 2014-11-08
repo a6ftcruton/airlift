@@ -33,6 +33,7 @@ Rails.application.routes.draw do
   post 'items/:item_id/review', to: 'reviews#create', as: 'reviews'
   get 'items/:item_id/review/:id', to: 'reviews#edit', as: 'edit_review'
   patch 'items/:item_id/review/:id', to: 'reviews#update', as: 'review_update'
+  get 'items', to: 'items#search', as: 'search_results'
   #resources :reviews, only: [:update]
 
   get '/menu', to: 'pdf#menu', as: 'menu'

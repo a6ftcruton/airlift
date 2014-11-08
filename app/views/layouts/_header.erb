@@ -24,15 +24,14 @@
                 <li><a href="/items">Items</a></li>
               </ul>
             </li>
-          <form class="navbar-form navbar-left" role="search">
+
             <div class="form-group">
-              <%= form_tag items_path, class: "form-inline", method: :get do %>
-              <%= text_field_tag :query, params[:query], class: "form-control" %>
-              <%= submit_tag "Search", name: nil, class: "bt btn-grey4" %>
-              <% end %>
+               <%= form_tag :controller => 'items', :action => 'search', :method => 'get' do %>
+                 <%= text_field_tag :search, params[:search], :id => 'search_field' %>
+                 <%= submit_tag "Search", :name => nil, class: 'btn btn-grey4'%>
+               <% end %>
             </div>
             <!-- <button type="submit" class="btn btn-default">Submit</button> -->
-          </form>
           <% if can? :create, @item %>
                 <li class="active"><%= link_to "Admin Dashboard", admin_path %></li>
           <% end %>

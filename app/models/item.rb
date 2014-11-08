@@ -2,7 +2,7 @@
 class Item < ActiveRecord::Base
 	# include Elasticsearch::Model
 	# include Elasticsearch::Model::Callbacks
-	searchkick autocomplete: ['title']
+	# searchkick autocomplete: ['title']
 
 	validates :title, presence: true, uniqueness: true
 	validates :description, presence: true
@@ -31,6 +31,11 @@ class Item < ActiveRecord::Base
 	# end
 	#
 	# @items = Item.search('foobar').records
+
+	def self.search(search)
+	  search_condition = "%" + search + "%"
+	  find(:all, :conditions => ['title LIKE ? OR description LIKE ?', search_condition, search_condition])
+	end
 
 	def active?
 		self.active == true
