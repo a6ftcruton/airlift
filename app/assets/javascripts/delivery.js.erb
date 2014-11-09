@@ -1,6 +1,5 @@
 $(document).ready(function() {
     setExchange(); 
-    //initialize();
 
     $('#order_exchange').change(setExchange); // on change
 
@@ -15,13 +14,14 @@ $(document).ready(function() {
             case "Delivery":
                 $("#pickup").hide("slow");
                 $("#delivery").show("slow", mapCurrentLocation);
-                $("#geoFindMe").click(geoFindMe);
+                $("#geoFindMe").click(saveCoords);
                 break;
             }
     }; 
 
   // Create Map
     function createPickupMap() {          
+      var geocoder = new google.maps.Geocoder();
       var myLatLng = new google.maps.LatLng(39.749759, -105.000132);
         var mapOptions = {
           center: myLatLng,
@@ -55,8 +55,8 @@ $(document).ready(function() {
 
       navigator.geolocation.getCurrentPosition(function(position) {
 
-        var initial_latitude = position.coords.latitude.toFixed(7);
-        var initial_longitude = position.coords.longitude.toFixed(7);
+        var initial_latitude = position.coords.latitude.toFixed(6);
+        var initial_longitude = position.coords.longitude.toFixed(6);
         var userLatLng = new google.maps.LatLng(initial_latitude, initial_longitude);
         var mapOptions = {
           center: userLatLng,
@@ -89,14 +89,19 @@ $(document).ready(function() {
         google.maps.event.addListener(marker, 'dragend', function(evt){
           map.panTo(marker.getPosition());
           document.getElementById('lat-long').innerHTML = '<p>Latitude: ' +
-            evt.latLng.lat().toFixed(7) + '°<br>Longitude: ' + evt.latLng.lng().toFixed(7) + '°</p>';
+            evt.latLng.lat().toFixed(7) + '°<br>Longitude: ' + evt.latLng.lng().toFixed(6) + '°</p>';
         });
         
+        
+
       });
 
     } 
         //google.maps.event.addDomListener(window, 'change', mapCurrentLocation);
 
+    function saveCoords() {
+          alert("clicked the button");
+        }
 
 
     

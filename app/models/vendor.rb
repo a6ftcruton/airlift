@@ -6,7 +6,8 @@ class Vendor < ActiveRecord::Base
 
   validates :name, presence: true #, uniqueness: true <- this blows up lots of tests?
   validates :slug, uniqueness: true
-
+# validates :zip_code, format: { with: /\d{5}\d*/ } 
+  
   private
 
   def set_default_slug
