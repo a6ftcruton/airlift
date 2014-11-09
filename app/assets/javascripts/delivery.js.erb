@@ -7,21 +7,21 @@ $(document).ready(function() {
     function setExchange() {       
         switch ($("#order_exchange").val()) {
             case "Pickup" :
-                $("#pickup").show("slow");
+                $("#pickup").show("slow", createPickupMap);
                 $('#delivery').hide("slow");
                 $('#datepicker ').datepicker();
-                $("#storepicker").click(createPickupMap);
+                //$("#storepicker").click(createPickupMap);
                 break;
             case "Delivery":
                 $("#pickup").hide("slow");
-                $("#delivery").show("slow");
+                $("#delivery").show("slow", mapCurrentLocation);
                 $("#geoFindMe").click(geoFindMe);
                 break;
             }
     }; 
 
   // Create Map
-    function createPickupMap() {          //changed from 'initialize'
+    function createPickupMap() {          
       var myLatLng = new google.maps.LatLng(39.749759, -105.000132);
         var mapOptions = {
           center: myLatLng,
@@ -47,13 +47,64 @@ $(document).ready(function() {
     }
       //google.maps.event.addDomListener(window, 'change', initialize);
 })
+ 
+    function mapCurrentLocation() {          
+      
+      var output = document.getElementById("lat-long");
+        output.innerHTML = "<p>Locating…</p>";
 
- // Get coordinates
+      navigator.geolocation.getCurrentPosition(function(position) {
+
+        var initial_latitude = position.coords.latitude.toFixed(7);
+        var initial_longitude = position.coords.longitude.toFixed(7);
+        var userLatLng = new google.maps.LatLng(initial_latitude, initial_longitude);
+        var mapOptions = {
+          center: userLatLng,
+          zoom: 14 
+        };
+        var map = new google.maps.Map(document.getElementById('delivery-map-canvas'), mapOptions);
+        var yourLocImg = "<%= asset_path('you.svg') %>";
+        var marker = new google.maps.Marker({
+            position: userLatLng,
+            map: map,
+            draggable: true,
+            title: "Drag this marker to your desired AirLift drop location.",
+            icon: yourLocImg 
+        });
+        
+        var infoContent = '<h2>AirDrop Coordinates:</h2>' +
+          '<span><b>Latitude:</b>' + initial_latitude + '</span><br/>' +
+          '<span><b>Longitude:</b>' + initial_longitude +' </span>';
+
+        var infowindow = new google.maps.InfoWindow({
+          content: infoContent
+        });
+        google.maps.event.addListener(marker, 'click', function() {
+          infowindow.open(map,marker);
+        });
+        
+        output.innerHTML = '<p>Latitude: ' + initial_latitude + '° <br>Longitude: ' + initial_longitude + '°</p>';
+
+
+        google.maps.event.addListener(marker, 'dragend', function(evt){
+          document.getElementById('lat-long').innerHTML = '<p>Latitude: ' +
+            evt.latLng.lat().toFixed(7) + '°<br>Longitude: ' + evt.latLng.lng().toFixed(7) + '°</p>';
+        });
+        
+      });
+
+    } 
+        //google.maps.event.addDomListener(window, 'change', mapCurrentLocation);
+
+
+
+    
+    // Get coordinates
   function geoFindMe() {
     var output = document.getElementById("lat-long");
 
     if (!navigator.geolocation){
-      output.innerHTML = "<p>Geolocation is not supported by your browser</p>";
+      output.innerHTML = "<p>Geolocation is not supported by your browser. Make sure your settings allow us to retrieve your current location!</p>";
       return;
     }
 
@@ -64,7 +115,7 @@ $(document).ready(function() {
       output.innerHTML = '<p>Latitude is ' + latitude + '° <br>Longitude is ' + longitude + '°</p>';
 
       var img = new Image();
-      //img.src = "http://maps.googleapis.com/maps/api/staticmap?center=" + latitude + "," + longitude + "&zoom=13&size=300x300&markers=icon:https://s3-us-west-2.amazonaws.com/turingproject/items/images/AirLift-favicon.png|" + latitude + "," + longitude + "&sensor=false";
+      img.src = "http://maps.googleapis.com/maps/api/staticmap?center=" + latitude + "," + longitude + "&zoom=13&size=300x300&markers=icon:https://s3-us-west-2.amazonaws.com/turingproject/items/images/AirLift-favicon.png|" + latitude + "," + longitude + "&sensor=false";
   img.src = "http://maps.googleapis.com/maps/api/staticmap?center=" + latitude + "," + longitude + "&zoom=13&size=300x300&markers=icon:../images/airlift-marker.png|" + latitude + "," + longitude + "&sensor=false";
 
       output.appendChild(img);
@@ -78,3 +129,5 @@ $(document).ready(function() {
 
     navigator.geolocation.getCurrentPosition(success, error);
   }
+
+
