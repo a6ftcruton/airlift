@@ -6,13 +6,13 @@ $(document).ready(function() {
 
     function setExchange() {       
         switch ($("#order_exchange").val()) {
-            case "pickup" :
+            case "Pickup" :
                 $("#pickup").show("slow");
                 $('#delivery').hide("slow");
                 $('#datepicker ').datepicker();
                 $("#storepicker").click(createPickupMap);
                 break;
-            case "delivery":
+            case "Delivery":
                 $("#pickup").hide("slow");
                 $("#delivery").show("slow");
                 $("#geoFindMe").click(geoFindMe);
@@ -28,10 +28,10 @@ $(document).ready(function() {
           zoom: 12 
         };
         var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-        var infoContent = '<h1>AirLift Command Center</h1>' +
+        var infoContent = '<h2>AirLift Command Center</h2>' +
           '<h5><b>Address:</b>1550 Blake St. Denver, CO</h5>' +
           '<h5><b>Phone:</b> 1-800-AIRLIFT2</h5>';
-        var markerImg = 'https://s3-us-west-2.amazonaws.com/turingproject/items/images/AirLift-favicon.png';
+        var markerImg = "<%= asset_path('airlift-marker.svg') %>";
         var marker = new google.maps.Marker({
             position: myLatLng,
             map: map,
