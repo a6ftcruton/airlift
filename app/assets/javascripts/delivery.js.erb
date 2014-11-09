@@ -87,6 +87,7 @@ $(document).ready(function() {
 
 
         google.maps.event.addListener(marker, 'dragend', function(evt){
+          map.panTo(marker.getPosition());
           document.getElementById('lat-long').innerHTML = '<p>Latitude: ' +
             evt.latLng.lat().toFixed(7) + '°<br>Longitude: ' + evt.latLng.lng().toFixed(7) + '°</p>';
         });
