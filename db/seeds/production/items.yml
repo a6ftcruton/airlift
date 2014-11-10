@@ -440,54 +440,63 @@ records:
     price: 1999.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 5).id %>'
+    image_file_name: "suncast_shed.jpg"
   - sprig_id: 60
     title: "ShelterLogic Grey Cover Peak Style Shelter"
     description: "For reliable vehicle protection or convenient storage without building a permanent structure, there is no better choice available than Shelter Logic's Peak Style Portable Garage Canopy. This multi-function shelter has an eleven-rib frame made of 2 3/8-in. diameter steel that is put through a 13 step Rhino Shield process and bonded with DuPont thermoset baked on powder-coat finish."
     price: 2699.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 5).id %>'
+    image_file_name: "shelterlogic_grey.jpg"
   - sprig_id: 61
     title: "Update International RS-36BK Black Heavy-Duty Stanchions"
     description: "Crowd Guidance System, 36 stanchion with 12 base, 6-1/2' retractable belt, four-way cassette, includes posts & bases (packed separately), black. Includes posts and bases."
     price: 32.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 6).id %>'
+    image_file_name: "black_stanchions.jpg"
   - sprig_id: 62
     title: "Update International WFC-27 - 27 Cone-Shape Wet Floor Sign"
     description: "Item: Cone-Shaped Wet Floor Sign Item Number: WFC-27 Description: Cone top accommodates barricade belts/chains, flashing light and sign holders."
     price: 9.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 6).id %>'
+    image_file_name: "wet_floor_sign.jpg"
   - sprig_id: 63
     title: "Federal Signal SST-MV Siren, Electronic, Multi-Voltage"
     description: "Federal Signal SST-MV Siren, electronic, multi-voltage - SST-MV Federal Signal's SST-MV is an electronic siren capable of producing one of four high decibel tone outputs from the same unit. The Model SST-MV features internal amplification and the tone circuitry to produce four different tones."
     price: 464.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 6).id %>'
+    image_file_name: "siren_electronic.jpg"
   - sprig_id: 64
     title: "Crowd Control Barrier Powder Coated Green"
     description: "Keep unwanted foot traffic off your property with green DMF pedestrian and crowd control barriers."
     price: 77.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 6).id %>'
+    image_file_name: "green_crowd_barrior.jpg"
   - sprig_id: 65
     title: "2-Pack Stackable Crowd Control Barriers"
     description: "You are viewing 1 set of 22 lbs. Black Stackable Crowd Control Belt Stanchions. These stanchions can be stacked together to save space."
     price: 134.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 6).id %>'
+    image_file_name: "stackable_crowd_control.jpg"
   - sprig_id: 66
     title: "28 inch Traffic Cones"
     description: "28 Traffic Cones. Available in Orange, Lime Green, or Blue."
     price: 14.45
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 6).id %>'
+    image_file_name: "crowd_control_cone.jpg"
   - sprig_id: 67
     title: "Caution Do Not Enter - Barricade Tape"
     description: "Presco caution tape is valued by those in the fields of law enforcement, safety, construction, and emergency situation."
     price: 6.49
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 6).id %>'
+    image_file_name: "caution_tape.jpg"
   - sprig_id: 68
     title: "OSHA CAUTION Biohazard Sign"
     description: "BIOHAZARD OSHA safety sign with symbol. US-made OSHA CAUTION sign / label for your Biohazard sign needs. 5-Star Vendor. Easy Ordering. Low Price Promise."
