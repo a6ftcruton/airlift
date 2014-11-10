@@ -503,102 +503,119 @@ records:
     price: 7.00
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 6).id %>'
+    image_file_name: "caution_sign.jpg"
   - sprig_id: 69
     title: "Unisex Restroom Plastic Sign - Blue"
     description: "Plastic Restroom Signs - Easy-to-read signs for restroom doors. All signs have braille characters to meet ADA regulations."
     price: 17.00
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 6).id %>'
+    image_file_name: "restroom_sign_blue.jpg"
   - sprig_id: 70
     title: "Line Starts Here"
     description: "Double Sided Sign - Line Starts Here Sign."
     price: 19.95
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 6).id %>'
+    image_file_name: "line_starts_here_sign.jpg"
   - sprig_id: 71
     title: "DEWALT Cordless Combo Tool Kit"
     description: "DC390 XRP 18-volt circular saw with 6-1/2-inch 16-tooth carbide blade can cut 2 by 4's at a 45 degree angle in a single pass."
     price: 799.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 7).id %>'
+    image_file_name: "dewalt_tool_kit.jpg"
   - sprig_id: 72
-    title: "Husqvarna 327P5X Pole Saw "
+    title: "Husqvarna 327P5X Pole Saw"
     description: "Commercial grade pole saw. Extends reach 15-inches. Ergonomic harness included."
     price: 569.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 7).id %>'
+    image_file_name: "pole_saw.jpg"
   - sprig_id: 73
     title: "SawStop 10 in. 3 HP Cabinet Table Saw with 52 In. Fence"
     description: "The SawStop 3 HP professional cabinet saw with 52 In. professional t-glide fence system offers versatility and safety. It delivers the performance you need with the peace of mind only SawStop's patented safety system can provide."
     price: 2999.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 7).id %>'
+    image_file_name: "saw_stop.jpg"
   - sprig_id: 74
     title: "Generac 7,500 Watt Portable Generator"
     description: "Power the fun stuff or cover an emergency with a GP series portable generator, you get affordable reliability and features not usually found on basic portable models."
     price: 999.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 7).id %>'
+    image_file_name: "portable_generator.jpg"
   - sprig_id: 75
     title: "Husqvarna Handheld Concrete Cut-Off Saw"
     description: "Powerful Husqvarna all-around power cutter is ideal for cutting concrete and masonry in alteration, renovation and new construction work."
     price: 833.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 7).id %>'
+    image_file_name: "concrete_saw.jpg"
   - sprig_id: 76
     title: "Honda FG110AT Toolbarn 4 Stroke Mini-Tiller"
     description: "Honda's mini tiller is very lightweight and portable at only 29lbs but has the fastest tine speed in its class."
     price: 349.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 7).id %>'
+    image_file_name: "caution_tape.jpg"
   - sprig_id: 77
     title: "IMC (Belaire) 216V Vertical 2-Stage Electric Air Compressor"
     description: "Features: -Air compressor.-Start-stop pressure switch control.-ASME safety valves fully-enclosed belt guard.-Tank drain and discharge valve.-15.3 cfm @100 PSI.-Capacity: 60 Gallon. Specifications: -208-230 Volt single phase.-5HP"
     price: 999.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 7).id %>'
+    image_file_name: "caution_tape.jpg"
   - sprig_id: 78
     title: "Makita LS1016 10 Dual Slide Compound Miter Saw"
     description: "Largest crown molding cutting capacity in its class. Powerful 15 AMP direct drive motor requires less maintenance and delivers 3,200 RPM."
     price: 446.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 7).id %>'
+    image_file_name: "caution_tape.jpg"
   - sprig_id: 79
     title: "Echo Chainsaw"
     description: "Professional power, quality features and a performance cutting system An ECHO Chainsaw is built to tackle the toughest jobs."
     price: 569.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 7).id %>'
+    image_file_name: "caution_tape.jpg"
   - sprig_id: 80
     title: "DEK 15 HP (420cc) Commercial Duty Chipper Shredder CH1"
     description: "This DEK chipper shredder with 2-way feed features a 15 HP 420cc commercial duty engine. Self feeds and chips 3 x 4 in. diameter branches and debris, turning yard waste into useful 1/4 in. mulch. Comes with a safety mechanism, which is a centrifugal clutch that protects your engine and prolongs the life of your chipper."
     price: 1307.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 7).id %>'
+    image_file_name: "caution_tape.jpg"
   - sprig_id: 81
     title: "Honda EU2000i Super Quiet Inverter Generator (2000 Watt)"
     description: "The EU2000i companion offers one 30 A receptacle for RV applications (requires optional adapter) and one 20 A receptacle."
     price: 949.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 8).id %>'
+    image_file_name: "caution_tape.jpg"
   - sprig_id: 82
     title: "Champion Power Equipment 3,500 Watt Portable Generator"
     description: "3500 running watts/4000 starting watts RV Ready - TT-30R outlet 120V AC load Up to 12 hour run time at 50% load 68 dBA at 23 ft."
     price: 249.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 8).id %>'
+    image_file_name: "caution_tape.jpg"
   - sprig_id: 83
     title: "Generac 5837 7,000 watt Automatic Standby Generator"
     description: "24/7 automatic power protection has never been more affordable."
     price: 1866.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 8).id %>'
+    image_file_name: "caution_tape.jpg"
   - sprig_id: 84
     title: "Generac 6244 20kW Liquid Propane/Natural Gas Generator"
     description: "Choose the #1 Selling Home Standby Generator Brand. Generac s 20kW Guardian Series provides the automatic backup power you need to protect your home and family during a power outage. Connected to your existing LP or natural gas fuel supply, it kicks in within seconds of determining power loss automatically and runs for as long as necessary until utility power returns."
     price: 4255.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 8).id %>'
+    image_file_name: "caution_tape.jpg"
   - sprig_id: 85
     title: "Pro-Series GENSD7 7000 Watt Silent Diesel Generator"
     description: "Features: -Generator.-Material: Steel.-Automatic voltage regulator.-Self-priming, electric start, 406 cc engine displacement.-Engine run time 9 hours."
