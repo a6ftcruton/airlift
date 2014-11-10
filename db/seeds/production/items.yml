@@ -412,24 +412,28 @@ records:
     price: 1000.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 5).id %>'
+    image_file_name: "all_season_tent.jpg"
   - sprig_id: 56
     title: "Rothco Silver Reflective Outdoors Camping Survival Shelter Tent"
     description: "Emergencies can happen at any time, so be prepared now before they happen! Your emergency kit or bug out bag won't be complete without this Survival Tent. This 2 person emergency shelter is made using the same reflective material as emergency survival blankets and it has the same water resistance and body heat retaining properties."
     price: 10.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 5).id %>'
+    image_file_name: "rothco_tent.jpg"
   - sprig_id: 57
     title: 'Mayday Industries SH11C G.I. Folding Cot 82" x 31"'
     description: "GI Folding Cot Comfortable, easy to use G.I. style cot that folds up for compact storage. Frame made of rugged, thick-walled square tube aluminum."
     price: 74.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 5).id %>'
+    image_file_name: "mayday_cot.jpg"
   - sprig_id: 58
     title: "Large Family Tent Outdoor Camping 10 Person 3 Room Shelter Survival Gear Cabin"
     description: "Large Family Tent Outdoor Camping 10 Person 3 Room Shelter Survival Gear Cabin This 10 Person 3 room Large Family Tent sets up in under 2minutes!"
     price: 349.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 5).id %>'
+    image_file_name: "large_10_person_tent.jpg"
   - sprig_id: 59
     title: "Suncast Outdoor Permanent Shed"
     description: "Suncast 10x10 Storage Shed. With a 625 cubic foot capacity, this Suncast storage shed is a versatile, durable solution for all your storage needs. Suncast's attractive, contemporary design includes 2 windows with shutters, window boxes, and even a standard skylight to help keep the interior bright. Combine that with the long-lasting resin construction and durable resin floor, and you've got a maintenance-free storage solution on which you can really count."
