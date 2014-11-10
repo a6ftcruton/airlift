@@ -622,109 +622,126 @@ records:
     price: 1099.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 8).id %>'
-    image_file_name: "diesel_generator"
+    image_file_name: "diesel_generator.jpg"
   - sprig_id: 86
     title: "Xantrex POWERPACK1500 AC-DC"
     description: "Powered by a rechargeable sealed 60Ah AGM battery. Includes a built-in 1500 Watt inverter, one 12V DC and two 120V AC sockets and storage compartment."
     price: 461.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 8).id %>'
+    image_file_name: "powerpack_xantrex.jpg"
   - sprig_id: 87
     title: "Tycon Power (UPS-DC1224-9) UPS Pro Outdoor Backup Power System 12V 9Ah"
     description: "The UPS Pro series outdoor enclosures are designed for applications that require a backup power source in order to maintain uninterrupted service to customers."
     price: 135.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 8).id %>'
+    image_file_name: "tycon_power_backup.jpg"
   - sprig_id: 88
     title: "Generac Guardian 6237 8 kW Emergency Power System"
     description: "Choose the #1 Selling Home Standby Generator Brand."
     price: 2399.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 8).id %>'
+    image_file_name: "guardian_emergency_power.jpg"
   - sprig_id: 89
     title: "Nature Power Solar Home and RV Portable Backup Power Kit - 800 Watts"
     description: "The Nature Power Solar Home and RV Portable Backup Power Kit is an independent power system with a built-in inverter."
     price: 499.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 8).id %>'
+    image_file_name: "solar_backup_kit.jpg"
   - sprig_id: 90
     title: "Samlex SEC-1230UL, 12 volt, 30 Amp Battery Charger"
     description: "By means of a DIP switch setting, conversion to a two-stage algorithm is possible to charge batteries connected to a DC load (DC UPS)."
     price: 199.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 8).id %>'
+    image_file_name: "samlex_battery.jpg"
   - sprig_id: 91
     title: "True North: Firefly Medic Pack"
     description: "Based on the popular FireFly modular pack system. With two quick zips you can drop the Medic bag and carry just the essentials, like a 3 liter hydration reservoir and personal gear. Choose Wildland or SAR configurations."
     price: 206.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 9).id %>'
+    image_file_name: "firefly_medic_pack.jpg"
   - sprig_id: 92
     title: "Uline 250 person First Aid Kit"
     description: "Uline First Aid Kits - Deluxe First Aid Kits contain a full assortment of products for treating common workplace injuries"
     price: 212.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 9).id %>'
+    image_file_name: "uline_first_aid.jpg"
   - sprig_id: 93
     title: "The Original Home Health Shoulder Bag"
     description: "Hopkins Medical Products Original Home Health Shoulder Bag 14 in. x 11 in. x 7 in., Multiple Compartments, Weighs 1.85 lb. "
     price: 29.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 9).id %>'
+    image_file_name: "home_health_shoulder_bag.jpg"
   - sprig_id: 94
     title: "Arsenal 5215 Large Trauma, Orange"
     description: "Large trauma bag: great for larger kits. Customizable interior slots and reflective trima."
     price: 53.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 9).id %>'
+    image_file_name: "arsenal_trauma_bag.jpg"
   - sprig_id: 95
     title: "5.11 Tactical 56936 Responder ALS Backpack"
     description: "Shove-it pocket behind admin compartment uses 4 compression straps to secure helmet - boots - DWR finish 4 compression straps Imported"
     price: 229.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 9).id %>'
+    image_file_name: "als_backpack.jpg"
   - sprig_id: 96
     title: "Cardiac Science Rescue Backpack for G3 AEDs"
     description: "A perfect fit for mobile responders such as athletic trainers, scout troops, and medic teams. The Cardiac Science Rescue Backpack includes storage pouches for supplies and accessories."
     price: 145.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 9).id %>'
+    image_file_name: "g3_backpack.jpg"
   - sprig_id: 97
     title: "All-in-One EMT Kit with Dual Head Stethoscope"
     description: "Rugged bright Orange case with matching accessories and individual pockets. 5 matching calibrated cuffs with quick release connector: adult, infant, child, large adult and thigh."
     price: 53.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 9).id %>'
+    image_file_name: "emt_dual_stethescope.jpg"
   - sprig_id: 98
     title: "Medical 3 Way Deployment Bag"
     description: "This 3 Way Deployment bag has everything an emergency medical worker could want. With 2 side zippered accessory pouches, plus the front and pain compartments."
     price: 26.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 9).id %>'
+    image_file_name: "3_way_deployment_bag.jpg"
   - sprig_id: 99
     title: "UTG Multi-Functional Tactical Messenger Bag"
     description: "Leapers Multi-Functional Tactical Messenger Bag has a padded shoulder strap and thick back padding to ensure maximum comfort even in intense tactical situations. The main compartment of the tactical bag closes via a drawstring with cord-lock to provide a izable and secured storage space."
     price: 40.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 9).id %>'
+    image_file_name: "multifunction_messenger_bag.jpg"
   - sprig_id: 100
     title: "EMT Trauma Bag"
     description: "American Diagnostic Corporation Trauma Bag Orange : The ADC Trauma Bag is an incredibly durable, extraordinarily versatile medical trauma bag for the pre-hospital care professional. Designed for easy access the bag allows for convenient storage."
     price: 38.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 9).id %>'
+    image_file_name: "emt_trauma_bag.jpg"
   - sprig_id: 101
     title: "2 x 60 yards Silver Nashua 394 Duct Tape - 3 Rolls"
     description: "Nashua Duct Tape - Known for its extra-tacky natural rubber adhesive that sticks to everything. Utility grade for sealing, bundling and light repairs."
     price: 17.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 10).id %>'
+    image_file_name: "silver_duct_tape.jpg"
   - sprig_id: 102
     title: "3M 6969 Black Duct Tape, 3 Rolls"
     description: "3M Duct Tape - Industrial strength for your most demanding jobs. Seals HVAC ducts, insulates pipes, makes tough, durable repairs."
     price: 57.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 10).id %>'
+    image_file_name: "3M_black_tape.jpg"
   - sprig_id: 103
     title: "3M 1210-A 10 Yards Pro Strength Duct Tape"
     description: "3M 1210-A Scotch Pro Strength Duct Tape 1.88 in x 10 yd (48.0 mm x 9.14 m) 24 rls/cs A professional grade tape for industrial and HVAC."
