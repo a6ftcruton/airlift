@@ -559,69 +559,70 @@ records:
     price: 349.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 7).id %>'
-    image_file_name: "caution_tape.jpg"
+    image_file_name: "mini_tiller.jpg"
   - sprig_id: 77
     title: "IMC (Belaire) 216V Vertical 2-Stage Electric Air Compressor"
     description: "Features: -Air compressor.-Start-stop pressure switch control.-ASME safety valves fully-enclosed belt guard.-Tank drain and discharge valve.-15.3 cfm @100 PSI.-Capacity: 60 Gallon. Specifications: -208-230 Volt single phase.-5HP"
     price: 999.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 7).id %>'
-    image_file_name: "caution_tape.jpg"
+    image_file_name: "bel_air_compressor.jpg"
   - sprig_id: 78
     title: "Makita LS1016 10 Dual Slide Compound Miter Saw"
     description: "Largest crown molding cutting capacity in its class. Powerful 15 AMP direct drive motor requires less maintenance and delivers 3,200 RPM."
     price: 446.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 7).id %>'
-    image_file_name: "caution_tape.jpg"
+    image_file_name: "makita_compound_saw.jpg"
   - sprig_id: 79
     title: "Echo Chainsaw"
     description: "Professional power, quality features and a performance cutting system An ECHO Chainsaw is built to tackle the toughest jobs."
     price: 569.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 7).id %>'
-    image_file_name: "caution_tape.jpg"
+    image_file_name: "echo_chainsaw.jpg"
   - sprig_id: 80
     title: "DEK 15 HP (420cc) Commercial Duty Chipper Shredder CH1"
     description: "This DEK chipper shredder with 2-way feed features a 15 HP 420cc commercial duty engine. Self feeds and chips 3 x 4 in. diameter branches and debris, turning yard waste into useful 1/4 in. mulch. Comes with a safety mechanism, which is a centrifugal clutch that protects your engine and prolongs the life of your chipper."
     price: 1307.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 7).id %>'
-    image_file_name: "caution_tape.jpg"
+    image_file_name: "shredder.jpg"
   - sprig_id: 81
     title: "Honda EU2000i Super Quiet Inverter Generator (2000 Watt)"
     description: "The EU2000i companion offers one 30 A receptacle for RV applications (requires optional adapter) and one 20 A receptacle."
     price: 949.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 8).id %>'
-    image_file_name: "caution_tape.jpg"
+    image_file_name: "honda_generator.jpg"
   - sprig_id: 82
     title: "Champion Power Equipment 3,500 Watt Portable Generator"
     description: "3500 running watts/4000 starting watts RV Ready - TT-30R outlet 120V AC load Up to 12 hour run time at 50% load 68 dBA at 23 ft."
     price: 249.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 8).id %>'
-    image_file_name: "caution_tape.jpg"
+    image_file_name: "chamption_portable_generator.jpg"
   - sprig_id: 83
     title: "Generac 5837 7,000 watt Automatic Standby Generator"
     description: "24/7 automatic power protection has never been more affordable."
     price: 1866.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 8).id %>'
-    image_file_name: "caution_tape.jpg"
+    image_file_name: "generac_generator.jpg"
   - sprig_id: 84
     title: "Generac 6244 20kW Liquid Propane/Natural Gas Generator"
     description: "Choose the #1 Selling Home Standby Generator Brand. Generac s 20kW Guardian Series provides the automatic backup power you need to protect your home and family during a power outage. Connected to your existing LP or natural gas fuel supply, it kicks in within seconds of determining power loss automatically and runs for as long as necessary until utility power returns."
     price: 4255.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 8).id %>'
-    image_file_name: "caution_tape.jpg"
+    image_file_name: "generac_gas_generator.jpg"
   - sprig_id: 85
     title: "Pro-Series GENSD7 7000 Watt Silent Diesel Generator"
     description: "Features: -Generator.-Material: Steel.-Automatic voltage regulator.-Self-priming, electric start, 406 cc engine displacement.-Engine run time 9 hours."
     price: 1099.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 8).id %>'
+    image_file_name: "diesel_generator"
   - sprig_id: 86
     title: "Xantrex POWERPACK1500 AC-DC"
     description: "Powered by a rechargeable sealed 60Ah AGM battery. Includes a built-in 1500 Watt inverter, one 12V DC and two 120V AC sockets and storage compartment."
