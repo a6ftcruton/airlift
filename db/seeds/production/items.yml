@@ -748,12 +748,14 @@ records:
     price: 16.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 10).id %>'
+    image_file_name: "silver_duct_tape.jpg"
   - sprig_id: 104
     title: "Silver 3M Standard Duct Tape 150-ft"
     description: "This 3M duct tape is ideal for light-duty marking and non-critical applications. The polyethylene backing provides moisture resistance and the synthetic rubber."
     price: 7.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 10).id %>'
+    image_file_name: "3M_black_tape.jpg"
   - sprig_id: 105
     title: "1 x 10 yards White Reflective Tape - 2 Rolls"
     description: "Reflective Tape - Reduce accidental damage to poles, dock doors and racking. Lasts up to 7 years. Outstanding in low light or dark areas."
