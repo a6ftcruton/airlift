@@ -762,39 +762,46 @@ records:
     price: 20.00
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 10).id %>'
+    image_file_name: "white_reflective_tape.jpg"
   - sprig_id: 106
     title: "Lightweight Safety Reflective Tape Black"
     description: "Stand out after dark with Lightweight's Reflective Tape. Made from 3M 680 Scotchlite Reflective material this tape it the highest quality retro-reflective money can buy!"
     price: 14.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 10).id %>'
+    image_file_name: "reflective_tape.jpg"
   - sprig_id: 107
     title: "DOT Approved Reflective Tape"
     description: "Features: 1 x 50 yd roll Application temperature: minimum 50°F. Polyester based film resists cracking & lifting. Retains reflectivity even after impact."
     price: 101.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 10).id %>'
+    image_file_name: "dot_tape.jpg"
   - sprig_id: 108
     title: "Wrights Metallic Extra Wide Double Fold Bias Tape Gold 3 yd."
     description: "Wrights Metallic Extra Wide Double Fold Bias Tape is great for binding straight or curved edges, or as a color accent on apparel, accessories and crafts."
     price: 3.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 10).id %>'
+    image_file_name: "wrights_gold_tape.jpg"
   - sprig_id: 109
     title: "2 inch Masking Tape Roll - 60 Yards"
     description: "Package, bundle, or label a wide variety of products in your business with this 2 inch masking tape roll!"
     price: 2.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 10).id %>'
+    image_file_name: "60in_masking_tape.jpg"
   - sprig_id: 110
     title: "Tape Dispenser Auto Industrial ASG Model 3000"
     description: "The ASG 66102 EZ-3000 EZ Series Extra Heavy-Duty/Wide Tape Dispenser is designed for continous industrial applications and manual or automatic dispensing."
     price: 2,299.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 10).id %>'
+    image_file_name: "td_auto_industrial.jpg"
   - sprig_id: 111
     title: "Duck Extra-Wide Packaging Tape Dispenser"
     description: "Extra-width tape gun eliminated the need for double taping box seams. Commercial grade tape gun features durable metal housing for heavy-duty performance."
     price: 14.99
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 10).id %>'
+    image_file_name: "duck_extrawide_dispenser.jpg"
