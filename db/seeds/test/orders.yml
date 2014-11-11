@@ -62,6 +62,8 @@ records:
     city: 'Denver'
     state: 'CO'
     zip: '99999'
+    latitude: 23.209355
+    longitude: -102.973175
   - sprig_id: 8
     status: 'cancelled'
     exchange: 'delivery'
@@ -77,6 +79,8 @@ records:
     city: 'Bend'
     state: 'OR'
     zip: '77777'
+    latitude: 20.764654
+    longitude: -76.605988
   - sprig_id: 9
     status: 'cancelled'
     exchange: 'delivery'
@@ -88,6 +92,8 @@ records:
     city: 'Niwot'
     state: 'AL'
     zip: '78787'
+    latitude: 48.142861
+    longitude: -55.336456
   - sprig_id: 10
     status: 'cancelled'
     exchange: 'delivery'
@@ -100,3 +106,5 @@ records:
     city: 'Kenosha'
     state: 'WI'
     zip: '45883'
+    latitude: 37.342486
+    longitude: 100.054169

@@ -16,7 +16,9 @@ class Order < ActiveRecord::Base
             presence: true, if: :delivery?
   validates :state, inclusion: states, if: :delivery?
   validates :zip, format: { with: /\d{5}\d*/ }, if: :delivery?
-
+ validates :latitude, presence:true, if: :delivery?
+ validates :longitude, presence:true, if: :delivery?
+  
   def delivery?
     exchange == 'delivery'
   end
@@ -59,5 +61,20 @@ class Order < ActiveRecord::Base
       VendorOrder.new(self, key, value)
     end
   end
+  
+  def text_customer(order)
+    customer_phone_number = "3034789928" # in production, change to match @user.phone_number
 
+    twilio_sid = ENV["TWILIO_SID"] 
+    twilio_token = ENV["TWILIO_TOKEN"]
+    twilio_phone_number = ENV["TWILIO_PHONE_NUMBER"]
+
+    @twilio_client = Twilio::REST::Client.new(twilio_sid, twilio_token)
+
+    @twilio_client.account.sms.messages.create(
+      from: twilio_phone_number,
+      to: customer_phone_number,
+      body: "Airlift order #{order.id} confirmation. Help is on the way!"
+    )
+  end
 end
