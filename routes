@@ -1,0 +1,93 @@
+                     Prefix Verb   URI Pattern                                          Controller#Action
+                       root GET    /                                                    welcome#index
+                  cart_edit GET    /cart/edit(.:format)                                 cart#edit
+              cart_add_item PATCH  /cart/add_item/:id(.:format)                         cart#add_item
+           cart_remove_item PATCH  /cart/remove_item/:id(.:format)                      cart#remove_item
+       cart_update_quantity PATCH  /cart/update_quantity/:id(.:format)                  cart#update_quantity
+               cart_destroy DELETE /cart/destroy(.:format)                              cart#destroy
+                      admin GET    /admin(.:format)                                     admin/dashboard#index
+                admin_items POST   /admin/items(.:format)                               admin/items#create
+             new_admin_item GET    /admin/items/new(.:format)                           admin/items#new
+            edit_admin_item GET    /admin/items/:id/edit(.:format)                      admin/items#edit
+                 admin_item GET    /admin/items/:id(.:format)                           admin/items#show
+                            PATCH  /admin/items/:id(.:format)                           admin/items#update
+                            PUT    /admin/items/:id(.:format)                           admin/items#update
+                            DELETE /admin/items/:id(.:format)                           admin/items#destroy
+           admin_categories GET    /admin/categories(.:format)                          admin/categories#index
+                            POST   /admin/categories(.:format)                          admin/categories#create
+         new_admin_category GET    /admin/categories/new(.:format)                      admin/categories#new
+        edit_admin_category GET    /admin/categories/:id/edit(.:format)                 admin/categories#edit
+             admin_category GET    /admin/categories/:id(.:format)                      admin/categories#show
+                            PATCH  /admin/categories/:id(.:format)                      admin/categories#update
+                            PUT    /admin/categories/:id(.:format)                      admin/categories#update
+                            DELETE /admin/categories/:id(.:format)                      admin/categories#destroy
+                admin_users GET    /admin/users(.:format)                               admin/users#index
+                            POST   /admin/users(.:format)                               admin/users#create
+             new_admin_user GET    /admin/users/new(.:format)                           admin/users#new
+            edit_admin_user GET    /admin/users/:id/edit(.:format)                      admin/users#edit
+                 admin_user GET    /admin/users/:id(.:format)                           admin/users#show
+                            PATCH  /admin/users/:id(.:format)                           admin/users#update
+                            PUT    /admin/users/:id(.:format)                           admin/users#update
+                            DELETE /admin/users/:id(.:format)                           admin/users#destroy
+               admin_orders GET    /admin/orders(.:format)                              admin/orders#index
+           edit_admin_order GET    /admin/orders/:id/edit(.:format)                     admin/orders#edit
+                admin_order DELETE /admin/orders/:id(.:format)                          admin/orders#destroy
+         admin_order_status PATCH  /admin/order/status/:id/:status(.:format)            admin/orders#status
+    admin_order_remove_item PATCH  /admin/orders/remove_item/:id/:item_id(.:format)     admin/orders#remove_item
+admin_order_update_quantity PATCH  /admin/orders/update_quantity/:id/:item_id(.:format) admin/orders#update_quantity
+           admin_updated_at PATCH  /admin/orders/updated_at/:id/:updated_at(.:format)   admin/orders#updated_at
+    admin_order_custom_show GET    /admin/orders/:status(.:format)                      admin/orders#custom_show
+                    vendors GET    /vendors(.:format)                                   vendors#index
+                            POST   /vendors(.:format)                                   vendors#create
+                 new_vendor GET    /vendors/new(.:format)                               vendors#new
+                edit_vendor GET    /vendors/:id/edit(.:format)                          vendors#edit
+                     vendor GET    /vendors/:id(.:format)                               vendors#show
+                            PATCH  /vendors/:id(.:format)                               vendors#update
+                            PUT    /vendors/:id(.:format)                               vendors#update
+                            DELETE /vendors/:id(.:format)                               vendors#destroy
+                     events GET    /events(.:format)                                    events#index
+                            POST   /events(.:format)                                    events#create
+                  new_event GET    /events/new(.:format)                                events#new
+                 edit_event GET    /events/:id/edit(.:format)                           events#edit
+                      event GET    /events/:id(.:format)                                events#show
+                            PATCH  /events/:id(.:format)                                events#update
+                            PUT    /events/:id(.:format)                                events#update
+                            DELETE /events/:id(.:format)                                events#destroy
+                      items GET    /items(.:format)                                     items#index
+                       item GET    /items/:id(.:format)                                 items#show
+                      users POST   /users(.:format)                                     users#create
+                   new_user GET    /users/new(.:format)                                 users#new
+                  edit_user GET    /users/:id/edit(.:format)                            users#edit
+                       user PATCH  /users/:id(.:format)                                 users#update
+                            PUT    /users/:id(.:format)                                 users#update
+                            DELETE /users/:id(.:format)                                 users#destroy
+                user_orders GET    /users/orders(.:format)                              users#show_orders
+                 categories GET    /categories(.:format)                                categories#index
+                            POST   /categories(.:format)                                categories#create
+               new_category GET    /categories/new(.:format)                            categories#new
+              edit_category GET    /categories/:id/edit(.:format)                       categories#edit
+                   category GET    /categories/:id(.:format)                            categories#show
+                            PATCH  /categories/:id(.:format)                            categories#update
+                            PUT    /categories/:id(.:format)                            categories#update
+                            DELETE /categories/:id(.:format)                            categories#destroy
+                 cart_items POST   /cart_items(.:format)                                cart_items#create
+                 orders_new POST   /orders/new(.:format)                                orders#store_lat_long
+                     orders GET    /orders(.:format)                                    orders#index
+                            POST   /orders(.:format)                                    orders#create
+                  new_order GET    /orders/new(.:format)                                orders#new
+                      order GET    /orders/:id(.:format)                                orders#show
+                 new_review GET    /items/:item_id/review(.:format)                     reviews#new
+                    reviews POST   /items/:item_id/review(.:format)                     reviews#create
+                edit_review GET    /items/:item_id/review/:id(.:format)                 reviews#edit
+              review_update PATCH  /items/:item_id/review/:id(.:format)                 reviews#update
+                      about GET    /about(.:format)                                     welcome#about
+                       code GET    /code(.:format)                                      welcome#code
+                      login GET    /login(.:format)                                     sessions#new
+                            POST   /login(.:format)                                     sessions#create
+                     logout DELETE /logout(.:format)                                    sessions#destroy
+                   contacts GET    /contacts(.:format)                                  contacts#new
+                            POST   /contacts(.:format)                                  contacts#create
+                new_contact GET    /contacts/new(.:format)                              contacts#new
+                            GET    /:slug(.:format)                                     vendors#show
+                            GET    /:slug(.:format)                                     vendors#show
+                vendor_item GET    /:slug/items/:id(.:format)                           items#show

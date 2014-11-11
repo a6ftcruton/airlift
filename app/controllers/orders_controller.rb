@@ -38,9 +38,9 @@ class OrdersController < ApplicationController
   end
 
   def store_lat_long
-    session[:latitude] = params[:latitude] 
-    session[:longitude] = params[:longitude] 
-    redirect_to items_path 
+    session[:latitude] = params[:latitude]
+    session[:longitude] = params[:longitude]
+    render text: ''
   end
   
 	private

@@ -85,15 +85,25 @@ $(document).ready(function() {
         
         output.innerHTML = '<p>Latitude: ' + initial_latitude + '° <br>Longitude: ' + initial_longitude + '°</p>';
 
-
+        // eventually you need this function to send ajax request on button click w/o needing marker to move first
         google.maps.event.addListener(marker, 'dragend', function(evt){
           map.panTo(marker.getPosition());
+          // ajax post req here
+          
           document.getElementById('lat-long').innerHTML = '<p>Latitude: ' +
-            evt.latLng.lat().toFixed(7) + '°<br>Longitude: ' + evt.latLng.lng().toFixed(6) + '°</p>';
+            evt.latLng.lat().toFixed(6) + '°<br>Longitude: ' + evt.latLng.lng().toFixed(6) + '°</p>';
+            var marker_lat = evt.latLng.lat();
+            var marker_lng = evt.latLng.lng();
+
+            $('#geoFindMe').click( function() {
+              $.post( '/orders/new', {latitude: marker_lat, longitude: marker_lng}); 
+            console.log(marker_lat);
+            console.log(marker_lng);
+          });
+             
+          
         });
         
-        
-
       });
 
     } 
