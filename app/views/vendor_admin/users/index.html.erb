@@ -12,10 +12,10 @@
   <tbody>
     <tr>
       <% @users.each do |user| %>
-        <td><%= user.first_name %>&nbsp<%= user.last_name %></td>
+        <td><%= user.first_name %>&nbsp;<%= user.last_name %></td>
         <td><%= user.nickname %></td>
         <td><%= user.email %></td>
-        <td><%= link_to user.role, edit_admin_user_path(user) %></td>
+        <td><%= link_to user.role, edit_vendor_admin_user_path(user) %></td>
         <td>
       </td>
     </tr>

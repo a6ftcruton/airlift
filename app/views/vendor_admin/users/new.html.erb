@@ -23,7 +23,7 @@
       <%= f.text_field :password_confirmation %>
 
       <%= f.label :user_or_admin %>
-      <%= f.select :role, ['user', 'admin'], :selected => f.object.role %>
+      <%= f.select :role, ['user', 'vendor_admin'], :selected => f.object.role %>
 
       <%= f.submit "Create New User" %>
     <% end %>
