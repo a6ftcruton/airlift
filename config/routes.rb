@@ -37,6 +37,7 @@ Rails.application.routes.draw do
   post 'items/:item_id/review', to: 'reviews#create', as: 'reviews'
   get 'items/:item_id/review/:id', to: 'reviews#edit', as: 'edit_review'
   patch 'items/:item_id/review/:id', to: 'reviews#update', as: 'review_update'
+  get 'items/search', to: 'items#search', as: 'search_results'
   #resources :reviews, only: [:update]
 
   get '/about' => 'welcome#about'
@@ -49,9 +50,8 @@ Rails.application.routes.draw do
   match '/contacts',     to: 'contacts#new',             via: 'get'
   resources "contacts", only: [:new, :create]
 
-#<<<<<<< HEAD   <-- these 3 lines from merge conflict, just making sure!
 #  get '/:slug', to: 'vendors#show'
-#=======
+
   get ':slug', to: 'vendors#show'
 
   scope ':slug' do

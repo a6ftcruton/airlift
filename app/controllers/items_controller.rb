@@ -4,15 +4,28 @@ class ItemsController < ApplicationController
   before_action :set_item, only: [:show]
   before_action :item_rating, only: [:index, :show]
 
-	def index
-    @items = Item.active
+	# def index
+  #   @items = Item.active
+  #   @categories = Category.all
+  # end
+  #
+  def index
+    if params[:search]
+      @items = Item.search(params[:search]).order("created_at DESC")
+    else
+      @items = Item.active
+    end
     @categories = Category.all
+  end
+
+  def search
+    @items = Item.search params[:search]
   end
 
 	def show
     @categories = @item.categories
 	end
-  
+
   private
 
     def set_item
