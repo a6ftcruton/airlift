@@ -114,30 +114,30 @@ $(document).ready(function() {
 
     
     // Get coordinates
-  function geoFindMe() {
-    var output = document.getElementById("lat-long");
-
-    if (!navigator.geolocation){
-      output.innerHTML = "<p>Geolocation is not supported by your browser. Make sure your settings allow us to retrieve your current location!</p>";
-      return;
-    }
-
-    function success(position) {
-      var latitude  = position.coords.latitude;
-      var longitude = position.coords.longitude;
-
-      output.innerHTML = '<p>Latitude is ' + latitude + '° <br>Longitude is ' + longitude + '°</p>';
-
-      var img = new Image();
-      img.src = "http://maps.googleapis.com/maps/api/staticmap?center=" + latitude + "," + longitude + "&zoom=13&size=300x300&markers=icon:https://s3-us-west-2.amazonaws.com/turingproject/items/images/AirLift-favicon.png|" + latitude + "," + longitude + "&sensor=false";
-  img.src = "http://maps.googleapis.com/maps/api/staticmap?center=" + latitude + "," + longitude + "&zoom=13&size=300x300&markers=icon:../images/airlift-marker.png|" + latitude + "," + longitude + "&sensor=false";
-
-      output.appendChild(img);
-    };
-
-    function error() {
-      output.innerHTML = "Unable to retrieve your location";
-    };
+// function geoFindMe() {
+//   var output = document.getElementById("lat-long");
+//
+//   if (!navigator.geolocation){
+//     output.innerHTML = "<p>Geolocation is not supported by your browser. Make sure your settings allow us to retrieve your current location!</p>";
+//     return;
+//   }
+//
+//   function success(position) {
+//     var latitude  = position.coords.latitude;
+//     var longitude = position.coords.longitude;
+//
+//     output.innerHTML = '<p>Latitude is ' + latitude + '° <br>Longitude is ' + longitude + '°</p>';
+//
+//     var img = new Image();
+//     img.src = "http://maps.googleapis.com/maps/api/staticmap?center=" + latitude + "," + longitude + "&zoom=13&size=300x300&markers=icon:https://s3-us-west-2.amazonaws.com/turingproject/items/images/AirLift-favicon.png|" + latitude + "," + longitude + "&sensor=false";
+// img.src = "http://maps.googleapis.com/maps/api/staticmap?center=" + latitude + "," + longitude + "&zoom=13&size=300x300&markers=icon:../images/airlift-marker.png|" + latitude + "," + longitude + "&sensor=false";
+//
+//     output.appendChild(img);
+//   };
+//
+//   function error() {
+//     output.innerHTML = "Unable to retrieve your location";
+//   };
 
     output.innerHTML = "<p>Locating…</p>";
 
