@@ -2,7 +2,6 @@ class OrdersController < ApplicationController
 	load_and_authorize_resource
   helper_method :find_vendor_name
 
-
 	def new
 		@order = Order.new
 	end
@@ -34,6 +33,16 @@ class OrdersController < ApplicationController
     @vendors = @order.group_by_vendor
 	end
 
+  def exchange
+#    require 'pry'; binding.pry
+  end
+
+  def store_lat_long
+    session[:latitude] = params[:latitude] 
+    session[:longitude] = params[:longitude] 
+    redirect_to items_path 
+  end
+  
 	private
 
 	def order_params

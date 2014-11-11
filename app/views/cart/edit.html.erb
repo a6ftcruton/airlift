@@ -29,6 +29,7 @@
       </table>
     </div>
     <%= link_to 'Clear My Cart', cart_destroy_path, method: :delete, class: "btn btn-grey4 btn-sm" %>
+    <%#= link_to "Choose Pickup or Delivery", orders_exchange_path, class: "btn btn-grey3 btn-sm" %>
     <%= link_to @cart_presenter.checkout_label, @cart_presenter.checkout_path, class: "btn btn-grey3 btn-sm" %>
   </div>
 </div>

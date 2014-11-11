@@ -61,4 +61,9 @@ RSpec.describe Vendor, :type => :model do
     expect(vendor).to_not be_valid
   end
 
+  it 'formats address correctly from supplied address data' do
+    address = vendor.set_address
+    expect(address).to eq "101 Caramel Lane Raleigh, NC 27519"
+  end
+
 end
