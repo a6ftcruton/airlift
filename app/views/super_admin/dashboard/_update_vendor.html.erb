@@ -1,0 +1,24 @@
+<table class="table">
+  <thead>
+    <tr>
+      <!-- <th>Picture</th> -->
+      <th>Vendor Name</th>
+      <!-- <th>Description</th> -->
+      <!-- <th>Price</th> -->
+      <th>Active?</th>
+      <th>Vendor Id</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @vendors.each do |vendor| %>
+       <tr class=<%= non_active_style(vendor) %>>
+        <td><%# if item.image_file_name != nil %><%#= image_tag item.image.url(:thumb) %><%# end %></td>
+        <td><%= link_to vendor.title, edit_super_admin_vendor_path(vendor) %></td>
+        <td><%#= vendor.description %></td>
+        <td><%#= print_price(item.price) %></td>
+        <td><%= vendor.active %></td>
+        <td><%= vendor.id %> </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

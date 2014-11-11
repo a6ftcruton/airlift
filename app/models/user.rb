@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
   validates :email, presence: true, format: { with: VALID_EMAIL_REGEX },
                     uniqueness: true
 
-  Roles = [ :super_admin , :user, :nonauth, :vendor_admin ]
+  Roles = [ :super_admin , :vendor_admin, :user, :nonauth ]
 
   def first_and_last_names_cannot_both_be_blank
     if first_name.empty? && last_name.empty?

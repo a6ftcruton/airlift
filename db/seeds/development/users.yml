@@ -24,7 +24,7 @@ records:
     nickname: 'novohispano'
     password: 'password'
     password_confirmation: 'password'
-    role: 'vendor_admin'
+    role: 'user'
     vendor_id: '<%= sprig_record(Vendor, 3).id %>'
   - sprig_id: 4
     first_name: 'Josh'

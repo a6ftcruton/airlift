@@ -1,19 +1,19 @@
-class VendorAdmin::UsersController < VendorAdmin::BaseController
-  before_action :set_user, except: [:index, :new, :create]
+class SuperAdmin::VendorsController < SuperAdmin::BaseController
+  before_action :set_vendor, except: [:index, :new, :create]
 
   def index
-    @users = User.where(vendor_id: @vendor)
+    @vendors = Vendor.all
   end
 
   def new
-    @user = User.new
+    @vendor = Vendor.new
   end
 
   def create
-    @user = User.new(user_params)
+    @vendor = Vendor.new(user_params)
     if @user.save
-      redirect_to vendor_admin_users_path
-      flash[:notice] = "You successfully created #{@user.role} #{@user.full_name}!"
+      redirect_to super_admin_users_path
+      flash[:notice] = "You successfully created vendor #{@vendor.name}!"
     else
       render :new
     end
@@ -23,9 +23,9 @@ class VendorAdmin::UsersController < VendorAdmin::BaseController
   end
 
   def update
-    if @user.update(user_params)
+    if @vendor.update(vendor_params)
       flash[:notice] = "Your account information has been successfully updated!"
-      redirect_to vendor_admin_path
+      redirect_to super_admin_path
     else
       redirect_to :back
       flash[:notice] = "Error saving your new information."
@@ -33,12 +33,12 @@ class VendorAdmin::UsersController < VendorAdmin::BaseController
   end
 
   def destroy
-    @user.destroy
-    redirect_to vendor_admin_path
+    @vendor.destroy
+    redirect_to super_admin_path
   end
 
   def edit
-    render 'edit_user_role'
+    render 'edit_vendor'
   end
 
   private

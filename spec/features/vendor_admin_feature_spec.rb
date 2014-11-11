@@ -36,6 +36,18 @@ describe 'vendor admin user', type: :feature do
 				expect(page).to have_content('Create A New Item')
 			end
 
+			xit 'can remove items' do
+				small_plates_category = create(:category, title: 'Small Plates')
+				create(:item, id: 1, title: 'Second Food', categories: [small_plates_category])
+				visit '/vendor_admin/items/1/edit'
+				find(:css, ".category_checkbox").set(false)
+				checkbox = find(".category_checkbox")
+				expect(checkbox).to_not be_checked
+				click_on("Save Changes")
+				visit '/vendor_admin/items/1'
+				expect(page).to_not have_content("Small Plates")
+			end
+
 			it 'has link to manage users' do
 				visit vendor_admin_path
 				expect(page).to have_content('View Current Users')
@@ -72,15 +84,6 @@ describe 'vendor admin user', type: :feature do
 			expect(page).to have_content("Your item has been successfully updated!")
 		end
 
-		it 'can create named categories for items' do
-			visit '/vendor_admin'
-			click_on('Create A New Category')
-			expect(page).to have_content("Create New Category")
-			fill_in "category_title", with: "New Category"
-			click_on('Create Category')
-			expect(page).to have_content("Your category has been successfully created!")
-		end
-
 		it 'can assign items to categories' do
 			small_plates_category = create(:category, title: 'Small Plates')
 			create(:item, id: 1, title: 'Second Food', categories: [small_plates_category])
@@ -89,18 +92,6 @@ describe 'vendor admin user', type: :feature do
 			click_on("Save Changes")
 			visit '/vendor_admin/items/1'
 			expect(page).to have_content("Small Plates")
-		end
-
-		it 'can remove items from categories' do
-			small_plates_category = create(:category, title: 'Small Plates')
-			create(:item, id: 1, title: 'Second Food', categories: [small_plates_category])
-			visit '/vendor_admin/items/1/edit'
-			find(:css, ".category_checkbox").set(false)
-			checkbox = find(".category_checkbox")
-			expect(checkbox).to_not be_checked
-			click_on("Save Changes")
-			visit '/vendor_admin/items/1'
-			expect(page).to_not have_content("Small Plates")
 		end
 
 		it 'can retire items from being sold' do
@@ -148,7 +139,7 @@ describe 'vendor admin user', type: :feature do
 
 	  it "can see all existing users" do
 	    visit "/vendor_admin/users"
-	    expect(page).to have_content("Current List of Caussa Users")
+	    expect(page).to have_content("Current List of Users")
 	  end
 
 		it "can modify an existing user's role" do
