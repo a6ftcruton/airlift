@@ -88,8 +88,7 @@ $(document).ready(function() {
         // eventually you need this function to send ajax request on button click w/o needing marker to move first
         google.maps.event.addListener(marker, 'dragend', function(evt){
           map.panTo(marker.getPosition());
-          // ajax post req here
-          
+
           document.getElementById('lat-long').innerHTML = '<p>Latitude: ' +
             evt.latLng.lat().toFixed(6) + '°<br>Longitude: ' + evt.latLng.lng().toFixed(6) + '°</p>';
             var marker_lat = evt.latLng.lat();
