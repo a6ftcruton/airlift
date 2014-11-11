@@ -37,7 +37,6 @@ class OrdersController < ApplicationController
 	end
 
   def exchange
-#    require 'pry'; binding.pry
   end
 
   def store_lat_long
@@ -52,9 +51,9 @@ class OrdersController < ApplicationController
 		params.require(:order).permit(:street_number, :street, :city, :state, :zip, :exchange, :status, :latitude, :longitude)
 	end
 
- def find_vendor_name(vendor_id)
-   Vendor.where(id: vendor_id).first.name
- end
+  def find_vendor_name(vendor_id)
+    Vendor.where(id: vendor_id).first.name
+  end
 
  end
 

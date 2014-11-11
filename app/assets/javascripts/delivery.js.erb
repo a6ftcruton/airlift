@@ -23,7 +23,7 @@ $(document).ready(function() {
   // Create Map
     function createPickupMap() {          
        var pickup_date = $('#datepicker').val();
-       $.post( '/orders/new', {date: pickup_date}); 
+   //    $.post( '/orders/new', {date: pickup_date}); 
       
       var geocoder = new google.maps.Geocoder();
       var myLatLng = new google.maps.LatLng(39.749759, -105.000132);
@@ -92,7 +92,6 @@ $(document).ready(function() {
         // eventually you need this function to send ajax request on button click w/o needing marker to move first
         google.maps.event.addListener(marker, 'dragend', function(evt){
           map.panTo(marker.getPosition());
-          // ajax post req here
           
           document.getElementById('lat-long').innerHTML = '<p>Latitude: ' +
             evt.latLng.lat().toFixed(6) + '°<br>Longitude: ' + evt.latLng.lng().toFixed(6) + '°</p>';
