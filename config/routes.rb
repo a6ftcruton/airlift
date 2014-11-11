@@ -27,15 +27,17 @@ Rails.application.routes.draw do
   get '/users/orders', to: 'users#show_orders', as: 'user_orders'
   resources :categories#, only: [:show]
   resources :cart_items, only: [:create]
+
   resources :orders, except: [:update, :edit, :destroy]
+  get 'orders/exchange', to: 'orders#exchange'
+  post 'orders/new', to: 'orders#store_lat_long'
+
 
   get 'items/:item_id/review', to: 'reviews#new', as: 'new_review'
   post 'items/:item_id/review', to: 'reviews#create', as: 'reviews'
   get 'items/:item_id/review/:id', to: 'reviews#edit', as: 'edit_review'
   patch 'items/:item_id/review/:id', to: 'reviews#update', as: 'review_update'
   #resources :reviews, only: [:update]
-
-  get '/menu', to: 'pdf#menu', as: 'menu'
 
   get '/about' => 'welcome#about'
   get '/code' => 'welcome#code'
@@ -47,6 +49,9 @@ Rails.application.routes.draw do
   match '/contacts',     to: 'contacts#new',             via: 'get'
   resources "contacts", only: [:new, :create]
 
+#<<<<<<< HEAD   <-- these 3 lines from merge conflict, just making sure!
+#  get '/:slug', to: 'vendors#show'
+#=======
   get ':slug', to: 'vendors#show'
 
   scope ':slug' do
