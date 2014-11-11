@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   patch 'cart/update_quantity/:id', to: 'cart#update_quantity', as: 'cart_update_quantity'
   delete 'cart/destroy'
 
-  namespace :admin do
+  namespace :vendor_admin do
     get '', to: 'dashboard#index'
     resources :items, except: [:index]
     resources :categories

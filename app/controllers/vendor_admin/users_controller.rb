@@ -1,4 +1,4 @@
-class Admin::UsersController < Admin::BaseController
+class VendorAdmin::UsersController < VendorAdmin::BaseController
   before_action :set_user, except: [:index, :new, :create]
 
   def index
@@ -12,7 +12,7 @@ class Admin::UsersController < Admin::BaseController
   def create
     @user = User.new(user_params)
     if @user.save
-      redirect_to admin_users_path
+      redirect_to vendor_admin_users_path
       flash[:notice] = "You successfully created #{@user.role} #{@user.full_name}!"
     else
       render :new
@@ -25,7 +25,7 @@ class Admin::UsersController < Admin::BaseController
   def update
     if @user.update(user_params)
       flash[:notice] = "Your account information has been successfully updated!"
-      redirect_to admin_path
+      redirect_to vendor_admin_path
     else
       redirect_to :back
       flash[:notice] = "Error saving your new information."
@@ -34,7 +34,7 @@ class Admin::UsersController < Admin::BaseController
 
   def destroy
     @user.destroy
-    redirect_to admin_path
+    redirect_to vendor_admin_path
   end
 
   def edit

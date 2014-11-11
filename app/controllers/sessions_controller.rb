@@ -22,10 +22,10 @@ class SessionsController < ApplicationController
 
   private
 
-  # user.is?('admin') ? admin_path : items_path
+  # user.is?('admin') ? vendor_admin_path : items_path
   def correct_destination(user)
-    if user.is?('admin') || user.is?('store_admin')
-      admin_path
+    if user.is?('super_admin') || user.is?('vendor_admin')
+      vendor_admin_path
     else
       items_path
     end

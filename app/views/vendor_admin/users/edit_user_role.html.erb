@@ -11,7 +11,7 @@
     <% end %>
 
     <%= link_to "Undo your changes", request.path, class: "btn btn-primary btn-lg" %>
-    <%= link_to "Cancel", admin_path, class: "btn btn-primary btn-lg" %>
+    <%= link_to "Cancel", vendor_admin_path, class: "btn btn-primary btn-lg" %>
 
     <%= form_for(@user, html: {multipart: true, method: 'delete'}, :url => admin_user_path(@user) ) do |f| %>
      <%= f.submit "Delete This Account", class: 'btn btn-danger btn-lg' %>

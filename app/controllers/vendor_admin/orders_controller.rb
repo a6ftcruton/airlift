@@ -1,4 +1,4 @@
-class Admin::OrdersController < Admin::BaseController
+class VendorAdmin::OrdersController < VendorAdmin::BaseController
   before_action :set_order, except: [:index, :custom_show]
   before_action :set_item_id, only: [:update_quantity, :remove_item]
 
@@ -36,7 +36,7 @@ class Admin::OrdersController < Admin::BaseController
 	def destroy
 		@order.destroy
 		flash[:notice]="Your shit is destroyed"
-		redirect_to admin_orders_path
+		redirect_to vendor_admin_orders_path
 	end
 
 	def status

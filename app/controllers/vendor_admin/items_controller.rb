@@ -1,4 +1,4 @@
-class Admin::ItemsController < Admin::BaseController
+class VendorAdmin::ItemsController < VendorAdmin::BaseController
   before_action :set_item, except: [:new, :create]
 
   def new
@@ -22,7 +22,7 @@ class Admin::ItemsController < Admin::BaseController
       @item.categories << category
     end
     if @item.save
-      redirect_to admin_path
+      redirect_to vendor_admin_path
       flash[:notice] = "Your item has been successfully added to the menu!"
     else
       redirect_to :back
@@ -32,7 +32,7 @@ class Admin::ItemsController < Admin::BaseController
 
   def destroy
     @item.destroy
-    redirect_to admin_path
+    redirect_to vendor_admin_path
   end
 
   def update
@@ -45,7 +45,7 @@ class Admin::ItemsController < Admin::BaseController
 
     if @item.update(item_params)
       flash[:notice] = "Your item has been successfully updated!"
-      redirect_to admin_item_path(@item)
+      redirect_to vendor_admin_item_path(@item)
     else
       redirect_to :back
       flash[:notice] = "Error saving item."

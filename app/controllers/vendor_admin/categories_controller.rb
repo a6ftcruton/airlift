@@ -1,4 +1,4 @@
-class Admin::CategoriesController < Admin::BaseController
+class VendorAdmin::CategoriesController < VendorAdmin::BaseController
   before_action :set_category, only: [:edit, :update, :destroy]
 
 	def index
@@ -17,7 +17,7 @@ class Admin::CategoriesController < Admin::BaseController
 		@category = Category.new(category_params)
 		if @category.save
 			flash[:notice] = "Your category has been successfully created!"
-			redirect_to admin_path
+			redirect_to vendor_admin_path
 		else
 			flash[:notice] = "Error saving category"
 			redirect_to :back
@@ -26,7 +26,7 @@ class Admin::CategoriesController < Admin::BaseController
 
 	def update
 		@category.update(category_params)
-		redirect_to admin_path
+		redirect_to vendor_admin_path
 	end
 
 	def destroy
