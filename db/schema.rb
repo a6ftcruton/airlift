@@ -100,6 +100,7 @@ ActiveRecord::Schema.define(version: 20141109221405) do
     t.datetime "updated_at"
     t.string   "password_digest",                  null: false
     t.string   "role",            default: "user"
+    t.string   "vendor_id"
   end
 
   create_table "vendor_order_items", force: true do |t|

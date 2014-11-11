@@ -6,6 +6,7 @@
       <th>Description</th>
       <th>Price</th>
       <th>Active?</th>
+      <th>Vendor Id</th>
     </tr>
   </thead>
   <tbody>
@@ -16,6 +17,7 @@
         <td><%= item.description %></td>
         <td><%= print_price(item.price) %></td>
         <td><%= item.active %></td>
+        <td><%= item.vendor_id %> </td>
       </tr>
     <% end %>
   </tbody>

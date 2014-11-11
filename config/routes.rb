@@ -49,6 +49,14 @@ Rails.application.routes.draw do
   match '/contacts',     to: 'contacts#new',             via: 'get'
   resources "contacts", only: [:new, :create]
 
-  get '/:slug', to: 'vendors#show'
+#<<<<<<< HEAD   <-- these 3 lines from merge conflict, just making sure!
+#  get '/:slug', to: 'vendors#show'
+#=======
+  get ':slug', to: 'vendors#show'
+
+  scope ':slug' do
+    get '/', to: 'vendors#show'
+    resources :items, only: [:show], as: "vendor_item"
+  end
 
 end
