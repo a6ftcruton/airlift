@@ -1,8 +1,4 @@
-# require 'elasticsearch/model'
 class Item < ActiveRecord::Base
-	# include Elasticsearch::Model
-	# include Elasticsearch::Model::Callbacks
-	# searchkick autocomplete: ['title']
 
 	validates :title, presence: true, uniqueness: true
 	validates :description, presence: true
@@ -23,18 +19,10 @@ class Item < ActiveRecord::Base
 
 	scope :active, -> {where(active: true)}
 
-	# Item.import
-	# def self.search(params)
-	# 	tire.search(load: true) do
-	# 		query { string params[:query] } if params[:query].present?
-	# 	end
-	# end
-	#
-	# @items = Item.search('foobar').records
+	@items = Item.all
 
-	def self.search(search)
-	  search_condition = "%" + search + "%"
-	  find(:all, :conditions => ['title LIKE ? OR description LIKE ?', search_condition, search_condition])
+	def self.search(query)
+	  where("lower(TITLE) like lower(?)", "%#{query}%")
 	end
 
 	def active?
