@@ -165,7 +165,7 @@ describe 'super admin dashboard' do
 # describe 'vendor admin order dashboard' do
 #
 # 	before do
-# 		category = create(:category, title: 'Test Category')
+# 		category = create(:categorgy, title: 'Test Category')
 # 		item = create(:item, title: 'Test Item', categories:[category])
 #
 # 		@order = create(:order)
