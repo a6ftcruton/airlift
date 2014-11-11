@@ -26,6 +26,10 @@ gem 'simple_form'
 gem "simple_calendar", "~> 1.1.0"
 gem 'coffee-rails', '~> 4.0.0'
 gem 'rails_12factor', group: :production
+gem 'elasticsearch-model'
+gem 'elasticsearch-rails'
+gem 'elasticsearch-persistence'
+gem 'searchkick'
 gem 'twilio-ruby'
 gem 'geocoder'
 
