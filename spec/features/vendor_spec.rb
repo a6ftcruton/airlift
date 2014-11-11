@@ -33,7 +33,7 @@ describe 'vendor', type: :feature do
     fill_in("Name Your Store", with: 'Great Store')
     fill_in("Describe Your Store", with: 'So great')
     click_on 'Create My Store'
-    expect(current_path).to eq root_path
+    expect(current_path).to eq vendors_path
     expect(page).to_not have_css('.errors')
   end
 
