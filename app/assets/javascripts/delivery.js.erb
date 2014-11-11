@@ -97,8 +97,8 @@ $(document).ready(function() {
 
             $('#geoFindMe').click( function() {
               $.post( '/orders/new', {latitude: marker_lat, longitude: marker_lng}); 
-            console.log(marker_lat);
-            console.log(marker_lng);
+              $("#delivery").hide("slow");
+              $("#confirm").show("slow");
           });
              
           

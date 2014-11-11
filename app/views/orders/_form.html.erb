@@ -23,6 +23,9 @@
       	<%= f.text_field :zip %>
 
       	<%= f.hidden_field :status %>
+      	<%= f.hidden_field :latitude, value: session[:latitude] %>
+      	<%= f.hidden_field :longitude, value: session[:longitude] %>
+
       	<%= f.label "Pickup or Delivery?" %>
       	<%= f.select :exchange, ['pickup', 'delivery'], :selected => 'pickup' %>
     	<%= f.submit class: "btn btn-grey1"%>
