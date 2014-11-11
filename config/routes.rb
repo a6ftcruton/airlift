@@ -22,7 +22,7 @@ Rails.application.routes.draw do
 
   resources :vendors
   resources :events
-  resources :items, only: [:index, :show, :search]
+  resources :items, only: [:index, :show]
   resources :users, except: [:index, :show]
   get '/users/orders', to: 'users#show_orders', as: 'user_orders'
   resources :categories#, only: [:show]
@@ -33,7 +33,7 @@ Rails.application.routes.draw do
   post 'items/:item_id/review', to: 'reviews#create', as: 'reviews'
   get 'items/:item_id/review/:id', to: 'reviews#edit', as: 'edit_review'
   patch 'items/:item_id/review/:id', to: 'reviews#update', as: 'review_update'
-  get 'items/search', to: 'items#search', as: 'search_results'
+  post 'items/search', to: 'items#search', as: 'search_results'
   #resources :reviews, only: [:update]
 
   get '/menu', to: 'pdf#menu', as: 'menu'
