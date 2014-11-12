@@ -35,6 +35,7 @@ Rails.application.routes.draw do
     get   '/orders/:status', to: 'orders#custom_show', as: 'order_custom_show'
   end
 
+  resources :charges
   resources :vendors
   resources :events
   resources :items, only: [:index, :show]
