@@ -11,6 +11,19 @@ class Vendor < ActiveRecord::Base
   #   @vendor_items = Vendor.find_by(slug: "responder").items
   # end
 
+  def online?
+    self.online ? 'Yes' : 'No'
+  end
+
+  def online=(value)
+    value.downcase!
+    if value == 'yes'
+      write_attribute(:online, true)
+    else
+      write_attribute(:online, false)
+    end
+  end
+
   private
 
   def set_default_slug

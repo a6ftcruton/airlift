@@ -5,7 +5,7 @@
         Last Name: <%= @user.last_name %><br/><br/>
         Nick Name: <%= @user.nickname %><br/><br/>
         Email: <%= @user.email %><br/><br/>
-        <%= f.label :user_or_admin, "User or Admin?" %> <%= f.select :role, ['vendor_admin'], :selected => f.object.role %>
+        <%= f.label :user_or_admin, "User or Admin?" %> <%= f.select :role, ['vendor_admin', 'user'], :selected => f.object.role %>
         <br>
         <%= f.submit "Save Changes", class: "btn btn-primary btn-lg" %>
     <% end %>

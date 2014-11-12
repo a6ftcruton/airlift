@@ -1,10 +1,10 @@
 <div class="admin-user">
   <div class="container">
-    <%= form_for @vendor, :url => super_admin_user_path(@vendor), method: "patch" do |f| %>
+    <%= form_for @vendor, :url => super_admin_vendor_path(@vendor), method: "patch" do |f| %>
         Name: <%= @vendor.name %><br/><br/>
         Description: <%= @vendor.description %><br/><br/>
         Active?: <%= @vendor.active %><br/><br/>
-        <%= f.label :active, "Active?" %> <%= f.select :active, ['true', 'false'], :selected => f.object.role %>
+        <%= f.label :online, "Online?" %> <%= f.select :online, ['yes', 'no'] %>
         <br>
         <%= f.submit "Save Changes", class: "btn btn-primary btn-lg" %>
     <% end %>
@@ -12,7 +12,7 @@
     <%= link_to "Undo your changes", request.path, class: "btn btn-primary btn-lg" %>
     <%= link_to "Cancel", super_admin_path, class: "btn btn-primary btn-lg" %>
 
-    <%= form_for(@vendor, html: {multipart: true, method: 'delete'}, :url => vendor_admin_user_path(@user) ) do |f| %>
+    <%= form_for(@vendor, html: {multipart: true, method: 'delete'}, :url => vendor_path(@vendor) ) do |f| %>
      <%= f.submit "Delete This Account", class: 'btn btn-danger btn-lg' %>
     <% end %>
   </div>

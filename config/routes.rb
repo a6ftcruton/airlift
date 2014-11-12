@@ -11,7 +11,9 @@ Rails.application.routes.draw do
     get '', to: 'dashboard#index'
     # resources :items, except: [:index]
     resources :categories
+    resources :vendors
     resources :users
+
     # resources :orders, only: [:index, :edit, :destroy]
     # patch '/order/status/:id/:status', to: 'orders#status', as: 'order_status'
     # patch '/orders/remove_item/:id/:item_id', to: 'orders#remove_item', as: 'order_remove_item'

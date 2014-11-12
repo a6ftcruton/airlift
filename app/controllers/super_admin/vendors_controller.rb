@@ -2,7 +2,7 @@ class SuperAdmin::VendorsController < SuperAdmin::BaseController
   before_action :set_vendor, except: [:index, :new, :create]
 
   def index
-    @vendors = Vendor.all
+    @vendors = Vendor.where(active: true)
   end
 
   def new
@@ -11,18 +11,23 @@ class SuperAdmin::VendorsController < SuperAdmin::BaseController
 
   def create
     @vendor = Vendor.new(user_params)
-    if @user.save
-      redirect_to super_admin_users_path
+    if @vendor.save
+      redirect_to super_admin_vendors_path
       flash[:notice] = "You successfully created vendor #{@vendor.name}!"
     else
       render :new
     end
   end
 
+  def edit
+    @vendor
+  end
+
   def show
   end
 
   def update
+    # binding.pry
     if @vendor.update(vendor_params)
       flash[:notice] = "Your account information has been successfully updated!"
       redirect_to super_admin_path
@@ -37,18 +42,14 @@ class SuperAdmin::VendorsController < SuperAdmin::BaseController
     redirect_to super_admin_path
   end
 
-  def edit
-    render 'edit_vendor'
-  end
-
   private
 
-    def user_params
-      params.require(:user).permit(:first_name, :last_name, :nickname, :email, :password, :role)
+    def vendor_params
+      params.require(:vendor).permit(:name, :description, :active, :online)
     end
 
-    def set_user
-      @user = User.find(params[:id])
+    def set_vendor
+      @vendor = Vendor.find(params[:id])
     end
 
 end

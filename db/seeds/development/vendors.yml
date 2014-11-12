@@ -3,14 +3,17 @@ records:
     name: "Above the Flood"
     description: "Flood and water damage prevention, mitigation, and restoration."
     active: 'true'
+    online: 'true'
   - sprig_id: 2
     name: "Real Relief"
     description: "Delivering the emergency supplies you'll need on the ground the moment disaster ends and recovery begins."
     active: 'true'
+    online: 'true'
   - sprig_id: 3
     name: "Responder"
     description: "Medical supplies necessary for the emergencies you cannot predict but will need to be ready for."
     active: 'false'
+    online: 'true'
   - sprig_id: 4
     name: "Doomsday Preppers"
     description: "Don't prepare for the disaster you think is coming--prepare for the worst."
