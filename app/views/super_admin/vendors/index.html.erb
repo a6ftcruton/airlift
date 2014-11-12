@@ -6,7 +6,7 @@
       <th>Name</th>
       <th>Description</th>
       <th>URL</th>
-      <th>Approve?</th>
+      <th>Approved?</th>
     </tr>
   </thead>
   <tbody>
@@ -16,11 +16,11 @@
         <td><%= vendor.description %></td>
         <td><%= vendor.slug %></td>
         <!-- <td> -->
-          <!-- <form action="javascript:select();" > -->
-            <!-- <input id="active" type="submit" name="active" value="Yes" /> -->
-          <!-- </form> -->
-         <!-- </td> -->
-        <td><%= link_to vendor.active, edit_super_admin_vendor_path(vendor) %></td>
+          <!-- <form action="javascript:select();" >
+            <input id="active" type="submit" name="active" value="Yes" />
+          </form>
+         </td> -->
+        <td><%= link_to "#{vendor.active}", edit_super_admin_vendor_path(vendor) %></td>
         <td>
       </td>
     </tr>
