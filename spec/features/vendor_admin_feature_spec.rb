@@ -14,7 +14,7 @@ describe 'vendor admin user', type: :feature do
 	end
 
 	it 'has a role of vendor admin' do
-		expect(page).to have_content("Site Administrator Dashboard")
+		expect(page).to have_content("#{@vendor.name} Admin Dashboard")
 	end
 
 	it 'is redirected to an admin dashboard upon login' do
@@ -23,16 +23,16 @@ describe 'vendor admin user', type: :feature do
 		fill_in 'email', with: "#{@user.email}"
 		fill_in 'password', with: "#{@user.password}"
 		click_on 'login'
-		expect(page).to have_content("Administrator")
+		expect(page).to have_content("Admin")
 		expect(current_path).to eq vendor_admin_path
-		expect(page).to have_content "Site Administrator Dashboard"
+		expect(page).to have_content "#{@vendor.name} Admin Dashboard"
 	end
 
 	describe 'vendor admin dashboard' do
 
 			it 'has link to create new items' do
 			  visit vendor_admin_path
-				expect(page).to have_content('Site Administrator Dashboard')
+				expect(page).to have_content("#{@vendor.name} Admin Dashboard")
 				expect(page).to have_content('Create A New Item')
 			end
 

@@ -24,7 +24,9 @@ class SessionsController < ApplicationController
 
   # user.is?('admin') ? vendor_admin_path : items_path
   def correct_destination(user)
-    if user.is?('super_admin') || user.is?('vendor_admin')
+    if user.is?('super_admin')
+      super_admin_path
+    elsif user.is?('vendor_admin')
       vendor_admin_path
     else
       items_path

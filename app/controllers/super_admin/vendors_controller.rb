@@ -27,7 +27,6 @@ class SuperAdmin::VendorsController < SuperAdmin::BaseController
   end
 
   def update
-    # binding.pry
     if @vendor.update(vendor_params)
       flash[:notice] = "Your account information has been successfully updated!"
       redirect_to super_admin_path
