@@ -2,7 +2,7 @@ class SuperAdmin::VendorsController < SuperAdmin::BaseController
   before_action :set_vendor, except: [:index, :new, :create]
 
   def index
-    @vendors = Vendor.where(active: true)
+    @vendors = Vendor.where(active: false)
   end
 
   def new
@@ -10,7 +10,7 @@ class SuperAdmin::VendorsController < SuperAdmin::BaseController
   end
 
   def create
-    @vendor = Vendor.new(user_params)
+    @vendor = Vendor.new(vendor_params)
     if @vendor.save
       redirect_to super_admin_vendors_path
       flash[:notice] = "You successfully created vendor #{@vendor.name}!"

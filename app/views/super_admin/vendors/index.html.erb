@@ -1,4 +1,4 @@
-<h1>Current List of Vendors</h1>
+<h1>New Vendor Requests</h1>
 
 <table class="table table-striped">
   <thead>
@@ -6,15 +6,20 @@
       <th>Name</th>
       <th>Description</th>
       <th>URL</th>
-      <th>Active?</th>
+      <th>Approve?</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <% @vendors.each do |vendor| %>
-        <td><%= vendor.name %>&nbsp;<%= vendor.name %></td>
+        <td><%= vendor.name %></td>
         <td><%= vendor.description %></td>
         <td><%= vendor.slug %></td>
+        <!-- <td> -->
+          <!-- <form action="javascript:select();" > -->
+            <!-- <input id="active" type="submit" name="active" value="Yes" /> -->
+          <!-- </form> -->
+         <!-- </td> -->
         <td><%= link_to vendor.active, edit_super_admin_vendor_path(vendor) %></td>
         <td>
       </td>
