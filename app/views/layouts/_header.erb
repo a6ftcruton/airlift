@@ -29,9 +29,9 @@
             </div>
             <!-- <button type="submit" class="btn btn-default">Submit</button> -->
           </form>
-          <% if current_user.role == 'super_admin' %>
+          <% if current_user && current_user.role == 'super_admin' %>
             <li class="active"><%= link_to "Platform Admin Dashboard", super_admin_path %></li>
-          <% elsif current_user.role == 'vendor_admin' %>
+          <% elsif current_user && current_user.role == 'vendor_admin' %>
             <li class="active"><%= link_to "Vendor Admin Dashboard", vendor_admin_path(current_user.vendor_id) %></li>
           <% end %>
         </ul>
