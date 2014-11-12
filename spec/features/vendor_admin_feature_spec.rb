@@ -149,6 +149,7 @@ describe 'vendor admin user', type: :feature do
 			expect(current_path).to eq vendor_admin_users_path
 			click_on('user')
 			expect(current_path).to eq edit_vendor_admin_user_path(nonadmin_user)
+			save_and_open_page
 			select 'vendor_admin', from: 'user_role'
 			click_on 'Save Changes'
 			expect(User.last.role).to eq 'vendor_admin'

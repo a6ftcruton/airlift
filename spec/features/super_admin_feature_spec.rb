@@ -23,15 +23,11 @@ describe 'super admin user', type: :feature do
 
     it "can see all users" do
       visit '/super_admin'
-      # click_on 'Create New User or Administrator'
-      # expect(current_path).to eq new_super_admin_user_path
-      expect(page).to have_content("Create New User or Administrator")
-      save_and_open_page
-      expect(page).to have_content(@vendor.name)
+      expect(page).to have_content("View Current Users")
+      click_on 'View Current Users'
+      expect(page).to have_content(@user.first_name)
     end
   end
-
-
 
   it 'can see all vendors' do
     visit '/super_admin'
