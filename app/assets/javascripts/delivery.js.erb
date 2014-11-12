@@ -23,33 +23,37 @@ $(document).ready(function() {
        var pickup_date = $('#datepicker').val();
       
         var geocoder = new google.maps.Geocoder();
-        var myLatLng = new google.maps.LatLng(39.749759, -105.000132);
+        var centerLatLng = new google.maps.LatLng(39.8282, -98.5795);
         var mapOptions = {
-          center: myLatLng,
-          zoom: 12 
+          center: centerLatLng,
+          zoom: 4 
         };
         var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-        var infoContent = '<h2>AirLift Command Center</h2>' +
-          '<h5><b>Address:</b>1550 Blake St. Denver, CO</h5>' +
-          '<h5><b>Phone:</b> 1-800-AIRLIFT2</h5>';
+        //var infoContent = '<h2>AirLift Command Center</h2>' +
+         // '<h5><b>Address:</b>1550 Blake St. Denver, CO</h5>' +
+          //'<h5><b>Phone:</b> 1-800-AIRLIFT2</h5>';
         var markerImg = '<%= asset_path('airlift-marker.svg') %>';
         locations = $('.vendor-info').data('locations')
         _.each(locations, function(location) {
-          debugger
           var marker = new google.maps.Marker({
               position: new google.maps.LatLng(location.latitude, location.longitude),
               map: map,
               title: location.name,
               icon: markerImg 
           });
+          _.each(locations, function(location) {
+            var infowindow = new google.maps.InfoWindow({
+              content:'<h3>'+ location.name + '</h3>'
+            });
+          });
           google.maps.event.addListener(marker, 'click', function() {
             infowindow.open(map,marker);
           });
         });
 
-        var infowindow = new google.maps.InfoWindow({
-          content: infoContent
-        });
+        //var infowindow = new google.maps.InfoWindow({
+        //  content: infoContent
+        //});
         $('#confirm-pickup').click(function(){
           $('#pickup').hide("slow");
           $('#confirm').show("slow");
