@@ -10,7 +10,7 @@
         <%= f.text_area :description %><br>
 
         <%= f.label :approved, "Approved?" %>
-        <%= f.select :approved, ['yes', 'no'] %><br>
+        <%= f.select :approved, options_for_select([["Yes", true], ["No", false]]) %><br>
 
         <%= f.label :online, "Online?" %>
         <%= f.select :online, ['yes', 'no'] %><br>
