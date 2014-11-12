@@ -10,17 +10,17 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
       <% @vendors.each do |vendor| %>
+      <tr>
         <td><%= vendor.name %></td>
         <td><%= vendor.description %></td>
         <td><%= vendor.slug %></td>
-        <!-- <td> -->
-          <!-- <form action="javascript:select();" >
+        <!-- <td>
+          <form action="javascript:select();" >
             <input id="active" type="submit" name="active" value="Yes" />
           </form>
          </td> -->
-        <td><%= link_to "#{vendor.active}", edit_super_admin_vendor_path(vendor) %></td>
+        <td><%= link_to "#{vendor.approved}", edit_super_admin_vendor_path(vendor) %></td>
         <td>
       </td>
     </tr>

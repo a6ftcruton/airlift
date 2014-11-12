@@ -6,7 +6,7 @@ records:
     city: "Boston"
     state: "MA"
     zip: "02210"
-    active: true
+    approved: true
     online: 'yes'
   - sprig_id: 2
     name: "Real Relief"
@@ -15,7 +15,7 @@ records:
     city: "Kinston"
     state: "NC"
     zip: "28504"
-    active: true
+    approved: true
     online: 'no'
   - sprig_id: 3
     name: "Responder"
@@ -24,7 +24,7 @@ records:
     city: "Portland"
     state: "OR"
     zip: "97204"
-    active: 'no'
+    approved: 'no'
     online: 'yes'
   - sprig_id: 4
     name: "Doomsday Preppers"
@@ -33,7 +33,7 @@ records:
     city: "Kodiak"
     state: "AK"
     zip: "99615"
-    active: true
+    approved: true
     online: 'yes'
   - sprig_id: 5
     name: "Gimme Shelter"
@@ -42,7 +42,7 @@ records:
     city: "Bellevue"
     state: "WA"
     zip: "98004"
-    active: true
+    approved: true
     online: 'yes'
   - sprig_id: 6
     name: "Danger Zone"
@@ -51,7 +51,7 @@ records:
     city: "Austin"
     state: "TX"
     zip: "78741"
-    active: true
+    approved: true
     online: 'yes'
   - sprig_id: 7
     name: "Power Play"
@@ -60,7 +60,7 @@ records:
     city: "St. Louis"
     state: "MO"
     zip: "63102"
-    active: true
+    approved: true
     online: 'yes'
   - sprig_id: 8
     name: "Assembly Generator Supplies"
@@ -69,7 +69,7 @@ records:
     city: "West Yellowstone"
     state: "MT"
     zip: "59758"
-    active: true
+    approved: true
     online: 'yes'
   - sprig_id: 9
     name: "Courier Emergency Medical"
@@ -78,7 +78,7 @@ records:
     city: "Jackson"
     state: "TN"
     zip: "38301"
-    active: true
+    approved: true
     online: 'yes'
   - sprig_id: 10
     name: "Duct Tape Depot"
@@ -87,5 +87,5 @@ records:
     city: "Green Bay"
     state: "WI"
     zip: "54304"
-    active: true
+    approved: true
     online: 'yes'
