@@ -1,7 +1,7 @@
 class Vendor < ActiveRecord::Base
   include US
   geocoded_by :set_address
-  # after_validation :geocode
+  after_validation :geocode
 
   has_many :items
   has_many :vendor_orders

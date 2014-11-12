@@ -58,6 +58,9 @@ RSpec.describe Order, :type => :model do
       order.zip = ''
       expect(order).to be_valid
     end
+
+    it 'is invalid without a pickup date' do
+    end
   end
 
   context "when the exchange is a delivery" do

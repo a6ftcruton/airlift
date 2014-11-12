@@ -9,40 +9,54 @@ $(document).ready(function() {
                 $("#pickup").show("slow", createPickupMap);
                 $('#delivery').hide("slow");
                 $('#datepicker ').datepicker();
-                //$("#storepicker").click(createPickupMap);
                 break;
             case "Delivery":
                 $("#pickup").hide("slow");
                 $("#delivery").show("slow", mapCurrentLocation);
-                $("#geoFindMe").click(saveCoords);
+                $("#confirm-delivery").click();
                 break;
             }
     }; 
 
   // Create Map
     function createPickupMap() {          
-      var geocoder = new google.maps.Geocoder();
-      var myLatLng = new google.maps.LatLng(39.749759, -105.000132);
+       var pickup_date = $('#datepicker').val();
+      
+        var geocoder = new google.maps.Geocoder();
+        var centerLatLng = new google.maps.LatLng(39.8282, -98.5795);
         var mapOptions = {
-          center: myLatLng,
-          zoom: 12 
+          center: centerLatLng,
+          zoom: 4 
         };
         var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-        var infoContent = '<h2>AirLift Command Center</h2>' +
-          '<h5><b>Address:</b>1550 Blake St. Denver, CO</h5>' +
-          '<h5><b>Phone:</b> 1-800-AIRLIFT2</h5>';
-        var markerImg = "<%= asset_path('airlift-marker.svg') %>";
-        var marker = new google.maps.Marker({
-            position: myLatLng,
-            map: map,
-            title: "AirLift Command Center",
-            icon: markerImg 
+        //var infoContent = '<h2>AirLift Command Center</h2>' +
+         // '<h5><b>Address:</b>1550 Blake St. Denver, CO</h5>' +
+          //'<h5><b>Phone:</b> 1-800-AIRLIFT2</h5>';
+        var markerImg = '<%= asset_path('airlift-marker.svg') %>';
+        locations = $('.vendor-info').data('locations')
+        _.each(locations, function(location) {
+          var marker = new google.maps.Marker({
+              position: new google.maps.LatLng(location.latitude, location.longitude),
+              map: map,
+              title: location.name,
+              icon: markerImg 
+          });
+          _.each(locations, function(location) {
+            var infowindow = new google.maps.InfoWindow({
+              content:'<h3>'+ location.name + '</h3>'
+            });
+          });
+          google.maps.event.addListener(marker, 'click', function() {
+            infowindow.open(map,marker);
+          });
         });
-        var infowindow = new google.maps.InfoWindow({
-          content: infoContent
-        });
-        google.maps.event.addListener(marker, 'click', function() {
-          infowindow.open(map,marker);
+
+        //var infowindow = new google.maps.InfoWindow({
+        //  content: infoContent
+        //});
+        $('#confirm-pickup').click(function(){
+          $('#pickup').hide("slow");
+          $('#confirm').show("slow");
         });
     }
       //google.maps.event.addDomListener(window, 'change', initialize);
@@ -88,15 +102,16 @@ $(document).ready(function() {
         // eventually you need this function to send ajax request on button click w/o needing marker to move first
         google.maps.event.addListener(marker, 'dragend', function(evt){
           map.panTo(marker.getPosition());
-          // ajax post req here
           
           document.getElementById('lat-long').innerHTML = '<p>Latitude: ' +
             evt.latLng.lat().toFixed(6) + '°<br>Longitude: ' + evt.latLng.lng().toFixed(6) + '°</p>';
             var marker_lat = evt.latLng.lat();
             var marker_lng = evt.latLng.lng();
+            $('#order_latitude').attr('value', marker_lat);
+            $('#order_longitude').attr('value', marker_lng);
 
-            $('#geoFindMe').click( function() {
-              $.post( '/orders/new', {latitude: marker_lat, longitude: marker_lng}); 
+            $('#confirm-delivery').click( function() {
+              //$.post( '/orders/new', {latitude: marker_lat, longitude: marker_lng}); 
               $("#delivery").hide("slow");
               $("#confirm").show("slow");
           });
@@ -108,37 +123,4 @@ $(document).ready(function() {
 
     } 
         //google.maps.event.addDomListener(window, 'change', mapCurrentLocation);
-
-    
-    // Get coordinates
-  function geoFindMe() {
-    var output = document.getElementById("lat-long");
-
-    if (!navigator.geolocation){
-      output.innerHTML = "<p>Geolocation is not supported by your browser. Make sure your settings allow us to retrieve your current location!</p>";
-      return;
-    }
-
-    function success(position) {
-      var latitude  = position.coords.latitude;
-      var longitude = position.coords.longitude;
-
-      output.innerHTML = '<p>Latitude is ' + latitude + '° <br>Longitude is ' + longitude + '°</p>';
-
-      var img = new Image();
-      img.src = "http://maps.googleapis.com/maps/api/staticmap?center=" + latitude + "," + longitude + "&zoom=13&size=300x300&markers=icon:https://s3-us-west-2.amazonaws.com/turingproject/items/images/AirLift-favicon.png|" + latitude + "," + longitude + "&sensor=false";
-  img.src = "http://maps.googleapis.com/maps/api/staticmap?center=" + latitude + "," + longitude + "&zoom=13&size=300x300&markers=icon:../images/airlift-marker.png|" + latitude + "," + longitude + "&sensor=false";
-
-      output.appendChild(img);
-    };
-
-    function error() {
-      output.innerHTML = "Unable to retrieve your location";
-    };
-
-    output.innerHTML = "<p>Locating…</p>";
-
-    navigator.geolocation.getCurrentPosition(success, error);
-  }
-
 
