@@ -4,9 +4,10 @@
     <%= m %>
   <% end %>
   <div>
-  <h2>Billing Address</h2>
     <%= form_for @order do |f|%>
         
+      <%= f.submit class: "btn btn-lg btn-grey1", value: "Submit Your Order"%><br/>
+
         <%= f.label :street_number %>
         <%= f.text_field :street_number %>
 
@@ -23,13 +24,13 @@
       	<%= f.text_field :zip %>
 
       	<%= f.hidden_field :status %>
-      	<%= f.hidden_field :latitude, value: session[:latitude] %>
-      	<%= f.hidden_field :longitude, value: session[:longitude] %>
+      	<%= f.hidden_field :latitude %>
+      	<%= f.hidden_field :longitude %>
 
       	<%= f.label "Pickup or Delivery?" %>
       	<%= f.select :exchange, ['pickup', 'delivery'], :selected => 'pickup' %>
-    	<%= f.submit class: "btn btn-grey1"%>
     <% end %>
+  <h2>Enter Your Billing Address For Deliveries</h2>
   </div>
   </div>
 </div>
