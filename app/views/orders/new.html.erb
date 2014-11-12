@@ -1,30 +1,15 @@
-<div class="row">
-  <div class="col-md-10 col-md-offset-1">
-  <h1>New Order</h1>
-  <% @order.errors.full_messages.each do |m| %>
-    <%= m %>
-  <% end %>
-    <%= form_for @order do |f|%>
-        
-        <%= f.label :street_number %>
-        <%= f.text_field :street_number %>
-
-      	<%= f.label :street %>
-      	<%= f.text_field :street %>
-
-      	<%= f.label :city %>
-      	<%= f.text_field :city %>
-
-      	<%= f.label :state %>
-      	<%= f.text_field :state %>
-
-      	<%= f.label :zip %>
-      	<%= f.text_field :zip %>
-
-      	<%= f.hidden_field :status %>
-      	<%= f.label "Pickup or Delivery?" %>
-      	<%= f.select :exchange, ['pickup', 'delivery'], :selected => 'pickup' %>
-    	<%= f.submit class: "btn btn-grey1"%>
-    <% end %>
+<div class="container exchange-container">
+  <div "container exchange-options">
+    <select id="order_exchange" class="form-control">
+      <option>Pickup</option>
+      <option>Delivery</option>
+    </select>
+  </div>
+  <%= render partial: "pickup" %>
+  <%= render partial: "delivery" %>
+  <%= render partial: "confirm" %>
 </div>
-</div>
+
+
+
+

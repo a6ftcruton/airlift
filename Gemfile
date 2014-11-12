@@ -8,8 +8,10 @@ gem 'rails', '4.1.6'
 gem 'pg'
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
+gem 'jquery-turbolinks'
 gem 'bcrypt', '~> 3.1.7'
 gem 'launchy', '~> 2.4.2'
 gem 'sprig', '~> 0.1'
@@ -25,6 +27,12 @@ gem 'simple_form'
 gem "simple_calendar", "~> 1.1.0"
 gem 'coffee-rails', '~> 4.0.0'
 gem 'rails_12factor', group: :production
+gem 'elasticsearch-model'
+gem 'elasticsearch-rails'
+gem 'elasticsearch-persistence'
+gem 'searchkick'
+gem 'twilio-ruby'
+gem 'geocoder'
 
 group :development, :test do
   gem 'spring'

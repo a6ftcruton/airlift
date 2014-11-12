@@ -58,11 +58,16 @@ RSpec.describe Order, :type => :model do
       order.zip = ''
       expect(order).to be_valid
     end
+
+    it 'is invalid without a pickup date' do
+    end
   end
 
   context "when the exchange is a delivery" do
     before do
       order.exchange = 'delivery'
+      order.latitude = 34.123456
+      order.longitude = -104.123456
     end
 
     it 'is invalid without a street number' do
@@ -101,5 +106,27 @@ RSpec.describe Order, :type => :model do
       order.zip = '1234'
       expect(order).to_not be_valid
     end
+
+    it 'is invlid without a latitude' do
+      order.latitude = nil
+      expect(order).to_not be_valid
+    end
+
+    it 'is invlid without a latitude' do
+      order.longitude = nil
+      expect(order).to_not be_valid
+    end
+
+    it 'is valid with a valid latitude and longitude' do
+      order.latitude = 34.123456
+      order.longitude = -104.123456
+      expect(order).to be_valid
+    end
+
+    xit 'is invalid if latitude is formatted incorrectly' do
+      order.latitude = 123456789
+      expect(order).to_not be_valid
+    end
+    
   end
 end

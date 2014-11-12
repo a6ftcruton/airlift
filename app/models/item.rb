@@ -1,4 +1,5 @@
 class Item < ActiveRecord::Base
+
 	validates :title, presence: true, uniqueness: true
 	validates :description, presence: true
 	validates :price, numericality: { greater_than: 0 }
@@ -6,7 +7,7 @@ class Item < ActiveRecord::Base
   has_many :line_items
   has_many :orders, through: :line_items
   has_many :reviews
-  has_many :vendor_order_items 
+  has_many :vendor_order_items
   has_many :vendor_orders, through: :vendor_order_items
 	belongs_to :vendor
 
@@ -17,6 +18,12 @@ class Item < ActiveRecord::Base
 	validates_attachment :image, content_type: {content_type: ["image/jpeg", "image/jpeg", "image/png", "image/gif"]}
 
 	scope :active, -> {where(active: true)}
+
+#  @items = Item.all
+
+	def self.search(query)
+	  where("lower(TITLE) like lower(?)", "%#{query}%")
+	end
 
 	def active?
 		self.active == true
