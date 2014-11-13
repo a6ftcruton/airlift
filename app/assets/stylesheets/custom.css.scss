@@ -87,6 +87,7 @@ a {
   background: #FFF;
   padding: 2px;
   margin-bottom: 20px;
+  margin-left: 100px;
   border-radius: 5px;
   clear: both;
   -webkit-border-radius: 5px;
@@ -130,6 +131,7 @@ a {
     width: 25% !important;
     border: solid;
   }
+
 }
 
 .grid-item.on {
@@ -296,7 +298,7 @@ a {
    height: 384px;
    width: 100%;
    margin-bottom: 10%;
- } 
+ }
  #exchange_dropdown {
    font-size: 30px;
    height: 50px;
@@ -331,30 +333,30 @@ a {
  }
  #pickup.container,
  #delivery.container {
-  padding-top: 20px; 
+  padding-top: 20px;
  }
  #map-container,
  #pickup_date,
  #confirm-pickup {
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
  }
  #lat-long > p {
-  font-size: 16px; 
+  font-size: 16px;
  }
  .pickup_options {
    margin: 0 36%;
  }
  .new_order {
-   margin: 0 10%;  
+   margin: 0 10%;
  }
  .new_order > input {
-  margin: 10px; 
+  margin: 10px;
  }
  #submit_order {
-  margin-bottom: 30px; 
+  margin-bottom: 30px;
  }
  #order-form {
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
  }
  .order-form-with-address {
    border: 3px solid rgba(0, 0, 0, .2);
@@ -362,5 +364,9 @@ a {
    margin: 20px 0;
  }
  .table > tbody {
-  text-align: left; 
+  text-align: left;
  }
+
+  body {
+    padding-top: 70px !important;
+  }
