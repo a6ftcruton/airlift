@@ -23,7 +23,14 @@ class VendorAdmin::UsersController < VendorAdmin::BaseController
   end
 
   def update
-    if @user.update(user_params)
+    old_role = @user.role
+    @user.update(user_params)
+    users = User.where(vendor_id: current_user.vendor_id.to_s, role: "vendor_admin")
+    if users.count == 0
+      @user.update(role: old_role)
+      flash[:notice] = "You must retain at least one vendor admin; role change undone!"
+      redirect_to :back
+    elsif @user.update(user_params) && users.count >= 1
       flash[:notice] = "Your account information has been successfully updated!"
       redirect_to vendor_admin_path
     else

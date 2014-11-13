@@ -10,8 +10,8 @@ records:
     vendor_id: '<%= sprig_record(Vendor, 1).id %>'
   - sprig_id: 2
     first_name: 'Jeff'
-    last_name: ''
-    email: 'demo+jeff@jumstartlab.com'
+    last_name: 'Casimir'
+    email: 'demo+jeff@jumpstartlab.com'
     nickname: 'j3'
     password: 'password'
     password_confirmation: 'password'
