@@ -127,13 +127,11 @@ ActiveRecord::Schema.define(version: 20141112184907) do
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "approved",    default: false
-    t.boolean  "online",      default: true
     t.string   "street"
     t.string   "city"
     t.string   "zip"
     t.string   "state"
-    t.boolean  "active",      default: false
+    t.boolean  "approved",    default: false
     t.boolean  "online",      default: true
     t.float    "latitude"
     t.float    "longitude"
