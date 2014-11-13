@@ -10,6 +10,7 @@ class Admin::UsersController < Admin::BaseController
   end
 
   def create
+    # binding.pry
     @user = User.new(user_params)
     if @user.save
       redirect_to admin_users_path
@@ -44,7 +45,7 @@ class Admin::UsersController < Admin::BaseController
   private
 
     def user_params
-      params.require(:user).permit(:first_name, :last_name, :nickname, :email, :password, :role)
+      params.require(:user).permit(:first_name, :last_name, :nickname, :email, :password, :role, :vendor_id)
     end
 
     def set_user
