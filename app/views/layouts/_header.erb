@@ -1,4 +1,4 @@
-<div class="navbar-wrapper">
+<nav class="navbar-wrapper">
   <div class="container">
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container-fluid">
@@ -10,7 +10,7 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="/"><%= image_tag("AirLift-logo-white.png", :alt => "logo", :width => '120', :height => '37' ) %></a>
-        </div> <!-- navbar-header-ending -->
+        </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <li class="dropdown">
@@ -22,23 +22,37 @@
               </ul>
             </li>
             <div class="navbar-form navbar-left">
-              <%= form_tag(items_path, :method => "get", id: "search-form") do %>
-                <%= text_field_tag :search, params[:search], placeholder: "Search Items", class: "form-control", style: "color: black" %>
-                <%= submit_tag "Search", :name => nil, :class =>"btn btn-grey4" %>
-              <% end %>
-              <%= render 'shared/login_form'  %>
+            <%= form_tag(items_path, :method => "get", id: "search-form") do %>
+              <%= text_field_tag :search, params[:search], placeholder: "Search Items", style: "color: black" %>
+              <%= submit_tag "Search", :name => nil, :class =>"btn btn-grey4" %>
+            <% end %>
             </div>
-          <div class='cart-container'>
-            <%= link_to( image_tag("Shopping-Cart.png"), cart_edit_path) %>
-            <span class='cart_quantity'><%= cart.size %></span>
-          </div>
-        </ul> <!--  navbarnav-ending -->
-      </div> <!--  collapse navbar-collapse-ending -->
-    </div><!--  container-fluid-ending -->
-  </div><!--  navbar navbar-inverse navbar-fixed-top-ending -->
-  </div> <!--  navbarnav-ending -->
-</div> <!--  container-ending -->
-</div> <!--  navbar wrapper-ending -->
+          <% if can? :create, @category %>
+            <li class="active"><%= link_to "Platform Admin Dashboard", super_admin_path %></li>
+          <% elsif can? :create, @item %>
+          <%# if can? :create, @item %>
+            <li class="active"><%= link_to "Admin Dashboard", vendor_admin_path(current_user.vendor_id) %></li>
+          <% end %>
+
+            <div class="nav navbar-nav navbar-right", style= "float:right", style="padding: 20px">
+              <% if current_user %>
+                <%= "Welcome #{current_user.nickname ? current_user.nickname : current_user.full_name}!" %>
+                <%= link_to "My Profile", edit_user_path(current_user) %> /
+                <%= link_to "Logout", logout_path, method: :delete %>
+              <% else %>
+                <%= render 'shared/login_form'  %>
+              <% end %>
+              <div class='cart-container' style="float:right", style="padding: 10px">
+                <%= link_to( image_tag("Shopping-Cart.png"), cart_edit_path) %>
+                <span class='cart_quantity'><%= cart.size %></span>
+              </div>
+            </div>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
 <div class='ajax_flash_messages'>
   <% flash.each do |type, message| %>
     <div class="flash" id="<%= type %>">

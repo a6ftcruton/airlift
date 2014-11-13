@@ -1,18 +1,8 @@
-<% if can? :create, @item %>
-		<li class="active"><%= link_to "Admin Dashboard", admin_path %></li>
-<% end %>
-<% if current_user %>
-	<%= "Welcome #{current_user.nickname ? current_user.nickname : current_user.full_name}!" %>
-	<%= link_to "My Profile", edit_user_path(current_user) %> /
-	<%= link_to "Logout", logout_path, method: :delete %>
-<% else %>
-	<%= form_tag(login_path, class: "navbar-form navbar-right edit") do %>
+<%= form_tag(login_path, class: "navbar-form navbar-right edit") do %>
 	<div class="form-group">
 	<%= text_field_tag "email", nil, placeholder: "email", class: 'form-control' %>
 	<%= password_field_tag "password", nil, placeholder: "password", class: "form-control" %>
 	<%= submit_tag :login, class: "btn btn-default"  %>
 	</div>
+	<%= link_to "Create Account", new_user_path %>
 <% end %>
-<% end %>
-
-<%= link_to "Create Account", new_user_path %>

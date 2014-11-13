@@ -105,7 +105,7 @@ a {
   .grid-sizer { width: 10%; }
 }
 
-@media screen and (min-width: 321px) {
+@media screen and (max-width: 321px) {
   /* 10 columns for larger screens */
   .grid-sizer { width: 100%; }
 }
