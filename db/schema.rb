@@ -131,6 +131,8 @@ ActiveRecord::Schema.define(version: 20141112020533) do
     t.string   "city"
     t.string   "zip"
     t.string   "state"
+    t.boolean  "approved",    default: false
+    t.boolean  "online",      default: true
     t.float    "latitude"
     t.float    "longitude"
   end
