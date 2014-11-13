@@ -30,7 +30,7 @@ class OrdersController < ApplicationController
       flash[:notice] = "Your order has been successfully created!"
 			redirect_to order
 		else
-      #flash[:notice] = order.errors.full_messages 
+      flash.now[:notice] = order.errors.full_messages.to_sentence 
 			redirect_to :back
 		end
 	end
