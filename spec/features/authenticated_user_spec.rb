@@ -115,18 +115,18 @@ describe 'authenticated user,', type: :feature do
 	it 'cannot access admin item pages' do
 		small_plates_category = create(:category, title: 'Small Plates')
 		create(:item, id: 1, title: 'Second Food', categories: [small_plates_category])
-		visit '/vendor_admin/items/1/edit'
+		visit '/admin/items/1/edit'
 		expect(page).to_not have_content "Edit Item"
 		expect(current_path).to eq(items_path)
 		expect(page).to have_content "You are not authorized to access this page."
-		visit '/vendor_admin/items/new'
+		visit '/admin/items/new'
 		expect(page).to_not have_content "Create New Item"
     expect(current_path).to eq(items_path)
 		expect(page).to have_content "You are not authorized to access this page."
 	end
 
   it 'cannot access admin user pages' do
-    visit '/vendor_admin/users/1/edit'
+    visit '/admin/users/1/edit'
     expect(page).to_not have_content "User or Admin?"
   end
 
