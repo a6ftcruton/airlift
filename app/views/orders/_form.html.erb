@@ -4,9 +4,9 @@
     <%= m %>
   <% end %>
   <div class="order-form-with-address">
-    <h3>Enter Billing Address To Complete Order</h3>
     <%= form_for @order do |f|%>
-        
+       <div id="order-form">        
+        <h3>Enter Billing Address To Complete Order</h3>
         <%= f.label :street_number %>
         <%= f.text_field :street_number %>
 
@@ -30,6 +30,7 @@
       	<%= f.hidden_field :pickup_date %>
 
       	<%= f.hidden_field :exchange %>
+        </div>
         <br><%= f.submit id: "submit_order", class: "btn btn-lg btn-grey1", value: "Submit Your Order"%>
  <% end %>
   </div>

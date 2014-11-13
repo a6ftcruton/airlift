@@ -324,7 +324,7 @@ a {
  #confirm-pickup {
   margin-bottom: 20px; 
  }
- #lat-long > h5 {
+ #lat-long > p {
   font-size: 16px; 
  }
  .pickup_options {
@@ -337,7 +337,10 @@ a {
   margin: 10px; 
  }
  #submit_order {
-  margin: 25px 0; 
+  margin-bottom: 30px; 
+ }
+ #order-form {
+  margin-bottom: 20px; 
  }
  .order-form-with-address {
    border: 3px solid rgba(0, 0, 0, .2);

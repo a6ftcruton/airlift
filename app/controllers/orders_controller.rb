@@ -18,8 +18,6 @@ class OrdersController < ApplicationController
 	def create
     order = Order.new(order_params)
     order.populate(cart, current_user)
-    order.convert_points
-    cart.clear
 
 		if order.save
       order.text_customer(order)
@@ -28,10 +26,11 @@ class OrdersController < ApplicationController
         VendorNotifier.new_order_notification(current_user, order, vendor_order).deliver
       end
       flash[:notice] = "Your order has been successfully created!"
+      cart.clear
 			redirect_to order
 		else
-      flash.now[:notice] = order.errors.full_messages.to_sentence 
-			redirect_to :back
+      flash[:notice] = order.errors.full_messages.to_sentence 
+      redirect_to new_order_path
 		end
 	end
 
@@ -43,11 +42,6 @@ class OrdersController < ApplicationController
   def exchange
   end
 
-  def store_lat_long
-    session[:latitude] = params[:latitude]
-    session[:longitude] = params[:longitude]
-  end
-  
 	private
 
 	def order_params

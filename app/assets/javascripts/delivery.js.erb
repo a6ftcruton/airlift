@@ -1,6 +1,7 @@
 $(document).ready(function() {
     setExchange(); 
-
+    fadeFlashNotices(); 
+    
     $('#exchange_dropdown').change(setExchange); // on change
         function setExchange() {       
         switch ($("#exchange_dropdown").val()) {
@@ -21,6 +22,10 @@ $(document).ready(function() {
                 break;
             }
     }; 
+
+    function fadeFlashNotices() {
+      $('#notice.flash').hide().delay(400).fadeIn(800).delay(4000).fadeOut(800);
+    }
 
   // Create Map
     function createPickupMap() {          
@@ -67,9 +72,15 @@ $(document).ready(function() {
         });
         
         $('#confirm-pickup').click(function(){
-          $('#pickup').hide("slow");
-          $('#confirm_pickup').show("slow");
-          //$('#confirm').show("slow");
+          
+          if ( $('#pickup_date').val() === "Click for Calendar") {
+            alert("You must choose a pickup date!"); 
+          }
+          else {
+            $('#pickup').hide("slow");
+            $('#confirm').show("slow");
+            $('#order-form').hide(1000);
+          }
         });
     }
 })
@@ -118,23 +129,27 @@ $(document).ready(function() {
           $('#order_longitude').attr('value', initial_longitude);
           $("#delivery").hide("slow");
           $("#confirm").show("slow");
+          $('#order-form').show(1200);
         });
 
         google.maps.event.addListener(marker, 'dragend', function(evt){
           map.panTo(marker.getPosition());
           
-          document.getElementById('lat-long').innerHTML = '<p>Latitude: ' +
-            evt.latLng.lat().toFixed(6) + '°<br>Longitude: ' + evt.latLng.lng().toFixed(6) + '°</p>';
+          document.getElementById('lat-long').innerHTML = '<h5>Latitude: ' +
+            evt.latLng.lat().toFixed(6) + '°<br>Longitude: ' + evt.latLng.lng().toFixed(6) + '°</h5>';
             var marker_lat = evt.latLng.lat();
             var marker_lng = evt.latLng.lng();
             $('#order_latitude').attr('value', marker_lat);
             $('#order_longitude').attr('value', marker_lng);
 
+            
+
             $('#confirm-delivery').click( function() {
-              $("#delivery").hide("slow");
-              $("#confirm").show("slow");
-          });
+                $("#delivery").hide("slow");
+                $("#confirm").show("slow");
+                $('#order-form').show(1200);
+            });
         });
       });
-    } 
+    } // document.ready 
 
