@@ -26,8 +26,9 @@ class OrdersController < ApplicationController
         VendorNotifier.new_order_notification(current_user, order, vendor_order).deliver
       end
       flash[:notice] = "Your order has been successfully created!"
-      cart.clear
 			redirect_to order
+      #  ??????????????? where else can we do this?   
+  #   cart.clear
 		else
       flash[:notice] = order.errors.full_messages.to_sentence 
       redirect_to new_order_path
