@@ -10,7 +10,7 @@
         <%if current_user.nil?  %>
         <h4><%= link_to "<< Return to All Categories", categories_path %><h4>
         <% elsif current_user.is?('admin') %></h4>
-        <h4><%= link_to "<< Return to Your Admin Dashboard", vendor_admin_path %>
+        <h4><%= link_to "<< Return to Your Admin Dashboard", admin_path %>
       <% end  %>
   </div>
 </div>

@@ -2,7 +2,6 @@ class User < ActiveRecord::Base
 
   has_many :orders
   has_many :reviews
-  belongs_to :vendor
 
   has_secure_password
 
@@ -12,7 +11,7 @@ class User < ActiveRecord::Base
   validates :email, presence: true, format: { with: VALID_EMAIL_REGEX },
                     uniqueness: true
 
-  Roles = [ :super_admin , :vendor_admin, :user, :nonauth ]
+  Roles = [ :admin , :user, :nonauth, :store_admin ]
 
   def first_and_last_names_cannot_both_be_blank
     if first_name.empty? && last_name.empty?
@@ -25,9 +24,6 @@ class User < ActiveRecord::Base
   end
 
   def is?( requested_role )
-    if self.role.to_s == :super_admin.to_s
-      return true
-    end
     self.role.to_s == requested_role.to_s
   end
 

@@ -1,0 +1,8 @@
+<div class="container">
+  <h1>You are currently editing the <%="#{@item.title.capitalize}"%> menu item</h1>
+  <br>
+  <%= render 'edit_form' %>
+  <%= link_to "Undo your changes", request.path, class: "btn btn-primary btn-lg" %>
+  <%= link_to "Cancel", admin_path, class: "btn btn-primary btn-lg" %>
+  <%= render 'delete_form' %>
+</div>

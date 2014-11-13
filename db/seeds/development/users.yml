@@ -6,16 +6,16 @@ records:
     nickname:
     password: 'password'
     password_confirmation: 'password'
-    role: 'vendor_admin'
+    role: 'store_admin'
     vendor_id: '<%= sprig_record(Vendor, 1).id %>'
   - sprig_id: 2
     first_name: 'Jeff'
-    last_name: 'Casimir'
-    email: 'demo+jeff@jumpstartlab.com'
+    last_name: ''
+    email: 'demo+jeff@jumstartlab.com'
     nickname: 'j3'
     password: 'password'
     password_confirmation: 'password'
-    role: 'vendor_admin'
+    role: 'store_admin'
     vendor_id: '<%= sprig_record(Vendor, 2).id %>'
   - sprig_id: 3
     first_name: 'Jorge'
@@ -24,7 +24,7 @@ records:
     nickname: 'novohispano'
     password: 'password'
     password_confirmation: 'password'
-    role: 'user'
+    role: 'store_admin'
     vendor_id: '<%= sprig_record(Vendor, 3).id %>'
   - sprig_id: 4
     first_name: 'Josh'
@@ -33,13 +33,4 @@ records:
     nickname: 'josh'
     password: 'password'
     password_confirmation: 'password'
-    role: 'super_admin'
-  - sprig_id: 5
-    first_name: 'Horace'
-    last_name: 'Horace'
-    email: 'demo+horace@jumpstartlab.com'
-    nickname:
-    password: 'password'
-    password_confirmation: 'password'
-    role: 'vendor_admin'
-    vendor_id: '<%= sprig_record(Vendor, 1).id %>'
+    role: 'admin'
