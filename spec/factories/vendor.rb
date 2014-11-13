@@ -6,7 +6,5 @@ FactoryGirl.define do
     city 'Raleigh'
     state 'NC'
     zip '27519'
-    approved 'Yes'
-    online 'Yes'
   end
 end
