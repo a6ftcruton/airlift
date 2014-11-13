@@ -5,7 +5,10 @@
 		<%= render 'form' %>
 	</div>
 <div class="col-md-2 col-md-offset-5">
-  <h3><%= link_to "I want to be a Vendor", new_vendor_path %></h3>
+  <!-- <h3><%#= link_to "I want to be a Vendor", new_vendor_path %></h3> -->
+  <% if current_user.role == 'user' %>
+    <h3><%= link_to "I want to be a Vendor", new_vendor_path %></h3>
+  <% end %>
 </div>
   <%= link_to 'Your Orders', user_orders_path %>
 </div>
