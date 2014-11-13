@@ -27,8 +27,7 @@ class OrdersController < ApplicationController
       end
       flash[:notice] = "Your order has been successfully created!"
 			redirect_to order
-      #  ??????????????? where else can we do this?   
-  #   cart.clear
+      cart.clear
 		else
       flash[:notice] = order.errors.full_messages.to_sentence 
       redirect_to new_order_path

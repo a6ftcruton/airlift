@@ -1,29 +1,6 @@
 <div class="col-md-10 col-md-offset-1">
 	<div class="panel panel-default">
     <div class="panel-heading"><h1>Completed Order</h1></div>
-      <div class="panel-body">
-         <table class="table">
-            <thead>
-              <tr class="success">
-                <th>Items</th>
-                <th>Quantity</th>
-                <th>Unit Price</th>
-                <th>Item Total</th>
-              </tr>
-            </thead>
-            <tbody>
-              <% cart.items_to_quantities.each do |item, quantity| %>
-                <tr>
-                  <td><%= link_to item.title, item_path(item) %></td> 
-                  <td><%= quantity %></td>
-                  <td><%= print_price(item.price) %></td>
-                  <td><%= print_price(item.price * quantity)%></td> 
-                </tr>
-              <% end %>
-            </tbody>
-          </table>
-        </div>
-      </div>
       <div class="well">
         <table class="table">
           <h3>Order Summary</h3>
@@ -39,8 +16,10 @@
             <td><h4><%= print_price(order_price(@order.items)) %></h4></td>
           </tr>
         </table>
-      </div>
-      </div>
+        </div>
+          <%= link_to "Return to Homepage", root_path, class: "btn btn-md btn-default" %>
+          <%= link_to "Browse Items", items_path, class: "btn btn-md btn-default" %>
+        </div>
       </div>
 	</div>
 </div>
