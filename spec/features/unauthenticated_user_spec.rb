@@ -144,7 +144,7 @@ describe 'unauthenticated user', type: :feature do
     end
 
     it "cannot view the administrator screens or use administrator functionality" do
-      visit '/admin'
+      visit '/vendor_admin'
       expect(current_path).to eq(items_path)
       expect(page).to have_content('You are not authorized to access this page')
     end

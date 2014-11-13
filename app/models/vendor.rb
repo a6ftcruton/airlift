@@ -1,7 +1,7 @@
 class Vendor < ActiveRecord::Base
   include US
   geocoded_by :set_address
-  # after_validation :geocode
+  after_validation :geocode
 
   has_many :items
   has_many :vendor_orders
@@ -22,6 +22,19 @@ class Vendor < ActiveRecord::Base
   # def vendor_items
   #   @vendor_items = Vendor.find_by(slug: "responder").items
   # end
+
+  def online?
+    self.online ? 'Yes' : 'No'
+  end
+
+  def online=(value)
+    value.downcase!
+    if value == 'yes'
+      write_attribute(:online, true)
+    else
+      write_attribute(:online, false)
+    end
+  end
 
   private
 

@@ -7,7 +7,7 @@ class Ability
 
     if user.is? :admin
       can :manage, :all
-    elsif user.is? :store_admin
+    elsif user.is? :vendor_admin
       can :manage, Item
       can :manage, Category
       can :manage, Order
