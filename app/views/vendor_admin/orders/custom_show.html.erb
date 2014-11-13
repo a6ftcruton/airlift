@@ -1,0 +1,28 @@
+<h2><%= @status.capitalize %> Orders in System</h2>
+<h4><%= link_to "All Orders", vendor_admin_orders_path %></h4>
+<table class = "table table-striped">
+  <thead>
+    <tr>
+      <th>Order Id</th>
+      <th>Creation Date</th>
+      <th>Completed/Cancelled Date</th>
+      <th>Customer Name</th>
+      <th>Total Price</th>
+      <th>Order Status</th>
+      <th>Order Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @orders.each do |order| %>
+    <tr>
+      <td><%= link_to order.id, edit_admin_order_path(order) %></td>
+      <td><%= (order.created_at).to_formatted_s(:long) %></td>
+      <td><%= (order.updated_at).to_formatted_s(:long) %></td>
+      <td><%= order.user.first_name %> </td>
+      <td><%= print_price(order_price(order.items)) %> </td>
+      <td><%= order.status %> </td>
+      <td><%= link_to "View/Edit Order", edit_admin_order_path(order), class: "btn btn-info" %>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
