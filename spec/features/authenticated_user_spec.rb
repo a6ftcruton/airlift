@@ -164,32 +164,4 @@ describe 'authenticated user order display page' do
       click_on 'Your Orders'
     end
 
-    it 'displays item with quantity ordered' do
-      click_on '1'
-      expect(page).to have_content "Second Food"
-      expect(page).to have_content "1"
-    end
-
-    it 'shows line-item subtotals' do
-      click_on '2'
-      expect(page).to have_content '$1.00'
-    end
-
-    it 'links to each item description' do
-      click_on '3'
-      click_on 'Second Food'
-      expect(page).to have_content "Second food"
-    end
-
-    it 'shows current status of an order' do
-      @order.status = 'pending'
-      click_on '4'
-      expect(page).to have_content "Order Status"
-    end
-
-    it 'shows total order price' do
-      click_on '5'
-      expect(page).to have_content "$1.00"
-    end
-
 end
