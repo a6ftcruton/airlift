@@ -1,0 +1,24 @@
+<div class="container">
+  <h1><%= @item.title.capitalize %>
+  <table>
+    <tr>
+      <th>Picture</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Category</th>
+    </tr>
+    <tr>
+      <td><% if @item.image_file_name != nil %><%= image_tag @item.image.url(:medium) %><% end %></td>
+      <td><%= @item.title %></td>
+      <td><%= @item.description %></td>
+      <td><%= @item.price %></td>
+      <td><% @categories.each do |category| %>
+        <%= category.title %>
+      <% end %></td>
+    </tr>
+  </table>
+  <%if current_user.is?('admin')  %>
+      <%= link_to "<< Return to Your Admin Dashboard", vendor_admin_path %>
+  <% end  %>
+</div>

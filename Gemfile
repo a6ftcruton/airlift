@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.1.1'
 
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem 'figaro'
 gem 'rails', '4.1.6'
 gem 'pg'

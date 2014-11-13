@@ -1,0 +1,21 @@
+<table class="table">
+  <thead>
+    <tr>
+      <!-- <th>Picture</th> -->
+      <th>Vendor Name</th>
+      <th>Description</th>
+      <th>Vendor Id</th>
+      <th>Online?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @vendors.each do |vendor| %>
+       <tr class=<%= non_active_style(vendor) %>>
+        <td><%= link_to vendor.name, vendor_admin_path(vendor) %></td>
+        <td><%= vendor.description %></td>
+        <td><%= vendor.id %> </td>
+        <td><%= link_to vendor.online?, edit_super_admin_vendor_path(vendor) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

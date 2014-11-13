@@ -10,8 +10,7 @@
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
 # It's strongly recommended that you check this file into your version control system.
-
-ActiveRecord::Schema.define(version: 20141112180453) do
+ActiveRecord::Schema.define(version: 20141112184907) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -132,6 +131,8 @@ ActiveRecord::Schema.define(version: 20141112180453) do
     t.string   "city"
     t.string   "zip"
     t.string   "state"
+    t.boolean  "approved",    default: false
+    t.boolean  "online",      default: true
     t.float    "latitude"
     t.float    "longitude"
   end

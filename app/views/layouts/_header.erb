@@ -1,4 +1,4 @@
-<div class="navbar-wrapper">
+<nav class="navbar-wrapper">
   <div class="container">
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container-fluid">
@@ -27,12 +27,15 @@
               <%= submit_tag "Search", :name => nil, :class =>"btn btn-grey4" %>
             <% end %>
             </div>
-          <% if can? :create, @item %>
-                <li class="active"><%= link_to "Admin Dashboard", admin_path %></li>
+          <% if can? :create, @category %>
+          <% if current_user && current_user.role == 'super_admin' %>
+            <li class="active"><%= link_to "Platform Admin Dashboard", super_admin_path %></li>
+          <% elsif current_user && current_user.role == 'vendor_admin' %>
+            <li class="active"><%= link_to "Vendor Admin Dashboard", vendor_admin_path(current_user.vendor_id) %></li>
           <% end %>
-        </ul>
-          <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right", style= "float:right", style="padding: 20px">
+          <% end %>
+
+            <div class="nav navbar-nav navbar-right", style= "float:right", style="padding: 20px">
               <% if current_user %>
                 <%= "Welcome #{current_user.nickname ? current_user.nickname : current_user.full_name}!" %>
                 <%= link_to "My Profile", edit_user_path(current_user) %> /
@@ -44,8 +47,8 @@
                 <%= link_to( image_tag("Shopping-Cart.png"), cart_edit_path) %>
                 <span class='cart_quantity'><%= cart.size %></span>
               </div>
+            </div>
             </ul>
-          </div>
         </div>
       </div>
     </div>
