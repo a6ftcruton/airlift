@@ -25,9 +25,11 @@
 
         <%= f.label :user_or_admin %>
         <%= f.select :role, ['user', 'vendor_admin', 'super_admin'], :selected => f.object.role %>
+        
+      <%= f.label :vendor_id %>
+      <%= f.select :vendor_id, Vendor.all.map { |vendor| [vendor.name, vendor.id] }, include_blank: true %>
 
-        <%= f.submit "Create New User" %>
-      <% end %>
-    </div>
+      <%= f.submit "Create New User" %>
+    <% end %>
   </div>
 </div>
