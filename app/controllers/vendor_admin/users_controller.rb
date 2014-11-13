@@ -2,7 +2,7 @@ class VendorAdmin::UsersController < VendorAdmin::BaseController
   before_action :set_user, except: [:index, :new, :create]
 
   def index
-    @users = User.where(vendor_id: current_user.vendor_id.to_s)
+    @users = User.where(vendor_id: current_user.vendor_id.to_s, role: "vendor_admin")
   end
 
   def new
