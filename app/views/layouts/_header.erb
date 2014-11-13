@@ -12,7 +12,7 @@
           <a class="navbar-brand" href="/"><%= image_tag("AirLift-logo-white.png", :alt => "logo", :width => '120', :height => '37' ) %></a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
+          <ul class="nav navbar-nav", style="float:right">
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Browse by<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
@@ -27,11 +27,6 @@
               <%= submit_tag "Search", :name => nil, :class =>"btn btn-grey4" %>
             <% end %>
             </div>
-          <% if current_user.role == 'super_admin' %>
-            <li class="active"><%= link_to "Platform Admin Dashboard", super_admin_path %></li>
-          <% elsif current_user.role == 'vendor_admin' %>
-            <li class="active"><%= link_to "Vendor Admin Dashboard", vendor_admin_path(current_user.vendor_id) %></li>
-          <% end %>
           <div class="navbar-form navbar-right">
           <% if current_user %>
             <%= "Welcome #{current_user.nickname ? current_user.nickname : current_user.full_name}!" %>
@@ -40,10 +35,10 @@
           <% else %>
             <%= render 'shared/login_form'  %>
           <% end %>
-          <div class='cart-container' style="float:right", style="padding: 10px">
-            <%= link_to( image_tag("Shopping-Cart.png"), cart_edit_path) %>
-            <span class='cart_quantity'><%= cart.size %></span>
-          </div>
+              <div class='cart-container', style='float:right'>
+                <%= link_to( image_tag("Shopping-Cart.png"), cart_edit_path) %>
+                <span class='cart_quantity'><%= cart.size %></span>
+              </div>
             </div>
             </ul>
           </div>
