@@ -1,4 +1,4 @@
-The Pivot
+Airlift - Emergency Supply Delivery 
 ===========
 
 Turing School project started 10/27
@@ -7,7 +7,7 @@ Jim, Kavita and Jessica
 
 Live Site http://airlifter.herokuapp.com/
 
-![Stories in Ready](https://badge.waffle.io/JessicaG/the_pivot.png?label=ready&title=Ready)](http://waffle.io/JessicaG/the_pivot)
+![Stories in Ready](https://badge.waffle.io/JessicaG/the_pivot.png?label=ready&title=Ready)]
 
 [![Build Status](https://travis-ci.org/JessicaG/the_pivot.svg)](https://travis-ci.org/JessicaG/the_pivot)
 
