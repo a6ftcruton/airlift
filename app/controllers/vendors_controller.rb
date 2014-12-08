@@ -4,11 +4,6 @@ class VendorsController < ApplicationController
     @vendors = Vendor.all
   end
 
-  # def show
-  #   @categories = Category.all
-  #   @vendor = Vendor.find_by(slug: params[:slug])
-  # end
-
   def show
     @categories = Category.all
   	@vendor = Vendor.find_by!(slug: params[:slug])
