@@ -2,7 +2,6 @@ class SuperAdmin::CategoriesController < SuperAdmin::BaseController
   before_action :set_category, only: [:edit, :update, :destroy]
 
 	def index
-		# @items = Item.all
 		@categories = Category.all
 	end
 

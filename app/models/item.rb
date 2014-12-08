@@ -19,8 +19,6 @@ class Item < ActiveRecord::Base
 
 	scope :active, -> {where(active: true)}
 
-#  @items = Item.all
-
 	def self.search(query)
 	  where("lower(TITLE) like lower(?)", "%#{query}%")
 	end

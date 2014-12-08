@@ -3,85 +3,69 @@
   background-color: #545454 !important;
   color: #FFFFFF !important;
 }
-
 .navbar-nav {
   color: white;
 }
-
 .navbar-wrapper .container {
   padding-top: 40px;
 }
-
 a {
   color: darkred !important;
   text-decoration: none;
 }
-
 #about {
   margin-left: auto;
   margin-right: auto;
   width:80%;
 }
-
 .about-text {
   font-size: 150%;
   width: 80%;
   padding-bottom: 150px;
 }
-
 .review {
   margin-left: auto !important;
   margin-right: auto !important;
   width: 50%;
 }
-
 .star {
   height: 10px;
   width: 10px;
 }
-
 .center {
     margin-left: auto;
     margin-right: auto;
     width: 40%;
 }
-
 //Custom Grey Buttons for use//
 .btn-grey1 {
   background-color: #464646;
   color: #FFFFFF;
 }
-
 .btn-grey2 {
   background-color: #616161;
   color: #FFFFFF;
 }
-
 .btn-grey3 {
   background-color: #8B8B8B;
   color: #FFFFFF;
 }
-
 .btn-grey4 {
   background-color: #979797;
   color: #FFFFFF;
 }
-
 .btn-grey5 {
   background-color: #A2A2A2;
   color: #FFFFFF;
 }
-
 .btn-grey6 {
   background-color: #B9B9B9;
   color: #FFFFFF;
 }
-
 .btn-grey7 {
   background-color: #D1D1D1;
   color: #FFFFFF;
 }
-
 //Masonry Grid Styling//
 #masonry-container {
   background: #FFF;
@@ -121,36 +105,32 @@ a {
   -moz-border-radius: 20px;
   border-radius: 20px;
   border-color: #545454;
+
   @media screen and (min-width: 321px) {
     /* 10 columns for larger screens */
    width: 100%;
    border: none;
    margin-bottom: 1.5em;
   }
+
   @media screen and (min-width: 720px) {
     width: 25% !important;
     border: solid;
   }
-
 }
-
 .grid-item.on {
   display: initial;
 }
-
 .grid-item .item-description {
   width: 100%;
   height: 50px;
 }
-
 .grid-item:hover {
   opacity: 1 !important;
 }
-
 .not_active {
   background-color: #eed3d7 !important;
 }
-
 .grid-item img {
   max-width: 100%;
 }
@@ -159,7 +139,6 @@ a {
 .text-size {
   width: 35px;
 }
-
 //Category Menu Styling//
 #categories ul {
   margin: 0;
@@ -167,49 +146,39 @@ a {
   list-style-type: none;
   text-align: center;
 }
-
 #categories ul li {
   display: inline;
 }
-
 #categories ul li a {
   text-decoration:none;
   padding: .2em 1em;
   color: #fff;
   background-color: rgb(192, 192, 192);
 }
-
 #categories ul li a.pressed {
   background-color: rgb(84, 84, 84);
 }
-
 .grid-item.off {
   display: none;
 }
-
 .grid-item.on {
   display: initial;
 }
-
 // Contact Form Styling//
 .hidden { display: none; }
-
 /*flash*/
-
 .flash#error {
 background-color: #f2dede;
 border-color: #eed3d7;
 color: #b94a48;
 text-align: left;
 }
-
 .flash#alert {
 background-color: #f2dede;
 border-color: #eed3d7;
 color: #b94a48;
 text-align: left;
 }
-
 .flash#notice {
 background-color: #dff0d8;
 border-color: #d6e9c6;
@@ -358,7 +327,6 @@ a {
  .table > tbody {
   text-align: left;
  }
-
-  body {
+ body {
     padding-top: 70px !important;
   }

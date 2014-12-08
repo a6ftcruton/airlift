@@ -5,8 +5,7 @@ class VendorNotifier < ActionMailer::Base
     @user = user
     @order = order
     @vendor_order = vendor_order
-    mail( :to => "jimsuttonjimsutton@gmail.com",
-#    mail( :to => user.email,
+    mail( :to => user.email,
           :subject => "You have a new Airlift order!"
         )
   end

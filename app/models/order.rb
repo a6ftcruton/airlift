@@ -63,7 +63,8 @@ class Order < ActiveRecord::Base
   end
 
   def text_customer(order)
-    customer_phone_number = "3034789928" # in production, change to match @user.phone_number
+    # in production, change to match @user.phone_number
+    customer_phone_number = "3034789928" 
 
     twilio_sid = ENV["TWILIO_SID"] 
     twilio_token = ENV["TWILIO_TOKEN"]
