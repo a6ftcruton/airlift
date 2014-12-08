@@ -7,7 +7,7 @@ Jim, Kavita and Jessica
 
 Live Site http://airlifter.herokuapp.com/
 
-![Stories in Ready](https://badge.waffle.io/JessicaG/the_pivot.png?label=ready&title=Ready)]
+![Stories in Ready](https://badge.waffle.io/JessicaG/the_pivot.png?label=ready&title=Ready)
 
 [![Build Status](https://travis-ci.org/JessicaG/the_pivot.svg)](https://travis-ci.org/JessicaG/the_pivot)
 
