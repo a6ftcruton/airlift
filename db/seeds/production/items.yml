@@ -8,22 +8,6 @@ records:
       - '<%= sprig_record(Category, 5).id %>'
     vendor_id: '<%= sprig_record(Vendor, 1).id %>'
     image_file_name: "t.jpg"
-  - sprig_id: 2
-    title: "SafetyMax Hi-Vis Pants"
-    description: "The perfect gear for construction jobs and outdoor activities alike."
-    price: 34.01
-    category_ids:
-      - '<%= sprig_record(Category, 1).id %>'
-    vendor_id: '<%= sprig_record(Vendor, 1).id %>'
-    image_file_name: "safety-coat.jpg"
-  - sprig_id: 3
-    title: "Diamondback POLY/PVC Rainsuit 3pc"
-    description: "Diamondback SRS3/111 POLY/PVC Rainsuit 3pc includes jacket with detachable hood and bib overall. Heavy 0.35mm PVC exterior laminated to polyester with a PVC interior coating for extra strength and durability. Full cut for a comfortable fit. Corduroy collar."
-    price: 25.95
-    category_ids:
-      - '<%= sprig_record(Category, 1).id %>'
-    vendor_id: '<%= sprig_record(Vendor, 1).id %>'
-    image_file_name: "rainsuit.jpg"
   - sprig_id: 4
     title: "Katadyn MyBottle Water Microfilter White Splash"
     description: "The Katadyn MyBottle Microfilter is a multi-purpose filtration system. It meets EPA guidelines for removal of bacteria and protozoan cyst (like Giardia). This economical microfilter system is easy to operate, reliable and the internal carbon filter also reduces chemicals and makes water taste better."
@@ -57,15 +41,6 @@ records:
       - '<%= sprig_record(Category, 1).id %>'
     vendor_id: '<%= sprig_record(Vendor, 1).id %>'
     image_file_name: "bleach.jpg"
-  - sprig_id: 8
-    title: "3M Spray Paint P95 Full Face Respirator"
-    description: "Full face piece helps prevent paint overspray and dusts from getting in eyes. 3M Spray Paint P95 Full Face Respirator model 68P71PA1-A/68P71 helps reduce exposure to organic vapors and mists associated with paint spray, pesticide applications, solvents, thinners. Replaceable cartridges, filters."
-    price: 151.95
-    category_ids:
-      - '<%= sprig_record(Category, 2).id %>'
-      - '<%= sprig_record(Category, 5).id %>'
-    vendor_id: '<%= sprig_record(Vendor, 1).id %>'
-    image_file_name: "respirator.jpg"
   - sprig_id: 9
     title: "Unger Industrial Curved Floor Squeegee - 36"
     description: "Features a pivoting aluminum channel with black rubber that is exchangeable and can be used from 2 sides. Handle socket provides optimum channel pivoting push-pull action and is designed for use with Total Reach extension poles."
@@ -83,15 +58,6 @@ records:
       - '<%= sprig_record(Category, 2).id %>'
     vendor_id: '<%= sprig_record(Vendor, 1).id %>'
     image_file_name: "handle.jpg"
-  - sprig_id: 11
-    title: "Quick Dam Sandless Sandbags"
-    description: "Quick Dams, also known as sandless sand bags (model# QD1224-6), create an effective, easy to use flood control barrier. As water comes in contact with the specially formulated inner powder, it turns into a gel causing the bag to swell. Quick Dam flood sand bags can be stacked and staggered to build a retaining wall. Quick Dams are an easy to use sandless flood control barrier that are a great alternative to heavy, messy tradional sand bags. Flood Barrier socks are great for diverting water away from your garage or basement."
-    price: 36.45
-    category_ids:
-      - '<%= sprig_record(Category, 3).id %>'
-      - '<%= sprig_record(Category, 5).id %>'
-    vendor_id: '<%= sprig_record(Vendor, 1).id %>'
-    image_file_name: "sandless.jpg"
   - sprig_id: 12
     title: "HydraBarrier Standard Water Bag"
     description: "HydraBarrier 6ft, 12ft, and 24ft Standard Bags (HBS06/HBS12/HBS24) are recommended for applications requiring diversion of fast moving streams of water. The Hydrabarrier Standard provides a 4 inch high tube capable of damming doorways, garage doors, basement entrances, and much more."
@@ -101,15 +67,6 @@ records:
       - '<%= sprig_record(Category, 5).id %>'
     vendor_id: '<%= sprig_record(Vendor, 1).id %>'
     image_file_name: "waterbag.jpg"
-  - sprig_id: 13
-    title: "Moldex Mold and Mildew Protectant Spray"
-    description: "Provides an invisible barrier that protects against the harmful effects of mold and mildew. Creates a mold and algae proof barrier that dries clear and fast. Designed for both indoor and outdoor applications and is moisture resistant on most surfaces."
-    price: 9.99
-    category_ids:
-      - '<%= sprig_record(Category, 3).id %>'
-      - '<%= sprig_record(Category, 5).id %>'
-    vendor_id: '<%= sprig_record(Vendor, 1).id %>'
-    image_file_name: "moldex.jpg"
   - sprig_id: 14
     title: "AquaPodKit Emergency Water Storage Standard"
     description: "The AquaPodKit Emergency Water Storage Standard contains 1 liner, pump, and lock, and is easy to install and provides the safe water your family will need in the event of a contaminated public water supply. Storm surges and destruction from hurricanes, water main breaks and other catastrophes can make tap water unsafe to drink"
@@ -119,14 +76,6 @@ records:
       - '<%= sprig_record(Category, 5).id %>'
     vendor_id: '<%= sprig_record(Vendor, 1).id %>'
     image_file_name: "aquapod.jpg"
-  - sprig_id: 15
-    title: "Encore Plastics Gamma Seal Bucket Lid"
-    description: "Reusable bucket lid. Encore Plastics Gamma Seal Bucket Lid 82136-500426 permanently transforms your 12-in diameter bucket into an airtight and leak proof storage container. A bucket can be used for hundreds of household storage applications, simply snap the patented adapter onto your bucket and spin on the removable lid."
-    price: 10.01
-    category_ids:
-      - '<%= sprig_record(Category, 4).id %>'
-    vendor_id: '<%= sprig_record(Vendor, 1).id %>'
-    image_file_name: "lid.jpg"
   - sprig_id: 16
     title: "Capital Rubber PVC Discharge Hose - MxF Coupling"
     description: "Lay flat PVC contractors grade hose for pump discharge and agricultural applications."
@@ -159,29 +108,6 @@ records:
       - '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 1).id %>'
     image_file_name: "boot.jpg"
-  - sprig_id: 20
-    title: "Boss MFG Chemical Guard Gloves"
-    description: "Fully coated black neoprene. Premium, smooth grip, interlock lined."
-    price: 12.95
-    category_ids:
-      - '<%= sprig_record(Category, 4).id %>'
-      - '<%= sprig_record(Category, 5).id %>'
-    vendor_id: '<%= sprig_record(Vendor, 1).id %>'
-    image_file_name: "gloves.JPG"
-  - sprig_id: 21
-    title: "Flushable Loo 400 Toilet"
-    description: "Nothing says comfort like a flushing toilet, and with the Flushable Loo 400, you can bring it and the convenience of home to the outdoors with minimum effort."
-    price: 119.45
-    category_ids: '<%= sprig_record(Category, 4).id %>'
-    vendor_id: '<%= sprig_record(Vendor, 2).id %>'
-    image_file_name: "portable.jpg"
-  - sprig_id: 22
-    title: "Deluxe First Responder First Aid Kit - SOFT CASE"
-    description: "Our comprehensive responder kit contains the essential first aid supplies you need in a medical emergency. This 100 denier cordura semi-rigid bag with handle, shoulder strap, side pockets, main compartment has removable divider & pocket, lid has zippered pouch, buckle closure, business card holder includes CPR devices, dressings, bandages, tapes, biohazard bags, gloves and more. Plus, there is still room for your own personal medical supplies."
-    price: 164.45
-    category_ids: '<%= sprig_record(Category, 4).id %>'
-    vendor_id: '<%= sprig_record(Vendor, 2).id %>'
-    image_file_name: "aid_kit.jpg"
   - sprig_id: 23
     title: "Ultimate First Responder Burn Pack"
     description: "This 23-piece pack provides a large quantity of essential supplies to treat and protect a burn injury, including a trauma pad that can be used to hold ice as well as provide compression."
@@ -189,13 +115,6 @@ records:
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 2).id %>'
     image_file_name: "burn_pack.jpg"
-  - sprig_id: 24
-    title: "AmbuRescue CPR Mask Kit"
-    description: "The Ambu Res-Cue Mask is designed to provide protected recue breathing for any patient (any age group) and may also be used with a resuscitator. The Ambu Res-Cue Mask helps protect rescuers in an emergency situation. Prevents direct contact with patient's mouth, nose and face and helps overcome hesitation to start resuscitation. Transparent dome allows rescuer to visually check for patient's lip color and vomitus."
-    price: 24.95
-    category_ids: '<%= sprig_record(Category, 4).id %>'
-    vendor_id: '<%= sprig_record(Vendor, 2).id %>'
-    image_file_name: "amub_res.jpg"
   - sprig_id: 25
     title: "IOSAT - Radiation Protection Tablets"
     description: "In the event of a nuclear accident, radioactive iodine would be released into the air and could then be absorbed by the thyroid, damaging it and potentially causing death. You don't want to be left unprotected and unprepared during a radioactive emergency. For example, after the Chernobyl melt-down, all U.S. supplies of Potassium Iodide, which protects the body from the harmful radioactive iodine, disappeared for months! Health experts believe that the greatest health concerns from a nuclear accident are likely to be not from the initial explosion or spill, but from the release of radioiodine being carried downwind hundreds of miles from the original site. When Potassium Iodide is taken it floods the thyroid with a stabilized iodine, preventing 99% percent of the damage caused by radioactive nuclear fallout. "
@@ -203,13 +122,6 @@ records:
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 2).id %>'
     image_file_name: "iosat.jpg"
-  - sprig_id: 26
-    title: "Vented Particulate Respirator Face Mask"
-    description: "The exhalation valve extends the life and increases the level of protection and comfort in this mask compared to the regular N95. Perfect for reducing the contraction of swine flu, bird flu and other communicable diseases. Patented 3M model 8110s filter media with one-way anti-fogging exhalation vent and advanced electrostatically charged microfibers help make breathing easier and cooler for enhanced user comfort."
-    price: 24.95
-    category_ids: '<%= sprig_record(Category, 4).id %>'
-    vendor_id: '<%= sprig_record(Vendor, 2).id %>'
-    image_file_name: "respi.jpg"
   - sprig_id: 27
     title: "Datrex 3600 Calorie Food Bar"
     description: "Every 72-hour emergency kit needs a stash of these tasty, high energy, and nutritious Datrex food bars. You might worry about the flavor of a bar packed so full of nutrition that it can keep one person sustained for three days, but Datrex food bars have a light coconut flavor and a moist cookie-like texture that our customers love. These bars are high in calories, but low in protein and salt so they won’t make you thirsty but they'll keep you energized."
@@ -245,20 +157,6 @@ records:
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 3).id %>'
     image_file_name: "cpr_backpack_kit.jpg"
-  - sprig_id: 32
-    title: "Kendall-Futuro Kerlix Bandage"
-    description: "6 ply - 4.5 in x 4.1 yd (11.4 cm x 3.7 m) Stretched. The brand hospitals use most. Sterile. Made in U.S.A."
-    price: 14.95
-    category_ids: '<%= sprig_record(Category, 4).id %>'
-    vendor_id: '<%= sprig_record(Vendor, 3).id %>'
-    image_file_name: "kendall.jpg"
-  - sprig_id: 33
-    title: "BSN Medical Tensoplast Elastic Adhesive Bandage, 4in. x 5 yd."
-    description: "Its Superior Stretch and Regain Feature Provides Firm, Controlled Compression and Support. The Porous Adhesive Of This Bandage Helps Prevent Skin Maceration. Fluffy Non-Fray Edges Prevents The Bandage from Rucking Or Marking. High Adhesive Property. Air Permeable. Provides Strong Compression and Long Term Support."
-    price: 22.95
-    category_ids: '<%= sprig_record(Category, 4).id %>'
-    vendor_id: '<%= sprig_record(Vendor, 3).id %>'
-    image_file_name: "bsn_adhesive.jpg"
   - sprig_id: 34
     title: "Tegaderm Hydrocolloid Dressing by 3M"
     description: "Multiple shape options to better match wound size and wound location. 3M Tegaderm Hydrocolloid Dressing maintains an optimal moist wound environment which has been shown to enhance healing of partial- and full-thickness dermal ulcers, superficial wounds and abrasions and superficial and partial-thickness burns and donor sites."
@@ -343,20 +241,6 @@ records:
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 4).id %>'
     image_file_name: "dead_blow_hammer.jpg"
-  - sprig_id: 46
-    title: "Folding Entrenching Survival Shovel E Tool"
-    description: "This versatile camping companion features quality tempered steel construction with a rubber grip. Offering the versatility of a shovel and a dibble pick–this piece also folds up."
-    price: 10.99
-    category_ids: '<%= sprig_record(Category, 4).id %>'
-    vendor_id: '<%= sprig_record(Vendor, 4).id %>'
-    image_file_name: "survival_shovel.jpg"
-  - sprig_id: 47
-    title: "Mayday Urban Road Warrior"
-    description: "s kit fits most all road emergency situations. All items are packed in a heavy-duty backpack. Kit contains 19 piece: -30 Minute High -Intensity Light Stick - Tow Rope - Auto Spot Light - Jumper Cables - First Aid Kit - Flashlight with Batteries - Fire Extinguisher - Solar Blanket - Waterproof Poncho - Swiss Style Army Knife - Flat Tire Fixer - Drinking Water - Leather Gloves - Whistle - Duct Tape - Utility Knife - Emergency Instructions and Help Sign - Moist Towelettes - Reflecting Triangle."
-    price: 66.99
-    category_ids: '<%= sprig_record(Category, 4).id %>'
-    vendor_id: '<%= sprig_record(Vendor, 4).id %>'
-    image_file_name: "mayday_urban_warrior.jpg"
   - sprig_id: 48
     title: "Ready America 70410 2 Person Cold Weather Survival Kit"
     description: "Be prepared for what Mother Nature dishes out with a Cold Weather Emergency Kit by Ready America. This two-person kit contains essential items such as lifesaving food and water, survival blankets and body warmers, tools to dig your vehicle out of the snow and more."
@@ -427,13 +311,6 @@ records:
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 5).id %>'
     image_file_name: "mayday_cot.jpg"
-  - sprig_id: 58
-    title: "Large Family Tent Outdoor Camping 10 Person 3 Room Shelter Survival Gear Cabin"
-    description: "Large Family Tent Outdoor Camping 10 Person 3 Room Shelter Survival Gear Cabin This 10 Person 3 room Large Family Tent sets up in under 2minutes!"
-    price: 349.99
-    category_ids: '<%= sprig_record(Category, 4).id %>'
-    vendor_id: '<%= sprig_record(Vendor, 5).id %>'
-    image_file_name: "large_10_person_tent.jpg"
   - sprig_id: 59
     title: "Suncast Outdoor Permanent Shed"
     description: "Suncast 10x10 Storage Shed. With a 625 cubic foot capacity, this Suncast storage shed is a versatile, durable solution for all your storage needs. Suncast's attractive, contemporary design includes 2 windows with shutters, window boxes, and even a standard skylight to help keep the interior bright. Combine that with the long-lasting resin construction and durable resin floor, and you've got a maintenance-free storage solution on which you can really count."
@@ -553,13 +430,6 @@ records:
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 7).id %>'
     image_file_name: "concrete_saw.jpg"
-  - sprig_id: 76
-    title: "Honda FG110AT Toolbarn 4 Stroke Mini-Tiller"
-    description: "Honda's mini tiller is very lightweight and portable at only 29lbs but has the fastest tine speed in its class."
-    price: 349.99
-    category_ids: '<%= sprig_record(Category, 4).id %>'
-    vendor_id: '<%= sprig_record(Vendor, 7).id %>'
-    image_file_name: "mini_tiller.jpg"
   - sprig_id: 77
     title: "IMC (Belaire) 216V Vertical 2-Stage Electric Air Compressor"
     description: "Features: -Air compressor.-Start-stop pressure switch control.-ASME safety valves fully-enclosed belt guard.-Tank drain and discharge valve.-15.3 cfm @100 PSI.-Capacity: 60 Gallon. Specifications: -208-230 Volt single phase.-5HP"
@@ -679,13 +549,6 @@ records:
     category_ids: '<%= sprig_record(Category, 4).id %>'
     vendor_id: '<%= sprig_record(Vendor, 9).id %>'
     image_file_name: "home_health_shoulder_bag.jpg"
-  - sprig_id: 94
-    title: "Arsenal 5215 Large Trauma, Orange"
-    description: "Large trauma bag: great for larger kits. Customizable interior slots and reflective trima."
-    price: 53.99
-    category_ids: '<%= sprig_record(Category, 4).id %>'
-    vendor_id: '<%= sprig_record(Vendor, 9).id %>'
-    image_file_name: "arsenal_trauma_bag.jpg"
   - sprig_id: 95
     title: "5.11 Tactical 56936 Responder ALS Backpack"
     description: "Shove-it pocket behind admin compartment uses 4 compression straps to secure helmet - boots - DWR finish 4 compression straps Imported"
