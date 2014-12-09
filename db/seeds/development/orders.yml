@@ -5,7 +5,7 @@ records:
     user_id: '<%= sprig_record(User, 1).id %>'
     item_ids:
       - '<%= sprig_record(Item, 7).id %>'
-      - '<%= sprig_record(Item, 8).id %>'
+      - '<%= sprig_record(Item, 80).id %>'
   - sprig_id: 2
     status: 'ordered'
     exchange: 'pickup'
@@ -20,11 +20,11 @@ records:
     item_ids:
       - '<%= sprig_record(Item, 9).id %>'
       - '<%= sprig_record(Item, 1).id %>'
-      - '<%= sprig_record(Item, 15).id %>'
+      - '<%= sprig_record(Item, 16).id %>'
       - '<%= sprig_record(Item, 14).id %>'
-      - '<%= sprig_record(Item, 8).id %>'
-      - '<%= sprig_record(Item, 3).id %>'
-      - '<%= sprig_record(Item, 5).id %>'
+      - '<%= sprig_record(Item, 80).id %>'
+      - '<%= sprig_record(Item, 31).id %>'
+      - '<%= sprig_record(Item, 50).id %>'
   - sprig_id: 4
     status: 'completed'
     exchange: 'pickup'
@@ -44,9 +44,9 @@ records:
     exchange: 'pickup'
     user_id: '<%= sprig_record(User, 2).id %>'
     item_ids:
-      - '<%= sprig_record(Item, 11).id %>'
-      - '<%= sprig_record(Item, 12).id %>'
-      - '<%= sprig_record(Item, 13).id %>'
+      - '<%= sprig_record(Item, 111).id %>'
+      - '<%= sprig_record(Item, 106).id %>'
+      - '<%= sprig_record(Item, 107).id %>'
   - sprig_id: 7
     status: 'cancelled'
     exchange: 'delivery'
@@ -54,9 +54,9 @@ records:
     item_ids:
       - '<%= sprig_record(Item, 6).id %>'
       - '<%= sprig_record(Item, 7).id %>'
-      - '<%= sprig_record(Item, 8).id %>'
-      - '<%= sprig_record(Item, 9).id %>'
-      - '<%= sprig_record(Item, 10).id %>'
+      - '<%= sprig_record(Item, 80).id %>'
+      - '<%= sprig_record(Item, 90).id %>'
+      - '<%= sprig_record(Item, 101).id %>'
     street_number: '1234'
     street: 'Euclid'
     city: 'Denver'
@@ -70,10 +70,10 @@ records:
     user_id: '<%= sprig_record(User, 2).id %>'
     item_ids:
       - '<%= sprig_record(Item, 16).id %>'
-      - '<%= sprig_record(Item, 11).id %>'
+      - '<%= sprig_record(Item, 110).id %>'
       - '<%= sprig_record(Item, 18).id %>'
       - '<%= sprig_record(Item, 9).id %>'
-      - '<%= sprig_record(Item, 10).id %>'
+      - '<%= sprig_record(Item, 104).id %>'
     street_number: '5678'
     street: 'Bradel'
     city: 'Bend'
@@ -86,7 +86,7 @@ records:
     exchange: 'delivery'
     user_id: '<%= sprig_record(User, 3).id %>'
     item_ids:
-      - '<%= sprig_record(Item, 15).id %>'
+      - '<%= sprig_record(Item, 16).id %>'
     street_number: '0707'
     street: 'Haskel'
     city: 'Niwot'
@@ -100,7 +100,7 @@ records:
     user_id: '<%= sprig_record(User, 4).id %>'
     item_ids:
       - '<%= sprig_record(Item, 19).id %>'
-      - '<%= sprig_record(Item, 20).id %>'
+      - '<%= sprig_record(Item, 23).id %>'
     street_number: '2929'
     street: 'Raven Dr'
     city: 'Kenosha'
