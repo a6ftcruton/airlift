@@ -31,7 +31,7 @@ records:
     user_id: '<%= sprig_record(User, 4).id %>'
     item_ids:
       - '<%= sprig_record(Item, 1).id %>'
-      - '<%= sprig_record(Item, 2).id %>'
+      - '<%= sprig_record(Item, 9).id %>'
   - sprig_id: 5
     status: 'cancelled'
     exchange: 'pickup'
